@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The Parklands</title>
+	<link rel="stylesheet" href="https://use.typekit.net/pkd5ooe.css">
+	<!-- <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+	<script src="https://kit.fontawesome.com/15caa5e93e.js" crossorigin="anonymous"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+	<link rel="manifest" href="../favicon.ico/site.webmanifest">
+</head>
+
+<body class="front-end">
+
+<div id="app" class="page-wrapper">
+
+
+
+    <nav class="skip-nav">
+        <ul class="skip-menu">
+            <a href="#nav-toggle" class="menu-item">Skip to main menu</a>
+            <a href="#main" class="menu-item">Skip to main content</a>
+        </ul>
+    </nav>
+
+    <header class="header">		
+        <div class="wrapper">
+            <a class="logo" href="/" target="_self">
+                <img class="svg" src="assets/img/logo.svg" alt="Title Here">
+            </a>
+            <button id="nav-toggle" class="nav-toggle">
+                <span class="toggle-wrapper">
+                    <span class="toggle-bar toggle-bar-1"></span>
+                    <span class="toggle-bar toggle-bar-2"></span>
+                    <span class="toggle-bar toggle-bar-3"></span>
+                    <span class="toggle-bar toggle-bar-4"></span>
+                </span>
+                <span class="visually-hide-text">Show Main Menu</span>
+            </button>
+            <nav class="header-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="/">Style Guide</a></li>
+                    <li class="menu-item"><a href="/blocks.html">Blocks</a></li>
+                    <li class="menu-item"><a href="/scratchpad.html">Scratch Pad</a></li>
+                    <li class="menu-item"><a href="/single.html">Single Post</a></li>
+                    <li class="menu-item"><a href="/profile.html">Profile</a></li>
+                    <li class="menu-item"><a href="/404.html">404 Page</a></li>
+                    <li class="menu-item"><a href="/cards.html">Cards</a></li>
+                </ul>
+                <ul class="main-menu">
+                    <li class="menu-item" v-for="layout in layouts">
+                        <a v-bind:href="'/#' + layout.id">{{layout.dataset.menutitle}}</a>
+                    </li>
+                </ul>
+                <ul class="social-menu">
+                    <li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li class="menu-item"><a href="https://twitter.com/" target="_blank"><span class="visually-hide-text">Twitter</span><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="menu-item"><a href="https://www.linkedin.com/" target="_blank"><span class="visually-hide-text">LinkedIn</span><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+
+<div class="style-guide-wrapper">
+
+	<section id="colors" class="block color-palette" data-menutitle="Colors">
+	<div class="wrapper">
+		<h2 class="title">Colors</h2>
+		<div class="row">
+			<div class="color black"></div>
+			<div class="color green"></div>
+			<div class="color yellow"></div>
+			<div class="color beige"></div>
+		</div>
+	</div>
+</section>
+	<section id="typeface" class="block type" data-menutitle="Typeface">
+	<div class="wrapper">
+		<h2 class="title">Type Face</h2>
+		<div class="row">
+			<section class="heading-characters specimen-characters-module specimen-module fonts-module">
+				<h2 class="font header-font"></h2>
+				<h2 class="specimen-module-title fonts-module-title">Characters</h2>
+				<div class="specimen-characters-module-content">
+					<div class="specimen-characters-char">A</div>
+					<div class="specimen-characters-char">B</div>
+					<div class="specimen-characters-char">C</div>
+					<div class="specimen-characters-char">ÄŒ</div>
+					<div class="specimen-characters-char">Ä†</div>
+					<div class="specimen-characters-char">D</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">E</div>
+					<div class="specimen-characters-char">F</div>
+					<div class="specimen-characters-char">G</div>
+					<div class="specimen-characters-char">H</div>
+					<div class="specimen-characters-char">I</div>
+					<div class="specimen-characters-char">J</div>
+					<div class="specimen-characters-char">K</div>
+					<div class="specimen-characters-char">L</div>
+					<div class="specimen-characters-char">M</div>
+					<div class="specimen-characters-char">N</div>
+					<div class="specimen-characters-char">O</div>
+					<div class="specimen-characters-char">P</div>
+					<div class="specimen-characters-char">Q</div>
+					<div class="specimen-characters-char">R</div>
+					<div class="specimen-characters-char">S</div>
+					<div class="specimen-characters-char">Å </div>
+					<div class="specimen-characters-char">T</div>
+					<div class="specimen-characters-char">U</div>
+					<div class="specimen-characters-char">V</div>
+					<div class="specimen-characters-char">W</div>
+					<div class="specimen-characters-char">X</div>
+					<div class="specimen-characters-char">Y</div>
+					<div class="specimen-characters-char">Z</div>
+					<div class="specimen-characters-char">Å½</div>
+					<div class="specimen-characters-char">a</div>
+					<div class="specimen-characters-char">b</div>
+					<div class="specimen-characters-char">c</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">Ä‡</div>
+					<div class="specimen-characters-char">d</div>
+					<div class="specimen-characters-char">Ä‘</div>
+					<div class="specimen-characters-char">e</div>
+					<div class="specimen-characters-char">f</div>
+					<div class="specimen-characters-char">g</div>
+					<div class="specimen-characters-char">h</div>
+					<div class="specimen-characters-char">i</div>
+					<div class="specimen-characters-char">j</div>
+					<div class="specimen-characters-char">k</div>
+					<div class="specimen-characters-char">l</div>
+					<div class="specimen-characters-char">m</div>
+					<div class="specimen-characters-char">n</div>
+					<div class="specimen-characters-char">o</div>
+					<div class="specimen-characters-char">p</div>
+					<div class="specimen-characters-char">q</div>
+					<div class="specimen-characters-char">r</div>
+					<div class="specimen-characters-char">s</div>
+					<div class="specimen-characters-char">Å¡</div>
+					<div class="specimen-characters-char">t</div>
+					<div class="specimen-characters-char">u</div>
+					<div class="specimen-characters-char">v</div>
+					<div class="specimen-characters-char">w</div>
+					<div class="specimen-characters-char">x</div>
+					<div class="specimen-characters-char">y</div>
+					<div class="specimen-characters-char">z</div>
+					<div class="specimen-characters-char">Å¾</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð‘</div>
+					<div class="specimen-characters-char">Ð’</div>
+					<div class="specimen-characters-char">Ð“</div>
+					<div class="specimen-characters-char">Ò</div>
+					<div class="specimen-characters-char">Ð”</div>
+					<div class="specimen-characters-char">Ð‚</div>
+					<div class="specimen-characters-char">Ð•</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð„</div>
+					<div class="specimen-characters-char">Ð–</div>
+					<div class="specimen-characters-char">Ð—</div>
+					<div class="specimen-characters-char">Ð…</div>
+					<div class="specimen-characters-char">Ð˜</div>
+					<div class="specimen-characters-char">Ð†</div>
+					<div class="specimen-characters-char">Ð‡</div>
+					<div class="specimen-characters-char">Ð™</div>
+					<div class="specimen-characters-char">Ðˆ</div>
+					<div class="specimen-characters-char">Ðš</div>
+					<div class="specimen-characters-char">Ð›</div>
+					<div class="specimen-characters-char">Ð‰</div>
+					<div class="specimen-characters-char">Ðœ</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">ÐŠ</div>
+					<div class="specimen-characters-char">Ðž</div>
+					<div class="specimen-characters-char">ÐŸ</div>
+					<div class="specimen-characters-char">Ð </div>
+					<div class="specimen-characters-char">Ð¡</div>
+					<div class="specimen-characters-char">Ð¢</div>
+					<div class="specimen-characters-char">Ð‹</div>
+					<div class="specimen-characters-char">Ð£</div>
+					<div class="specimen-characters-char">ÐŽ</div>
+					<div class="specimen-characters-char">Ð¤</div>
+					<div class="specimen-characters-char">Ð¥</div>
+					<div class="specimen-characters-char">Ð¦</div>
+					<div class="specimen-characters-char">Ð§</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð¨</div>
+					<div class="specimen-characters-char">Ð©</div>
+					<div class="specimen-characters-char">Ðª</div>
+					<div class="specimen-characters-char">Ð«</div>
+					<div class="specimen-characters-char">Ð¬</div>
+					<div class="specimen-characters-char">Ð­</div>
+					<div class="specimen-characters-char">Ð®</div>
+					<div class="specimen-characters-char">Ð¯</div>
+					<div class="specimen-characters-char">Ð°</div>
+					<div class="specimen-characters-char">Ð±</div>
+					<div class="specimen-characters-char">Ð²</div>
+					<div class="specimen-characters-char">Ð³</div>
+					<div class="specimen-characters-char">Ò‘</div>
+					<div class="specimen-characters-char">Ð´</div>
+					<div class="specimen-characters-char">Ñ’</div>
+					<div class="specimen-characters-char">Ðµ</div>
+					<div class="specimen-characters-char">Ñ‘</div>
+					<div class="specimen-characters-char">Ñ”</div>
+					<div class="specimen-characters-char">Ð¶</div>
+					<div class="specimen-characters-char">Ð·</div>
+					<div class="specimen-characters-char">Ñ•</div>
+					<div class="specimen-characters-char">Ð¸</div>
+					<div class="specimen-characters-char">Ñ–</div>
+					<div class="specimen-characters-char">Ñ—</div>
+					<div class="specimen-characters-char">Ð¹</div>
+					<div class="specimen-characters-char">Ñ˜</div>
+					<div class="specimen-characters-char">Ðº</div>
+					<div class="specimen-characters-char">Ð»</div>
+					<div class="specimen-characters-char">Ñ™</div>
+					<div class="specimen-characters-char">Ð¼</div>
+					<div class="specimen-characters-char">Ð½</div>
+					<div class="specimen-characters-char">Ñš</div>
+					<div class="specimen-characters-char">Ð¾</div>
+					<div class="specimen-characters-char">Ð¿</div>
+					<div class="specimen-characters-char">Ñ€</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Ñ‚</div>
+					<div class="specimen-characters-char">Ñ›</div>
+					<div class="specimen-characters-char">Ñƒ</div>
+					<div class="specimen-characters-char">Ñž</div>
+					<div class="specimen-characters-char">Ñ„</div>
+					<div class="specimen-characters-char">Ñ…</div>
+					<div class="specimen-characters-char">Ñ†</div>
+					<div class="specimen-characters-char">Ñ‡</div>
+					<div class="specimen-characters-char">ÑŸ</div>
+					<div class="specimen-characters-char">Ñˆ</div>
+					<div class="specimen-characters-char">Ñ‰</div>
+					<div class="specimen-characters-char">ÑŠ</div>
+					<div class="specimen-characters-char">Ñ‹</div>
+					<div class="specimen-characters-char">ÑŒ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">ÑŽ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Î‘</div>
+					<div class="specimen-characters-char">Î’</div>
+					<div class="specimen-characters-char">Î“</div>
+					<div class="specimen-characters-char">Î”</div>
+					<div class="specimen-characters-char">Î•</div>
+					<div class="specimen-characters-char">Î–</div>
+					<div class="specimen-characters-char">Î—</div>
+					<div class="specimen-characters-char">Î˜</div>
+					<div class="specimen-characters-char">Î™</div>
+					<div class="specimen-characters-char">Îš</div>
+					<div class="specimen-characters-char">Î›</div>
+					<div class="specimen-characters-char">Îœ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Îž</div>
+					<div class="specimen-characters-char">ÎŸ</div>
+					<div class="specimen-characters-char">Î </div>
+					<div class="specimen-characters-char">Î¡</div>
+					<div class="specimen-characters-char">Î£</div>
+					<div class="specimen-characters-char">Î¤</div>
+					<div class="specimen-characters-char">Î¥</div>
+					<div class="specimen-characters-char">Î¦</div>
+					<div class="specimen-characters-char">Î§</div>
+					<div class="specimen-characters-char">Î¨</div>
+					<div class="specimen-characters-char">Î©</div>
+					<div class="specimen-characters-char">Î±</div>
+					<div class="specimen-characters-char">Î²</div>
+					<div class="specimen-characters-char">Î³</div>
+					<div class="specimen-characters-char">Î´</div>
+					<div class="specimen-characters-char">Îµ</div>
+					<div class="specimen-characters-char">Î¶</div>
+					<div class="specimen-characters-char">Î·</div>
+					<div class="specimen-characters-char">Î¸</div>
+					<div class="specimen-characters-char">Î¹</div>
+					<div class="specimen-characters-char">Îº</div>
+					<div class="specimen-characters-char">Î»</div>
+					<div class="specimen-characters-char">Î¼</div>
+					<div class="specimen-characters-char">Î½</div>
+					<div class="specimen-characters-char">Î¾</div>
+					<div class="specimen-characters-char">Î¿</div>
+					<div class="specimen-characters-char">Ï€</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Ïƒ</div>
+					<div class="specimen-characters-char">Ï„</div>
+					<div class="specimen-characters-char">Ï…</div>
+					<div class="specimen-characters-char">Ï†</div>
+					<div class="specimen-characters-char">Ï‡</div>
+					<div class="specimen-characters-char">Ïˆ</div>
+					<div class="specimen-characters-char">Ï‰</div>
+					<div class="specimen-characters-char">Î¬</div>
+					<div class="specimen-characters-char">Î†</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Îˆ</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Î‰</div>
+					<div class="specimen-characters-char">Î¯</div>
+					<div class="specimen-characters-char">ÏŠ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">ÎŠ</div>
+					<div class="specimen-characters-char">ÏŒ</div>
+					<div class="specimen-characters-char">ÎŒ</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Î°</div>
+					<div class="specimen-characters-char">Ï‹</div>
+					<div class="specimen-characters-char">ÎŽ</div>
+					<div class="specimen-characters-char">Î«</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Ä‚</div>
+					<div class="specimen-characters-char">Ã‚</div>
+					<div class="specimen-characters-char">ÃŠ</div>
+					<div class="specimen-characters-char">Ã”</div>
+					<div class="specimen-characters-char">Æ </div>
+					<div class="specimen-characters-char">Æ¯</div>
+					<div class="specimen-characters-char">Äƒ</div>
+					<div class="specimen-characters-char">Ã¢</div>
+					<div class="specimen-characters-char">Ãª</div>
+					<div class="specimen-characters-char">Ã´</div>
+					<div class="specimen-characters-char">Æ¡</div>
+					<div class="specimen-characters-char">Æ°</div>
+					<div class="specimen-characters-char">1</div>
+					<div class="specimen-characters-char">2</div>
+					<div class="specimen-characters-char">3</div>
+					<div class="specimen-characters-char">4</div>
+					<div class="specimen-characters-char">5</div>
+					<div class="specimen-characters-char">6</div>
+					<div class="specimen-characters-char">7</div>
+					<div class="specimen-characters-char">8</div>
+					<div class="specimen-characters-char">9</div>
+					<div class="specimen-characters-char">0</div>
+					<div class="specimen-characters-char">â€˜</div>
+					<div class="specimen-characters-char">?</div>
+					<div class="specimen-characters-char">â€™</div>
+					<div class="specimen-characters-char">â€œ</div>
+					<div class="specimen-characters-char">!</div>
+					<div class="specimen-characters-char">â€</div>
+					<div class="specimen-characters-char">(</div>
+					<div class="specimen-characters-char">%</div>
+					<div class="specimen-characters-char">)</div>
+					<div class="specimen-characters-char">[</div>
+					<div class="specimen-characters-char">#</div>
+					<div class="specimen-characters-char">]</div>
+					<div class="specimen-characters-char">{</div>
+					<div class="specimen-characters-char">@</div>
+					<div class="specimen-characters-char">}</div>
+					<div class="specimen-characters-char">/</div>
+					<div class="specimen-characters-char">&amp;</div>
+					<div class="specimen-characters-char">\</div>
+					<div class="specimen-characters-char">&lt;</div>
+					<div class="specimen-characters-char">-</div>
+					<div class="specimen-characters-char">+</div>
+					<div class="specimen-characters-char">Ã·</div>
+					<div class="specimen-characters-char">Ã—</div>
+					<div class="specimen-characters-char">=</div>
+					<div class="specimen-characters-char">&gt;</div>
+					<div class="specimen-characters-char">Â®</div>
+					<div class="specimen-characters-char">Â©</div>
+					<div class="specimen-characters-char">$</div>
+					<div class="specimen-characters-char">â‚¬</div>
+					<div class="specimen-characters-char">Â£</div>
+					<div class="specimen-characters-char">Â¥</div>
+					<div class="specimen-characters-char">Â¢</div>
+					<div class="specimen-characters-char">:</div>
+					<div class="specimen-characters-char">;</div>
+					<div class="specimen-characters-char">,</div>
+					<div class="specimen-characters-char">.</div>
+					<div class="specimen-characters-char">*</div>
+				</div>
+			</section>
+			<section class="body-characters specimen-characters-module specimen-module fonts-module">
+				<h2 class="font body-font"></h2>
+				<h2 class="specimen-module-title fonts-module-title">Characters</h2>
+				<div class="specimen-characters-module-content">
+					<div class="specimen-characters-char">A</div>
+					<div class="specimen-characters-char">B</div>
+					<div class="specimen-characters-char">C</div>
+					<div class="specimen-characters-char">ÄŒ</div>
+					<div class="specimen-characters-char">Ä†</div>
+					<div class="specimen-characters-char">D</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">E</div>
+					<div class="specimen-characters-char">F</div>
+					<div class="specimen-characters-char">G</div>
+					<div class="specimen-characters-char">H</div>
+					<div class="specimen-characters-char">I</div>
+					<div class="specimen-characters-char">J</div>
+					<div class="specimen-characters-char">K</div>
+					<div class="specimen-characters-char">L</div>
+					<div class="specimen-characters-char">M</div>
+					<div class="specimen-characters-char">N</div>
+					<div class="specimen-characters-char">O</div>
+					<div class="specimen-characters-char">P</div>
+					<div class="specimen-characters-char">Q</div>
+					<div class="specimen-characters-char">R</div>
+					<div class="specimen-characters-char">S</div>
+					<div class="specimen-characters-char">Å </div>
+					<div class="specimen-characters-char">T</div>
+					<div class="specimen-characters-char">U</div>
+					<div class="specimen-characters-char">V</div>
+					<div class="specimen-characters-char">W</div>
+					<div class="specimen-characters-char">X</div>
+					<div class="specimen-characters-char">Y</div>
+					<div class="specimen-characters-char">Z</div>
+					<div class="specimen-characters-char">Å½</div>
+					<div class="specimen-characters-char">a</div>
+					<div class="specimen-characters-char">b</div>
+					<div class="specimen-characters-char">c</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">Ä‡</div>
+					<div class="specimen-characters-char">d</div>
+					<div class="specimen-characters-char">Ä‘</div>
+					<div class="specimen-characters-char">e</div>
+					<div class="specimen-characters-char">f</div>
+					<div class="specimen-characters-char">g</div>
+					<div class="specimen-characters-char">h</div>
+					<div class="specimen-characters-char">i</div>
+					<div class="specimen-characters-char">j</div>
+					<div class="specimen-characters-char">k</div>
+					<div class="specimen-characters-char">l</div>
+					<div class="specimen-characters-char">m</div>
+					<div class="specimen-characters-char">n</div>
+					<div class="specimen-characters-char">o</div>
+					<div class="specimen-characters-char">p</div>
+					<div class="specimen-characters-char">q</div>
+					<div class="specimen-characters-char">r</div>
+					<div class="specimen-characters-char">s</div>
+					<div class="specimen-characters-char">Å¡</div>
+					<div class="specimen-characters-char">t</div>
+					<div class="specimen-characters-char">u</div>
+					<div class="specimen-characters-char">v</div>
+					<div class="specimen-characters-char">w</div>
+					<div class="specimen-characters-char">x</div>
+					<div class="specimen-characters-char">y</div>
+					<div class="specimen-characters-char">z</div>
+					<div class="specimen-characters-char">Å¾</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð‘</div>
+					<div class="specimen-characters-char">Ð’</div>
+					<div class="specimen-characters-char">Ð“</div>
+					<div class="specimen-characters-char">Ò</div>
+					<div class="specimen-characters-char">Ð”</div>
+					<div class="specimen-characters-char">Ð‚</div>
+					<div class="specimen-characters-char">Ð•</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð„</div>
+					<div class="specimen-characters-char">Ð–</div>
+					<div class="specimen-characters-char">Ð—</div>
+					<div class="specimen-characters-char">Ð…</div>
+					<div class="specimen-characters-char">Ð˜</div>
+					<div class="specimen-characters-char">Ð†</div>
+					<div class="specimen-characters-char">Ð‡</div>
+					<div class="specimen-characters-char">Ð™</div>
+					<div class="specimen-characters-char">Ðˆ</div>
+					<div class="specimen-characters-char">Ðš</div>
+					<div class="specimen-characters-char">Ð›</div>
+					<div class="specimen-characters-char">Ð‰</div>
+					<div class="specimen-characters-char">Ðœ</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">ÐŠ</div>
+					<div class="specimen-characters-char">Ðž</div>
+					<div class="specimen-characters-char">ÐŸ</div>
+					<div class="specimen-characters-char">Ð </div>
+					<div class="specimen-characters-char">Ð¡</div>
+					<div class="specimen-characters-char">Ð¢</div>
+					<div class="specimen-characters-char">Ð‹</div>
+					<div class="specimen-characters-char">Ð£</div>
+					<div class="specimen-characters-char">ÐŽ</div>
+					<div class="specimen-characters-char">Ð¤</div>
+					<div class="specimen-characters-char">Ð¥</div>
+					<div class="specimen-characters-char">Ð¦</div>
+					<div class="specimen-characters-char">Ð§</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð¨</div>
+					<div class="specimen-characters-char">Ð©</div>
+					<div class="specimen-characters-char">Ðª</div>
+					<div class="specimen-characters-char">Ð«</div>
+					<div class="specimen-characters-char">Ð¬</div>
+					<div class="specimen-characters-char">Ð­</div>
+					<div class="specimen-characters-char">Ð®</div>
+					<div class="specimen-characters-char">Ð¯</div>
+					<div class="specimen-characters-char">Ð°</div>
+					<div class="specimen-characters-char">Ð±</div>
+					<div class="specimen-characters-char">Ð²</div>
+					<div class="specimen-characters-char">Ð³</div>
+					<div class="specimen-characters-char">Ò‘</div>
+					<div class="specimen-characters-char">Ð´</div>
+					<div class="specimen-characters-char">Ñ’</div>
+					<div class="specimen-characters-char">Ðµ</div>
+					<div class="specimen-characters-char">Ñ‘</div>
+					<div class="specimen-characters-char">Ñ”</div>
+					<div class="specimen-characters-char">Ð¶</div>
+					<div class="specimen-characters-char">Ð·</div>
+					<div class="specimen-characters-char">Ñ•</div>
+					<div class="specimen-characters-char">Ð¸</div>
+					<div class="specimen-characters-char">Ñ–</div>
+					<div class="specimen-characters-char">Ñ—</div>
+					<div class="specimen-characters-char">Ð¹</div>
+					<div class="specimen-characters-char">Ñ˜</div>
+					<div class="specimen-characters-char">Ðº</div>
+					<div class="specimen-characters-char">Ð»</div>
+					<div class="specimen-characters-char">Ñ™</div>
+					<div class="specimen-characters-char">Ð¼</div>
+					<div class="specimen-characters-char">Ð½</div>
+					<div class="specimen-characters-char">Ñš</div>
+					<div class="specimen-characters-char">Ð¾</div>
+					<div class="specimen-characters-char">Ð¿</div>
+					<div class="specimen-characters-char">Ñ€</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Ñ‚</div>
+					<div class="specimen-characters-char">Ñ›</div>
+					<div class="specimen-characters-char">Ñƒ</div>
+					<div class="specimen-characters-char">Ñž</div>
+					<div class="specimen-characters-char">Ñ„</div>
+					<div class="specimen-characters-char">Ñ…</div>
+					<div class="specimen-characters-char">Ñ†</div>
+					<div class="specimen-characters-char">Ñ‡</div>
+					<div class="specimen-characters-char">ÑŸ</div>
+					<div class="specimen-characters-char">Ñˆ</div>
+					<div class="specimen-characters-char">Ñ‰</div>
+					<div class="specimen-characters-char">ÑŠ</div>
+					<div class="specimen-characters-char">Ñ‹</div>
+					<div class="specimen-characters-char">ÑŒ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">ÑŽ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Î‘</div>
+					<div class="specimen-characters-char">Î’</div>
+					<div class="specimen-characters-char">Î“</div>
+					<div class="specimen-characters-char">Î”</div>
+					<div class="specimen-characters-char">Î•</div>
+					<div class="specimen-characters-char">Î–</div>
+					<div class="specimen-characters-char">Î—</div>
+					<div class="specimen-characters-char">Î˜</div>
+					<div class="specimen-characters-char">Î™</div>
+					<div class="specimen-characters-char">Îš</div>
+					<div class="specimen-characters-char">Î›</div>
+					<div class="specimen-characters-char">Îœ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Îž</div>
+					<div class="specimen-characters-char">ÎŸ</div>
+					<div class="specimen-characters-char">Î </div>
+					<div class="specimen-characters-char">Î¡</div>
+					<div class="specimen-characters-char">Î£</div>
+					<div class="specimen-characters-char">Î¤</div>
+					<div class="specimen-characters-char">Î¥</div>
+					<div class="specimen-characters-char">Î¦</div>
+					<div class="specimen-characters-char">Î§</div>
+					<div class="specimen-characters-char">Î¨</div>
+					<div class="specimen-characters-char">Î©</div>
+					<div class="specimen-characters-char">Î±</div>
+					<div class="specimen-characters-char">Î²</div>
+					<div class="specimen-characters-char">Î³</div>
+					<div class="specimen-characters-char">Î´</div>
+					<div class="specimen-characters-char">Îµ</div>
+					<div class="specimen-characters-char">Î¶</div>
+					<div class="specimen-characters-char">Î·</div>
+					<div class="specimen-characters-char">Î¸</div>
+					<div class="specimen-characters-char">Î¹</div>
+					<div class="specimen-characters-char">Îº</div>
+					<div class="specimen-characters-char">Î»</div>
+					<div class="specimen-characters-char">Î¼</div>
+					<div class="specimen-characters-char">Î½</div>
+					<div class="specimen-characters-char">Î¾</div>
+					<div class="specimen-characters-char">Î¿</div>
+					<div class="specimen-characters-char">Ï€</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Ïƒ</div>
+					<div class="specimen-characters-char">Ï„</div>
+					<div class="specimen-characters-char">Ï…</div>
+					<div class="specimen-characters-char">Ï†</div>
+					<div class="specimen-characters-char">Ï‡</div>
+					<div class="specimen-characters-char">Ïˆ</div>
+					<div class="specimen-characters-char">Ï‰</div>
+					<div class="specimen-characters-char">Î¬</div>
+					<div class="specimen-characters-char">Î†</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Îˆ</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Î‰</div>
+					<div class="specimen-characters-char">Î¯</div>
+					<div class="specimen-characters-char">ÏŠ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">ÎŠ</div>
+					<div class="specimen-characters-char">ÏŒ</div>
+					<div class="specimen-characters-char">ÎŒ</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Î°</div>
+					<div class="specimen-characters-char">Ï‹</div>
+					<div class="specimen-characters-char">ÎŽ</div>
+					<div class="specimen-characters-char">Î«</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Ä‚</div>
+					<div class="specimen-characters-char">Ã‚</div>
+					<div class="specimen-characters-char">ÃŠ</div>
+					<div class="specimen-characters-char">Ã”</div>
+					<div class="specimen-characters-char">Æ </div>
+					<div class="specimen-characters-char">Æ¯</div>
+					<div class="specimen-characters-char">Äƒ</div>
+					<div class="specimen-characters-char">Ã¢</div>
+					<div class="specimen-characters-char">Ãª</div>
+					<div class="specimen-characters-char">Ã´</div>
+					<div class="specimen-characters-char">Æ¡</div>
+					<div class="specimen-characters-char">Æ°</div>
+					<div class="specimen-characters-char">1</div>
+					<div class="specimen-characters-char">2</div>
+					<div class="specimen-characters-char">3</div>
+					<div class="specimen-characters-char">4</div>
+					<div class="specimen-characters-char">5</div>
+					<div class="specimen-characters-char">6</div>
+					<div class="specimen-characters-char">7</div>
+					<div class="specimen-characters-char">8</div>
+					<div class="specimen-characters-char">9</div>
+					<div class="specimen-characters-char">0</div>
+					<div class="specimen-characters-char">â€˜</div>
+					<div class="specimen-characters-char">?</div>
+					<div class="specimen-characters-char">â€™</div>
+					<div class="specimen-characters-char">â€œ</div>
+					<div class="specimen-characters-char">!</div>
+					<div class="specimen-characters-char">â€</div>
+					<div class="specimen-characters-char">(</div>
+					<div class="specimen-characters-char">%</div>
+					<div class="specimen-characters-char">)</div>
+					<div class="specimen-characters-char">[</div>
+					<div class="specimen-characters-char">#</div>
+					<div class="specimen-characters-char">]</div>
+					<div class="specimen-characters-char">{</div>
+					<div class="specimen-characters-char">@</div>
+					<div class="specimen-characters-char">}</div>
+					<div class="specimen-characters-char">/</div>
+					<div class="specimen-characters-char">&amp;</div>
+					<div class="specimen-characters-char">\</div>
+					<div class="specimen-characters-char">&lt;</div>
+					<div class="specimen-characters-char">-</div>
+					<div class="specimen-characters-char">+</div>
+					<div class="specimen-characters-char">Ã·</div>
+					<div class="specimen-characters-char">Ã—</div>
+					<div class="specimen-characters-char">=</div>
+					<div class="specimen-characters-char">&gt;</div>
+					<div class="specimen-characters-char">Â®</div>
+					<div class="specimen-characters-char">Â©</div>
+					<div class="specimen-characters-char">$</div>
+					<div class="specimen-characters-char">â‚¬</div>
+					<div class="specimen-characters-char">Â£</div>
+					<div class="specimen-characters-char">Â¥</div>
+					<div class="specimen-characters-char">Â¢</div>
+					<div class="specimen-characters-char">:</div>
+					<div class="specimen-characters-char">;</div>
+					<div class="specimen-characters-char">,</div>
+					<div class="specimen-characters-char">.</div>
+					<div class="specimen-characters-char">*</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>
+	<section id="typeset" class="block type" data-menutitle="Typeset">
+	<div class="wrapper">
+		<h2 class="title">Typeset</h2>
+		<div class="row typeset">
+
+			<h1>Header 1</h1>
+			<h2>Header 2</h2>
+			<h3>Header 3</h3>
+			<h4>Header 4</h4>
+			<h5>Header 5</h5>
+			<h6>Header 6</h6>
+
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicfdng elit. Necessitatibus, quo</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse asperiores quasi minus quo dolore quas.
+			</h2>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quasi officia saepe placeat dolor?
+				Quas laudantium, unde vel!</h3>
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iste nisi, distinctio cumque, eveniet
+				ea dolores rem! Deserunt est libero dolorum, odit mollitia nulla!</h4>
+			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas repudiandae rerum doloremque
+				hic fugit assumenda, in, ea temporibus minus! Eum repudiandae dolorem laudantium quasi.</h5>
+			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, ab aliquam odit tempore nulla? Eveniet
+				doloremque, consequuntur, eaque cumque veritatis dolorem odit voluptatem assumenda, placeat repellat
+				deserunt aliquam culpa
+				animi.</h6>
+
+			<h2>Paragraphs</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				ex ea commodo consequat. Duis aute
+				irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+				occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="javascript:void(0)">eiusmod
+					tempor incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, <a
+					href="javascript:void(0)">quis nostrud
+					exercitation
+					ullamco</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <a
+					href="javascript:void(0)">reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non <a href="javascript:void(0)">proident</a>,
+				sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo
+					consequat. Duis
+					aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+					est laborum.</b></p>
+			<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo
+					consequat. Duis
+					aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+					est laborum.</i></p>
+			<blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat.
+				Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+				occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</blockquote>
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+				</ul>
+			</ul>
+			<ol>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+				</ol>
+			</ol>
+		</div>
+	</div>
+</section>
+	<section id="buttons-regular" class="block button-styles" data-menutitle="Buttons - Regular">
+	<div class="wrapper">
+		<h2 class="title">Button Styles</h2>
+		<div class="row">
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 small">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 small">Button</a>
+			</div>
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 large">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 large">Button</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="buttons-inverted" class="block button-styles blue-bg" data-menutitle="Buttons - Inverted">
+	<div class="wrapper">
+		<div class="row">
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 small">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 small">Button</a>
+			</div>
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 large">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 large">Button</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="tables" class="block tables" data-menutitle="Tables">
+	<div class="wrapper">
+		<h2 class="title">Tables</h2>
+		<div class="row">
+			<div class="col">
+				<div style="overflow-x:auto;">
+					<table>
+						<tr>
+							<th>Lorem ipsum dolor</th>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+					</table>
+				</div>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<div style="overflow-x:auto;">
+					<table>
+						<tr>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="form-elements" class="block forms" data-menutitle="Form Elements">
+	<div class="wrapper">
+		<h1 class="title">Form Elements</h1>
+		<div class="row">
+			<div class="col">
+				<form class="" action="index.html" method="post">
+					<fieldset>
+						<input type="text" name="" value="" placeholder="Text">
+						<input type="email" name="" value="" placeholder="Email">
+						<input type="number" name="" value="" placeholder="Number">
+						<input type="password" name="" value="" placeholder="Password">
+						<input type="date" name="" value="" placeholder="Date">
+						<input type="file" name="" value="" placeholder="File">
+						<input type="range" name="" value="" min="0" max="100" placeholder="Range">
+						<input type="search" name="" value="" placeholder="Search">
+						<input type="tel" name="" value="" placeholder="Telephone">
+						<input type="url" name="" value="" placeholder="Url">
+						<input type="text" name="" value="" placeholder="Read Only" readonly>
+						<input type="text" name="" value="" placeholder="Disabled" disabled>
+
+					</fieldset>
+					<fieldset>
+						<label for="radio-1">
+							Radio 1
+							<input id="radio-1" type="radio" name="radio" value="Radio 1">
+						</label>
+						<label for="radio-2">
+							Radio 2
+							<input id="radio-2" type="radio" name="radio" value="Radio 2">
+						</label>
+						<label for="radio-3">
+							Radio 3
+							<input id="radio-3" type="radio" name="radio" value="Radio 3">
+						</label>
+					</fieldset>
+					<fieldset>
+						<label for="checkbox-1">
+							Checkbox 1
+							<input id="checkbox-1" type="checkbox" name="checkbox-1" value="Test">
+						</label>
+						<label for="checkbox-2">
+							Checkbox 2
+							<input id="checkbox-2" type="checkbox" name="checkbox-2" value="Test">
+						</label>
+						<label for="checkbox-3">
+							Checkbox 3
+							<input id="checkbox-3" type="checkbox" name="checkbox-3" value="Test">
+						</label>
+					</fieldset>
+					<select class="" name="">
+						<option value="">Label 1</option>
+						<option value="">Label 2</option>
+						<option value="">Label 3</option>
+					</select>
+					<textarea name="name" rows="8" cols="80"></textarea>
+					<button type="button" name="button" onclick="alert('Clicked!')">Submit</button>
+					<input type="reset">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="hero-02-style-1-right" class="wp-block-mightily-hero-02 block hero style-1 content-right" data-menutitle="Hero 02 Style 1 - Right">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+					<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h1 class="label icon icon-hiking">Label</h1>
+					<h2 class="title">Hero 02 Style 1</h2>
+					<p class="copy">Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="hero-02-style-1-left" class="wp-block-mightily-hero-02 block hero style-1 content-left" data-menutitle="Hero 02 Style 1 - Left">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+					<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title">Hero 02 Style 1</h2>
+					<p class="copy">Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="hero-style-2-left" class="wp-block-mightily-hero-02 block hero style-3 content-left" data-menutitle="Hero - Style 2 Content Left">
+	<div class="wrapper">
+		<div class="background-image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+			<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden"/>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<div class="sunrise icon-sun">
+						<h1 class="label">Sunrise <time class="time">8:01 AM</time> <span class="dot">•</span> Sunset <time class="time">7:46 PM</time></h1>
+						<p>Other content can go below.</p>
+					</div>
+					<h2 class="title">Hero 02 Style 3</h2>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="hero-style-6-left" class="wp-block-mightily-hero-02 block hero style-6 content-left" data-menutitle="Hero - Style 6 Content Left">
+	<div class="wrapper">
+		<div class="background-image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+			<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden"/>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title">Hero 02 Style 6</h2>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+					
+					<p class="address">234 Street Name, Louisville, KY 40245</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section id="hero-style-3-right" class="block hero style-3 content-right" data-menutitle="Hero - Style 3 Content Right">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image: url('https://via.placeholder.com/600x400.png');">
+					<img class="visually-hidden" src="https://via.placeholder.com/600x400.png" alt="">
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h2>Hero Style 3 - Content Right</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea
+						commodo consequat. Duis aute.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+	<section id="hero-style-4-right" class="block hero style-4 content-right" data-menutitle="Hero - Style 4 Content Right">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image: url('https://via.placeholder.com/600x400.png');">
+					<img class="visually-hidden" src="https://via.placeholder.com/600x400.png" alt="">
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h2>Hero Style 4 - Content Right</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea
+						commodo consequat. Duis aute.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+	<section id="listing-list" class="block listing card-set list" data-menutitle="Listing - List">
+	<div class="wrapper">
+		<h2 class="section-title">Listing - List</h2>
+		<ul class="deck-of-cards">
+			<li class="block-single-card post" v-for="n in 8">
+				<figure class="wp-block-image">
+	<img src="https://via.placeholder.com/400x280" alt="Image description" sizes="(max-width: 1024px) 100vw, 1024px">
+</figure>
+<div class="text">
+	<p class="category">Category</p>
+	<p class="author">Author Name Here</p>
+	<h3 class="title">
+		<a class="link" href="#" target="_self">Card Title</a>
+	</h3>
+	<p class="excerpt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+</div>
+			</li>
+		</ul>
+		<div class="pagination">
+			<div class="facetwp-pager">
+				<a class="facetwp-page first active" data-page="1">1</a>
+				<a class="facetwp-page last" data-page="2">2</a>
+				<a class="facetwp-page next" data-page="2">&gt;&gt;</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="listing-grid" class="block listing card-set grid" data-menutitle="Listing - Grid">
+	<div class="wrapper">
+		<h2 class="section-title">Listing - Grid</h2>
+		<ul class="deck-of-cards">
+			<li class="block-single-card post" v-for="n in 8">
+				<figure class="wp-block-image">
+	<img src="https://via.placeholder.com/400x280" alt="Image description" sizes="(max-width: 1024px) 100vw, 1024px">
+</figure>
+<div class="text">
+	<p class="category">Category</p>
+	<p class="author">Author Name Here</p>
+	<h3 class="title">
+		<a class="link" href="#" target="_self">Card Title</a>
+	</h3>
+	<p class="excerpt">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+</div>
+			</li>
+		</ul>
+		<div class="pagination">
+			<div class="facetwp-pager">
+				<a class="facetwp-page first active" data-page="1">1</a>
+				<a class="facetwp-page last" data-page="2">2</a>
+				<a class="facetwp-page next" data-page="2">&gt;&gt;</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="accordion-list" class="block accordion list-view" data-menutitle="Accordions - List">
+	<div class="wrapper">
+		<h2 class="title">Accordions</h2> <!-- Style guide title -->
+		<details class="accordion-item" open>
+			<summary class="accordion-title">Accordion Title</summary>
+			<div class="accordion-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor similique tenetur,
+					ducimus sapiente possimus. Ut quos incidunt debitis accusantium temporibus perferendis,
+					consectetur voluptatum esse illum doloribus
+					est atque rem soluta
+					sequi nostrum accusamus consequuntur tempore unde illo adipisci. Rerum, eum illo, facere
+					est aperiam, quam molestiae dolorum explicabo libero sunt alias perspiciatis earum
+					sequi. Soluta est, doloribus ipsum
+					dignissimos maxime animi quae
+					porro suscipit molestias optio, vero cum asperiores totam officia quia tenetur ipsam ad
+					sed reprehenderit delectus minima quidem ratione labore. Mollitia, laboriosam voluptate
+					quasi veritatis cum. Voluptas, cum
+					modi odio, dicta ducimus
+					veniam possimus facilis dolorum incidunt repellendus nemo accusantium iste voluptatum
+					dolor non illo officia id, perferendis, odit nisi tenetur aliquid! Eligendi voluptatum,
+					rem dolore ducimus doloribus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem esse
+					repellendus accusantium adipisci consequatur, natus eum expedita distinctio nihil porro
+					in ut, commodi, omnis saepe dolorem
+					officia illo atque quae
+					mollitia magnam quas dignissimos! Consequuntur ut, impedit similique, eius nobis
+					facilis? Rerum, tempora blanditiis quo ad at. Pariatur dolorem impedit repellat expedita
+					quidem sunt modi ad veritatis, placeat
+					beatae fuga quod nemo harum
+					inventore laudantium ducimus ipsam ipsum asperiores deleniti cum quasi nam! Vel
+					quibusdam porro error laborum quas numquam inventore velit illo, magnam delectus beatae
+					facilis dicta cum iste aperiam. Repudiandae
+					amet, aspernatur ex.
+					Voluptates, alias! Et fugiat recusandae quos excepturi incidunt eaque placeat id, ipsa
+					eveniet consectetur unde maiores dolorum officiis esse ratione, omnis cumque! Vitae amet
+					incidunt ea architecto fugiat
+					reiciendis nisi, quae autem veniam
+					quasi aspernatur, dignissimos perspiciatis natus, corporis fugit aut reprehenderit
+					atque. Ea tempora voluptatibus quidem iure magnam, doloremque. Dicta laborum atque
+					aliquid alias, eligendi voluptates assumenda, at
+					quas sint repellendus,
+					nobis nam vitae velit fugiat maiores, incidunt error itaque quod dolorem minima optio
+					blanditiis mollitia! Beatae quam dignissimos vitae recusandae accusantium maxime iure,
+					esse iusto totam. Ipsam animi, dolore
+					quae! Perspiciatis
+					voluptatibus nemo voluptas repellendus odit ipsa quia dicta inventore eligendi dolore
+					animi, fuga deleniti accusantium cumque voluptatum nihil porro! Vitae omnis labore
+					commodi eius cupiditate perferendis quaerat
+					sunt molestiae dignissimos
+					blanditiis.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+				</ul>
+				<div class="buttons">
+					<a href="#" target="_self" class="btn">Button TItle</a>
+					<a href="#" target="_self" class="btn">Button TItle</a>
+				</div>
+			</div>
+		</details>
+		<details class="accordion-item" open>
+			<summary class="accordion-title">Accordion Title</summary>
+			<div class="accordion-content">
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</details>
+		<details class="accordion-item" open>
+			<summary class="accordion-title">Accordion Title</summary>
+			<div class="accordion-content">
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+			</div>
+		</details>
+    </div>
+</section>
+
+	<section id="sliders" class="block gallery slider-with-nav images" data-menutitle="Sliders">
+    <div class="wrapper">
+        <h2 class="title">Gallery - Slider</h2> <!-- Style guide title -->
+        <div class="items" data-id="1" data-slick='{
+            "slidesToShow": 1, 
+            "slidesToScroll": 1, 
+            "asNavFor": ".block.slider-with-nav .items-nav", 
+            "arrows": false, 
+            "fade": true,
+            "adaptiveHeight": true,
+            "responsive": [{"breakpoint": 768,"settings": {"arrows": true}}]
+        }'>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x600.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x600.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/800x480.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x580.png" alt="Image description" />
+            </div>
+        </div>
+        <!-- Echo the block index into the slider-nav class -->
+        <div class="items-nav" data-id="1" data-slick='{
+            "slidesToShow": 3, 
+            "slidesToScroll": 1, 
+            "asNavFor": ".block.slider-with-nav .items", 
+            "arrows": true, 
+            "focusOnSelect": true
+        }'>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x1000.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x600.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/800x480.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1000x580.png" alt="Image description" />
+            </div>
+        </div>
+    </div>
+</section>
+                    
+<section id="gallery" class="block gallery slider logos">
+    <div class="wrapper">
+        <h2 class="title">Logo - Slider</h2>
+        <div class="items" data-slick='{
+            "slidesToShow": 5,
+            "slidesToScroll": 1,
+            "arrows": true,
+            "autoplay": true,
+            "infinite": true,
+            "responsive": [{"breakpoint": 768,"settings": {"slidesToShow": 3, "slidesToScroll": 1}}]
+        }'>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/300x300.png" alt="Image description" />
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+    <div class="wrapper">
+        <nav>
+            <ul class="footer-menu">
+                <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                <li class="menu-item"><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </nav>
+        <ul class="social-menu">
+            <li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li class="menu-item"><a href="https://twitter.com/" target="_blank"><span class="visually-hide-text">Twitter</span><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="menu-item"><a href="https://www.linkedin.com/" target="_blank"><span class="visually-hide-text">LinkedIn</span><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</footer>
+
+</div> <!-- End #app -->
+
+<!-- development version of vue.js, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="assets/js/bundle.js"></script>
+</body>
+
+</html>

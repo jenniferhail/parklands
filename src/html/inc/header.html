@@ -1,0 +1,116 @@
+@include('head.html')
+
+<div id="app">
+
+	<nav class="skip-nav">
+		<ul class="skip-menu">
+			<a href="#nav-toggle" class="menu-item">Skip to main menu</a>
+			<a href="#main" class="menu-item">Skip to main content</a>
+		</ul>
+	</nav>
+
+	<header class="header">
+		@include('notifications.html')
+
+		<div class="wrapper mobile-bar">
+			<div class="row">
+				<a class="logo" href="/" target="_self">
+					<img class="svg" src="assets/img/logo-green.svg" alt="Title Here">
+				</a>
+				<nav class="top-menu">
+					<ul class="main-menu">
+						<li class="menu-item donate button"><a href="#">Donate</a></li>
+						<li class="menu-item cfs"><a href="#">CFS</a></li>
+						<li id="weather-forecast" class="menu-item weather">
+							<button id="weather-trigger">
+								<weather-data></weather-data>
+							</button>
+						</li>
+						<!-- <li id="weather-forecast" class="menu-item weather"><a href="#">Weather</a></li> -->
+						<li class="menu-item search">
+							<a href="#">Search</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="bottom-menu">
+					<ul class="main-menu bottom">
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<!-- <button class="submenu-btn" aria-expanded="false"><i class="fas fa-caret-down" aria-hidden="true"></i><span><span class="visually-hidden">Show Submenu for "Link"</span></span></button> -->
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<button id="nav-toggle" class="nav-toggle">
+						<span class="toggle-wrapper">
+							<span class="toggle-bar toggle-bar-1"></span>
+							<span class="toggle-bar toggle-bar-2"></span>
+							<span class="toggle-bar toggle-bar-3"></span>
+							<span class="toggle-bar toggle-bar-4"></span>
+						</span>
+						<span class="visually-hide-text">Show Main Menu</span>
+					</button>
+				</nav>
+			</div>
+			<nav class="hamburger-menu">
+				<div class="wrapper">
+					<ul class="main-menu">
+						<li class="menu-item"><a href="/styleguide.html">Style Guide</a></li>
+						<li class="menu-item"><a href="/scratchpad.html">Scratch Pad</a></li>
+						<li class="menu-item"><a href="/single.html">Single Post</a></li>
+						<li class="menu-item"><a href="/profile.html">Profile</a></li>
+						<li class="menu-item"><a href="/404.html">404 Page</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item newsletter"><a href="#">Newsletter Sign-Up</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<ul class="social-menu">
+						<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+									class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+									class="visually-hide-text">Twitter</span><i class="fab fa-twitter"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+									class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+									class="visually-hide-text">YouTube</span><i class="fab fa-youtube"
+									aria-hidden="true"></i></a></li>
+					</ul>
+					<div class="contact">
+						<p>© 21st Century Parks, Inc. 2020</br>
+							Mailing Address:</br>
+							471 West Main Street, Suite 202</br>
+							Louisville, KY 40202</p>
+					</div>
+				</div>
+				<!-- <ul class="main-menu">
+                    <li class="menu-item" v-for="layout in layouts">
+                        <a v-bind:href="'/#' + layout.id">{{layout.dataset.menutitle}}</a>
+                    </li>
+                </ul> -->
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="main">

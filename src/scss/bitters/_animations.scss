@@ -1,0 +1,46 @@
+// Anime JS Fading Resets
+.block,
+.block.cards .col {
+	opacity: 0;
+}
+body.home .block.hero.style-4 {
+	// Targeting content directly in hero style 4,
+	// Not the nested hero style 3
+	& > .wrapper {
+		.image,
+		.moving-clouds,
+		.content {
+			opacity: 0;
+		}
+	}
+}
+
+// Home Page, Hero Style 4
+.moving-clouds {
+	position: absolute;
+	z-index: 1;
+	top: 18em;
+	left: 0;
+	width: 12030px; // 250.625em
+	height: 700px; // 43.75em
+	opacity: 0; // 0.85
+	background-repeat: repeat-x;
+	animation: cloudLoop 120s linear infinite;
+	@media ($mobile-only) {
+		display: none;
+	}
+}
+
+.block.hero.style-4 {
+	overflow: hidden;
+}
+
+@keyframes cloudLoop {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		// transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-4010px, 0, 0);
+	}
+}

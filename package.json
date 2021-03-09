@@ -1,0 +1,43 @@
+{
+	"name": "mightily",
+	"version": "3.0.0",
+	"description": "Doing less to make more.",
+	"author": {
+		"name": "Mightily",
+		"url": "http://mightily.com"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.8.3",
+		"babelify": "^10.0.0",
+		"browser-sync": "^2.26.7",
+		"browserify": "^16.5.0",
+		"del": "^5.1.0",
+		"gulp": "4.0.2",
+		"gulp-autoprefixer": "7.0.1",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-concat": "2.6.1",
+		"gulp-eslint": "^6.0.0",
+		"gulp-file-include": "^2.1.1",
+		"gulp-hash": "^4.2.2",
+		"gulp-notify": "^3.2.0",
+		"gulp-rename": "2.0.0",
+		"gulp-sass": "4.0.2",
+		"gulp-uglify": "3.0.2",
+		"jquery": "^3.4.1",
+		"lazypipe": "1.0.2",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-paths": "^3.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"dependencies": {
+		"animejs": "^3.2.1",
+		"countup": "^1.8.2",
+		"gulp-include": "^2.4.1",
+		"gulp-sourcemaps": "^2.6.5",
+		"lottie-web": "^5.7.3",
+		"micromodal": "^0.4.6",
+		"slick-carousel": "^1.8.1",
+		"slick-lightbox": "^0.2.12"
+	}
+}

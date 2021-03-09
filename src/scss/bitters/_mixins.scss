@@ -1,0 +1,398 @@
+@mixin disableLists() {
+	ul,
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li:before {
+			content: none;
+		}
+	}
+}
+
+@mixin content($position) {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+
+	@if $position==right {
+		flex-direction: row;
+		justify-content: flex-end;
+	} @else if $position==left {
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+	} @else if $position==center {
+		justify-content: center;
+		flex-direction: row;
+		text-align: center;
+	}
+}
+
+@mixin flex($direction: row, $align: center, $justify: center) {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+@mixin flexChild($width, $size: 1) {
+	flex: $size 0 $width;
+	max-width: $width;
+}
+
+@mixin flexOneChild($position) {
+	padding: 20px;
+
+	@if $position==left {
+		@media ($mobile-sm) {
+			padding: 20px 0 20px 20px;
+		}
+
+		@media ($tablet) {
+			padding: 60px 0 60px 60px;
+		}
+	} @else if $position==right {
+		@media ($mobile-sm) {
+			padding: 60px 20px 60px 0;
+		}
+
+		@media ($tablet) {
+			padding: 60px 60px 60px 0;
+		}
+	} @else if $position==center {
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+		text-align: center;
+
+		.content {
+			text-align: center;
+		}
+	}
+}
+
+@mixin centerBtns() {
+	.wp-block-buttons {
+		justify-content: center;
+	}
+}
+
+@mixin fullbleed($height, $minHeight) {
+	.wrapper {
+		position: relative;
+		height: $height;
+		min-height: $minHeight;
+	}
+
+	.image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+@mixin fullbleedTrick() {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+@mixin box() {
+	padding: 30px;
+	background-color: $faded-black;
+
+	> * {
+		color: $white;
+	}
+}
+
+// Icon classes
+$icons: "sun", "walking", "paddling", "fishing", "learning", "biking",
+	"tail-wagging";
+
+@each $icon in $icons {
+	.icon-#{$icon} {
+		background-image: url($img-path + "icons/" + $icon + ".svg");
+		background-repeat: no-repeat;
+		background-size: 26px 26px;
+	}
+}
+
+// Weather Icons
+$weatherIcons: "skc" "sunny",
+	// Fair/clear
+	"few" "partly-cloudy",
+	// A few clouds
+	"sct" "partly-cloudy",
+	// Partly cloudy
+	"bkn" "cloudy",
+	// Mostly cloudy
+	"ovc" "overcast",
+	// Overcast
+	"wind_skc" "wind",
+	// Fair/clear and windy
+	"wind_few" "wind",
+	// A few clouds and windy
+	"wind_sct" "wind",
+	// Partly cloudy and windy
+	"wind_bkn" "wind",
+	// Mostly cloudy and windy
+	"wind_ovc" "wind",
+	// Overcast and windy
+	"snow" "snow",
+	// Snow
+	"rain_snow" "snow",
+	// Rain/snow
+	"rain_sleet" "sleet",
+	// Rain/sleet
+	"snow_sleet" "sleet",
+	// Snow/sleet
+	"fzra" "freezing-rain",
+	// Freezing rain
+	"rain_fzra" "freezing-rain",
+	// Rain/freezing rain
+	"snow_fzra" "snow",
+	// Freezing rain/snow
+	"sleet" "sleet",
+	// Sleet
+	"rain" "raining",
+	// Rain
+	"rain_showers" "raining",
+	// Rain showers (high cloud cover)
+	"rain_showers_hi" "raining",
+	// Rain showers (low cloud cover)
+	"tsra" "thunderstorm",
+	// Thunderstorm (high cloud cover)
+	"tsra_sct" "thunderstorm",
+	// Thunderstorm (medium cloud cover)
+	"tsra_hi" "thunderstorm",
+	// Thunderstorm (low cloud cover)
+	"tornado" "tornado",
+	// Tornado
+	"hurricane" "thunderstorm",
+	// Hurricane conditions
+	"tropical_storm" "thunderstorm",
+	// Tropical storm conditions
+	"dust" "dust",
+	// Dust
+	"smoke" "smoke",
+	// Smoke
+	"haze" "haze",
+	// Haze
+	"hot" "sunny",
+	// Hot
+	"cold" "snow",
+	// Cold
+	"blizzard" "blizzard",
+	// Blizzard
+	"fog" "fog",
+	// Fog/mist
+	"skc-day" "sunny",
+	// Fair/clear
+	"few-day" "partly-cloudy",
+	// A few clouds
+	"sct-day" "partly-cloudy",
+	// Partly cloudy
+	"bkn-day" "cloudy",
+	// Mostly cloudy
+	"ovc-day" "overcast",
+	// Overcast
+	"wind_skc-day" "wind",
+	// Fair/clear and windy
+	"wind_few-day" "wind",
+	// A few clouds and windy
+	"wind_sct-day" "wind",
+	// Partly cloudy and windy
+	"wind_bkn-day" "wind",
+	// Mostly cloudy and windy
+	"wind_ovc-day" "wind",
+	// Overcast and windy
+	"snow-day" "snow",
+	// Snow
+	"rain_snow-day" "snow",
+	// Rain/snow
+	"rain_sleet-day" "sleet",
+	// Rain/sleet
+	"snow_sleet-day" "sleet",
+	// Snow/sleet
+	"fzra-day" "freezing-rain",
+	// Freezing rain
+	"rain_fzra-day" "freezing-rain",
+	// Rain/freezing rain
+	"snow_fzra-day" "snow",
+	// Freezing rain/snow
+	"sleet-day" "sleet",
+	// Sleet
+	"rain-day" "raining",
+	// Rain
+	"rain_showers-day" "raining",
+	// Rain showers (high cloud cover)
+	"rain_showers_hi-day" "raining",
+	// Rain showers (low cloud cover)
+	"tsra-day" "thunderstorm",
+	// Thunderstorm (high cloud cover)
+	"tsra_sct-day" "thunderstorm",
+	// Thunderstorm (medium cloud cover)
+	"tsra_hi-day" "thunderstorm",
+	// Thunderstorm (low cloud cover)
+	"tornado-day" "tornado",
+	// Tornado
+	"hurricane-day" "thunderstorm",
+	// Hurricane conditions
+	"tropical_storm-day" "thunderstorm",
+	// Tropical storm conditions
+	"dust-day" "dust",
+	// Dust
+	"smoke-day" "smoke",
+	// Smoke
+	"haze-day" "haze",
+	// Haze
+	"hot-day" "sunny",
+	// Hot
+	"cold-day" "snow",
+	// Cold
+	"blizzard-day" "blizzard",
+	// Blizzard
+	"fog-day" "fog",
+	// Fog/mist
+	// NIGHT
+	"skc-night" "fair-clear",
+	// Fair/clear
+	"few-night" "partly-cloudy",
+	// A few clouds
+	"sct-night" "partly-cloudy",
+	// Partly cloudy
+	"bkn-night" "cloudy",
+	// Mostly cloudy
+	"ovc-night" "overcast",
+	// Overcast
+	"wind_skc-night" "wind",
+	// Fair/clear and windy
+	"wind_few-night" "wind",
+	// A few clouds and windy
+	"wind_sct-night" "wind",
+	// Partly cloudy and windy
+	"wind_bkn-night" "wind",
+	// Mostly cloudy and windy
+	"wind_ovc-night" "wind",
+	// Overcast and windy
+	"snow-night" "snow",
+	// Snow
+	"rain_snow-night" "snow",
+	// Rain/snow
+	"rain_sleet-night" "sleet",
+	// Rain/sleet
+	"snow_sleet-night" "sleet",
+	// Snow/sleet
+	"fzra-night" "freezing-rain",
+	// Freezing rain
+	"rain_fzra-night" "freezing-rain",
+	// Rain/freezing rain
+	"snow_fzra-night" "snow",
+	// Freezing rain/snow
+	"sleet-night" "sleet",
+	// Sleet
+	"rain-night" "raining",
+	// Rain
+	"rain_showers-night" "raining",
+	// Rain showers (high cloud cover)
+	"rain_showers_hi-night" "raining",
+	// Rain showers (low cloud cover)
+	"tsra-night" "thunderstorm",
+	// Thunderstorm (high cloud cover)
+	"tsra_sct-night" "thunderstorm",
+	// Thunderstorm (medium cloud cover)
+	"tsra_hi-night" "thunderstorm",
+	// Thunderstorm (low cloud cover)
+	"tornado-night" "tornado",
+	// Tornado
+	"hurricane-night" "thunderstorm",
+	// Hurricane conditions
+	"tropical_storm-night" "thunderstorm",
+	// Tropical storm conditions
+	"dust-night" "dust",
+	// Dust
+	"smoke-night" "smoke",
+	// Smoke
+	"haze-night" "haze",
+	// Haze
+	"hot-night" "sunny",
+	// Hot
+	"cold-night" "snow",
+	// Cold
+	"blizzard-night" "blizzard",
+	// Blizzard
+	"fog-night" "fog";
+
+@each $abbr, $weatherIcon in $weatherIcons {
+	.icon.#{$abbr} {
+		background-image: url($img-path + "weather/" + $weatherIcon + ".svg");
+		background-repeat: no-repeat;
+		background-size: 30px 30px;
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+// Link Underline
+@mixin text-underline-crop($background) {
+	text-shadow: 0.03em 0 $background, -0.03em 0 $background,
+		0 0.03em $background, 0 -0.03em $background, 0.06em 0 $background,
+		-0.06em 0 $background, 0.09em 0 $background, -0.09em 0 $background,
+		0.12em 0 $background, -0.12em 0 $background, 0.15em 0 $background,
+		-0.15em 0 $background;
+}
+
+@mixin text-background($color-bg, $color-text) {
+	background-image: linear-gradient($color-text, $color-text);
+	background-size: 1px 1px;
+	background-repeat: repeat-x;
+	background-position: 0% 95%;
+}
+
+@mixin text-selection($selection) {
+	&::selection {
+		@include text-underline-crop($selection);
+
+		background: $selection;
+	}
+
+	&::-moz-selection {
+		@include text-underline-crop($selection);
+
+		background: $selection;
+	}
+}
+
+@mixin link-underline($background, $text, $selection) {
+	@include text-underline-crop($background);
+	@include text-background($background, $text);
+	@include text-selection($selection);
+
+	color: $text;
+	text-decoration: none;
+
+	*,
+	*:after,
+	&:after,
+	*:before,
+	&:before {
+		text-shadow: none;
+	}
+
+	&:visited {
+		color: $text;
+	}
+}
+
+// End Link Underline

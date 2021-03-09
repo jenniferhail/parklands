@@ -1,0 +1,341 @@
+.header {
+	@include disableLists;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background-color: $black;
+	transition: background-color $base-duration $base-timing;
+
+	@media ($menu) {
+		background-color: rgba(0, 0, 0, 0.82);
+	}
+
+	.logged-in & {
+		top: 32px;
+	}
+
+	.wrapper {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		@media ($menu) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		&.mobile-bar {
+			@media ($mobile-only) {
+				padding: 0;
+			}
+			.row {
+				@media ($mobile-only) {
+					padding: 10px 30px;
+					background-color: black;
+				}
+			}
+		}
+	}
+
+	.row {
+		position: relative;
+		width: 100%;
+		@include flex($justify: space-between);
+		flex-wrap: wrap;
+		z-index: 5;
+	}
+
+	.logo {
+		display: inline-block;
+		width: 100%;
+		max-width: 115px;
+		flex: 1 0 0;
+
+		@media ($menu) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		@media ($mobile-only) {
+			margin-right: 10px;
+		}
+
+		svg {
+			display: block;
+			max-height: 50px;
+		}
+	}
+
+	.social-menu {
+		padding: 30px 0;
+
+		@media ($mobile-only) {
+			text-align: center;
+		}
+	}
+
+	.hamburger-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		padding-top: 120px;
+		padding-bottom: 80px;
+		overflow-y: scroll;
+		z-index: 4;
+		opacity: 0;
+		pointer-events: none;
+		color: $white;
+		background-color: #000000;
+		transform: translateX(101%);
+		transition: transform 500ms $base-timing, opacity 0ms $base-timing 500ms;
+
+		@media ($menu) {
+			text-align: right;
+			background-color: rgba(0, 0, 0, 0.82);
+		}
+	}
+
+	.contact {
+		@media ($mobile-only) {
+			text-align: center;
+		}
+	}
+}
+
+.home .header {
+	@media ($menu) {
+		background-color: $transparent;
+	}
+	&.scrolled {
+		@media ($menu) {
+			background-color: rgba(0, 0, 0, 0.82);
+		}
+	}
+}
+
+.header.active {
+	.hamburger-menu {
+		opacity: 1;
+		pointer-events: visible;
+		transform: translateX(0);
+		transition: transform 500ms $base-timing, opacity 0ms $base-timing;
+	}
+
+	.nav-toggle {
+		.toggle-bar-1 {
+			top: 18px;
+			width: 0%;
+			left: 50%;
+		}
+
+		.toggle-bar-2 {
+			transform: rotate(45deg);
+		}
+
+		.toggle-bar-3 {
+			transform: rotate(-45deg);
+		}
+
+		.toggle-bar-4 {
+			top: 18px;
+			width: 0%;
+			left: 50%;
+		}
+	}
+}
+
+// Hamburger Menu
+.nav-toggle {
+	display: block;
+	padding: 5px 0;
+	z-index: 5;
+	border: none;
+	background-color: transparent;
+
+	@media ($mobile-only) {
+		margin-left: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+	}
+
+	.toggle-wrapper {
+		display: block;
+		width: 32px;
+		height: 20px;
+		margin: 0 auto;
+		position: relative;
+		transform: rotate(0deg);
+		transition: 0.5s ease-in-out;
+		cursor: pointer;
+	}
+
+	.toggle-bar {
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background-color: $white;
+		border-radius: 50px;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: 0.25s ease-in-out;
+	}
+
+	.toggle-bar-1 {
+		top: 0px;
+		width: 23px;
+	}
+
+	.toggle-bar-2,
+	.toggle-bar-3 {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.toggle-bar-4 {
+		bottom: 0;
+		width: 27px;
+	}
+}
+
+// Nav search
+.menu-item.search {
+	width: 100%;
+	min-width: 350px;
+	overflow: hidden;
+	z-index: 0;
+	opacity: 0;
+	transition: z-index $base-duration $base-timing 300ms;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	&:focus {
+		z-index: 2;
+	}
+
+	&.ready {
+		opacity: 1;
+	}
+
+	&.active {
+		z-index: 2;
+		transition: z-index $base-duration $base-timing;
+
+		.search-container {
+			transform: translate(48px, 0);
+		}
+	}
+
+	a {
+		display: block;
+		line-height: 16px;
+		padding: 16px 15px 14px;
+	}
+
+	i {
+		font-size: 20px;
+	}
+
+	.search-container {
+		position: relative;
+		display: flex;
+		align-items: stretch;
+		left: -30px;
+		transform: translate(100%, 0);
+		transition: transform $base-duration $base-timing;
+		@media ($menu) {
+			left: -45px;
+		}
+	}
+
+	form {
+		position: relative;
+		display: flex;
+		width: 100%;
+	}
+
+	label,
+	input[type="text"] {
+		margin-bottom: 0;
+	}
+
+	label {
+		flex: 1 0 0;
+	}
+
+	input[type="text"] {
+		width: 100%;
+		padding: 8px 0 2px;
+		border: none;
+		border-bottom: 1px solid $white;
+		background: $transparent;
+		box-shadow: none;
+		color: $white;
+	}
+
+	button {
+		background: $transparent;
+		color: $white;
+
+		&:focus {
+			outline: $focus-outline;
+			outline-offset: -2px;
+		}
+	}
+
+	.open-search {
+		position: relative;
+		z-index: 1;
+		padding: 8px 6px 0;
+		border: none;
+		@media ($menu) {
+			padding: 8px 15px 0px;
+		}
+	}
+
+	.submit {
+		padding: 16px 0 14px 10px;
+		font-family: $base-font-family;
+		-webkit-font-smoothing: antialiased;
+		font-weight: 600;
+		line-height: 1;
+		letter-spacing: 0.5px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: none;
+		background: none;
+		color: $green;
+
+		&:hover {
+			background-color: $transparent;
+		}
+	}
+
+	.close {
+		width: 40px;
+		height: 46px;
+		margin-left: 5px;
+		padding: 5px 5px 11px;
+		text-decoration: none;
+		border: none;
+		background: none;
+
+		&:after {
+			@include triangle(right, $green, 13px);
+		}
+	}
+}

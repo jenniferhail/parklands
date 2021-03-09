@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The Parklands</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://use.typekit.net/pkd5ooe.css">
+	<!-- <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+	<script src="https://kit.fontawesome.com/15caa5e93e.js" crossorigin="anonymous"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+	<link rel="manifest" href="../favicon.ico/site.webmanifest">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="front-end home">
+
+<div id="app">
+
+	<nav class="skip-nav">
+		<ul class="skip-menu">
+			<a href="#nav-toggle" class="menu-item">Skip to main menu</a>
+			<a href="#main" class="menu-item">Skip to main content</a>
+		</ul>
+	</nav>
+
+	<header class="header">
+		<!-- <div id="33" class="site-alert option notification top">
+    <div class="wrapper">
+        <h1 class="title h3">Site Alert: Site Alert Test</h1>
+        <p>This is the Site Alert Test</p>
+        <a href="https://staging.theparklands.org/site-alert-test/" class="link">Read More</a>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+<!-- <div class="park-alert option notification top">
+    <div class="wrapper">
+        <p>An exciting notification can go here!</p>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+<!-- <div class="option notification bottom">
+    <div class="wrapper">
+        <p>A cookie notice can go here! To provide a more personalized user experience, including content, ads and social media features, our website uses pixels and cookies. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. By continuing on this website, you consent to use of our pixels and cookies. For more information, visit our Privacy Policy.</p>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+		<div class="wrapper mobile-bar">
+			<div class="row">
+				<a class="logo" href="/" target="_self">
+					<img class="svg" src="assets/img/logo-green.svg" alt="Title Here">
+				</a>
+				<nav class="top-menu">
+					<ul class="main-menu">
+						<li class="menu-item donate button"><a href="#">Donate</a></li>
+						<li class="menu-item cfs"><a href="#">CFS</a></li>
+						<li id="weather-forecast" class="menu-item weather">
+							<button id="weather-trigger">
+								<weather-data></weather-data>
+							</button>
+						</li>
+						<!-- <li id="weather-forecast" class="menu-item weather"><a href="#">Weather</a></li> -->
+						<li class="menu-item search">
+							<a href="#">Search</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="bottom-menu">
+					<ul class="main-menu bottom">
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<!-- <button class="submenu-btn" aria-expanded="false"><i class="fas fa-caret-down" aria-hidden="true"></i><span><span class="visually-hidden">Show Submenu for "Link"</span></span></button> -->
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<button id="nav-toggle" class="nav-toggle">
+						<span class="toggle-wrapper">
+							<span class="toggle-bar toggle-bar-1"></span>
+							<span class="toggle-bar toggle-bar-2"></span>
+							<span class="toggle-bar toggle-bar-3"></span>
+							<span class="toggle-bar toggle-bar-4"></span>
+						</span>
+						<span class="visually-hide-text">Show Main Menu</span>
+					</button>
+				</nav>
+			</div>
+			<nav class="hamburger-menu">
+				<div class="wrapper">
+					<ul class="main-menu">
+						<li class="menu-item"><a href="/styleguide.html">Style Guide</a></li>
+						<li class="menu-item"><a href="/scratchpad.html">Scratch Pad</a></li>
+						<li class="menu-item"><a href="/single.html">Single Post</a></li>
+						<li class="menu-item"><a href="/profile.html">Profile</a></li>
+						<li class="menu-item"><a href="/404.html">404 Page</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item newsletter"><a href="#">Newsletter Sign-Up</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<ul class="social-menu">
+						<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+									class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+									class="visually-hide-text">Twitter</span><i class="fab fa-twitter"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+									class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+									class="visually-hide-text">YouTube</span><i class="fab fa-youtube"
+									aria-hidden="true"></i></a></li>
+					</ul>
+					<div class="contact">
+						<p>© 21st Century Parks, Inc. 2020</br>
+							Mailing Address:</br>
+							471 West Main Street, Suite 202</br>
+							Louisville, KY 40202</p>
+					</div>
+				</div>
+				<!-- <ul class="main-menu">
+                    <li class="menu-item" v-for="layout in layouts">
+                        <a v-bind:href="'/#' + layout.id">{{layout.dataset.menutitle}}</a>
+                    </li>
+                </ul> -->
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="main">
+
+<section class="block cards style-1">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                    <div class="card-title">
+                        <h2 class="h3">Title Here</h2>
+                    </div>
+				</div>
+				<div class="content">
+					<h1 class="title h3">Cards Style 1</h1>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                    <div class="card-title">
+                        <h2 class="h3">Title Here</h2>
+                    </div>
+				</div>
+                <div class="content">
+					<h1 class="title h3">Cards Style 1</h1>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="" class="block cards style-2 no-bg align-left two-col" style="opacity: 1;">
+        <div class="wrapper">
+        <div class="row">
+                                                <div class="col" style="opacity: 1;">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/education-programs-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Learning</h1>
+                                                    
+                                                            <p class="blurb">Where nurture meets nature.</p>
+                            
+                            <p>The purpose of our Outdoor Classroom is to teach STEAM (science, technology, engineering, arts, and math) and natural history through hands-on discoveries outdoors that stimulate curiosity for children, adults, and families — all resulting in the enhancement of scientific literacy in our community. We envision a future in which all people view themselves as lifelong learners and share a connection to the natural world.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/learning/" class="wp-block-button__link" target="">Learn More About Learning</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col" style="opacity: 1;">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/paddling-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Paddling</h1>
+                                                    
+                                                            <p class="blurb">Take me to the river.</p>
+                            
+                            <p>Winding through upland meadows and farm fields and bottomland forests, Floyds Fork empties into the Salt River, which flows another 25 miles until it drains into the Ohio River. Located along Floyds Fork between Shelbyville Road and Bardstown Road, The Parklands offers some of the best paddling access in the area.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/paddling/" class="wp-block-button__link" target="">Learn More About Paddling</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col" style="opacity: 1;">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/fishing-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Fishing</h1>
+                                                    
+                                                            <p class="blurb">The original live-streaming.</p>
+                            
+                            <p>Venture down into the thickets of undergrowth along the creek. Listen to the lisp and lapse of the current. Wade into the stream, and cast your line out into the channel. Throughout The Parklands, you can find ponds, lakes, fishing piers, and the unifying artery of Floyds Fork stocked with game fish and available for picnics and wildlife watching year-round.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/fishing/" class="wp-block-button__link" target="">Learn More About Fishing</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col" style="opacity: 1;">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/bark-park-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Tail Wagging</h1>
+                                                    
+                                                            <p class="blurb">Experience life unleashed.</p>
+                            
+                            <p>An off-leash dog park adjacent to the Egg Lawn, the Barklands is open to members of the Louisville Dog Run Association and divided into three one-acre zones — one zone for large dogs, one zone for smaller dogs, and one zone designated as “resting” (or closed for use). The runs rotate to maintain the turf, and the signage identifies which areas are open.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/tail-wagging/" class="wp-block-button__link" target="">Learn More About Tail Wagging</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/biking-copy-green.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Biking</h1>
+                                                    
+                                                            <p class="blurb">Move in all the best circles.</p>
+                            
+                            <p>Some bikers prefer a paved road. Others prefer a dirt trail. Either way, The Parklands has you covered. Outside of the bike park, hikers and walkers share all of our bike-accessible trails, so always pass on the left and alert those who you’re moving around. Choose your route based on the trail usage, the distance, and the difficulty level, and then get rolling.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/biking/" class="wp-block-button__link" target="">Learn More About Biking</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/hiking-green.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Walking</h1>
+                                                    
+                                                            <p class="blurb">Wonder while you wander.</p>
+                            
+                            <p>Running, walking, and hiking are some of the most accessible activities you can do to improve your health and roam throughout The Parklands. Whether you’re into high-intensity training or a sightseeing stroll, prefer packed dirt or stone slabs underfoot, have the energy to take on one or 10 miles — we can show you the way.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/walking/" class="wp-block-button__link" target="">Learn More About Walking</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/picnicking-green.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Picnicking</h1>
+                                                    
+                                                            <p class="blurb">Make a meal of it.</p>
+                            
+                            <p>Feast in the open air. Watch butterflies fluttering from coneflower to coneflower. Each of our parks has its own designated picnic areas located at limestone gorges, lakeside overlooks, or sunlit hillsides. No matter what type of picnic you’re planning, we’ve got the spot for you.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/picnicking/" class="wp-block-button__link" target="">Learn More About Picnicking</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/Gardening-Icon-green.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Gardening</h1>
+                                                    
+                                                            <p class="blurb">The plot thickens.</p>
+                            
+                            <p>Sunflowers standing 10 feet tall at their midsummer peak. The scent of tomato vines rubbed between your fingers. Raised beds overflowing with lettuce and eggplant cages and cucumber trellises. Community gardens alleviate stress and knit together neighborhoods — and they cut down on our carbon footprints.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/gardening/" class="wp-block-button__link" target="">Learn More About Gardening</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/playgrounds-and-spraygrounds-green.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Playing</h1>
+                                                    
+                                                            <p class="blurb">The ultimate playdate.</p>
+                            
+                            <p>We opened the Marshall Playground and Sprayground in Beckley Creek Park in 2011 — our first amenity available to the public. Today, we offer the Cliffside Playground and Sprayground in Broad Run Park, as well as the Pope Lick Park playground near John Floyds Fields. Come out and make a splash.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/playing/" class="wp-block-button__link" target="">Learn More About Playing</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/compete-icon-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Competing</h1>
+                                                    
+                                                            <p class="blurb">Be a good sport.</p>
+                            
+                            <p>Get competitive on one of our sports fields — the Egg Lawn, the Greensward, the Cliffside Center, the John Floyds Fields, or the fields in the Humana Grand Allee. These spaces are fun for all ages and perfect for tackling in a friendly football game, dribbling a field hockey ball, throwing around a Frisbee, facing off in lacrosse, or kicking a soccer ball. So grab some friends and come out and play.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/competing/" class="wp-block-button__link" target="">Learn More About Competing</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    <div class="col">
+
+                        <!-- Style 1 Image -->
+                        
+                        <!-- Styles 2 Optional Icon - Image or Animation -->
+                                                                                                                                                        <div class="icon">
+                                        <img src="https://staging.theparklands.org/app/uploads/2020/11/Sightseeing-Icon-green-1.svg" alt="">
+                                    </div>
+                                						                                                            
+                        <div class="content">
+                                                            <h1 class="title h4">Sightseeing</h1>
+                                                    
+                                                            <p class="blurb">Start here. Or here. Or here.</p>
+                            
+                            <p>For millennia, animals and humans have shaped the landscapes that make up The Parklands. We’ve identified dozens of places to sightsee throughout the parks and highlighted our favorite ones here. Next time you visit, stop and observe all the nuances within the flora, fauna, history, and culture of our area.</p>
+                                <div class="wp-block-buttons">
+                                                <div class="wp-block-button">
+                    <a href="https://staging.theparklands.org/find-an-activity/sightseeing/" class="wp-block-button__link" target="">Learn More About Sightseeing</a>
+                </div>
+                        </div>
+                        </div>
+                    </div>
+                                    </div>
+    </div>
+</section>
+
+<section class="block cards style-3">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">
+                <div class="content">
+                    <h1 class="title h4">Card Style 5</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="col">
+				<div class="content">
+                    <h1 class="title h4">Card Style 5</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="" class="block cards style-2 no-bg align-center three-col" style="opacity: 1;">
+    <div class="intro">
+        <div class="wrapper">
+            <div class="content">
+                <!-- Optional Label. If no label is present, the Title becomes the H1 -->
+                <h2 class="title">
+                    <span class="line h2 no-line-break green">Paddling</span>
+                    <span class="line h2 no-line-break black">Resources</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col" style="opacity: 1;">
+
+                <!-- Style 1 Image -->
+
+                <!-- Styles 2 Optional Icon - Image or Animation -->
+                <div class="icon">
+                    <img src="https://staging.theparklands.org/app/uploads/2020/11/download-icon-green-1.svg" alt="">
+                </div>
+
+                <div class="content">
+                    <h1 class="title h4">Paddling Map with Route Information</h1>
+
+
+                    <div class="wp-block-buttons">
+                        <div class="wp-block-button">
+                            <a href="https://staging.theparklands.org/app/uploads/2020/11/TheParklands_PaddlingMap_Public.pdf"
+                                class="wp-block-button__link" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="opacity: 1;">
+
+                <!-- Style 1 Image -->
+
+                <!-- Styles 2 Optional Icon - Image or Animation -->
+                <div class="icon">
+                    <img src="https://staging.theparklands.org/app/uploads/2020/11/download-icon-green-1.svg" alt="">
+                </div>
+
+                <div class="content">
+                    <h1 class="title h4">Route Descriptions</h1>
+
+
+                    <div class="wp-block-buttons">
+                        <div class="wp-block-button">
+                            <a href="https://staging.theparklands.org/app/uploads/2020/11/Creek-Guide-and-Description_1.pdf"
+                                class="wp-block-button__link" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="opacity: 1;">
+
+                <!-- Style 1 Image -->
+
+                <!-- Styles 2 Optional Icon - Image or Animation -->
+                <div class="icon">
+                    <img src="https://staging.theparklands.org/app/uploads/2020/11/download-icon-green-1.svg" alt="">
+                </div>
+
+                <div class="content">
+                    <h1 class="title h4">Blue Moon Rental Price List</h1>
+
+
+                    <div class="wp-block-buttons">
+                        <div class="wp-block-button">
+                            <a href="https://staging.theparklands.org/app/uploads/2020/11/Blue-Moon-Rentals.pdf"
+                                class="wp-block-button__link" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="opacity: 1;">
+
+                <!-- Style 1 Image -->
+
+                <!-- Styles 2 Optional Icon - Image or Animation -->
+                <div class="icon">
+                    <img src="https://staging.theparklands.org/app/uploads/2020/11/download-icon-green-1.svg" alt="">
+                </div>
+
+                <div class="content">
+                    <h1 class="title h4">Recommendations for a Great Paddling Experience</h1>
+
+
+                    <div class="wp-block-buttons">
+                        <div class="wp-block-button">
+                            <a href="https://staging.theparklands.org/app/uploads/2020/11/PaddlingTheFork_Final-11.11.16.pdf"
+                                class="wp-block-button__link" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+	<div class="wrapper">
+		<a class="logo" href="/" target="_self">
+			<img class="svg" src="assets/img/logo.svg" alt="Title Here">
+		</a>
+		<p class="green-txt tagline"><i>A visitor-supported public park</i></p>
+		<ul class="social-menu">
+			<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+						class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+						class="visually-hide-text">Twitter</span><i class="fab fa-twitter" aria-hidden="true"></i></a>
+			</li>
+			<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+						class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+						class="visually-hide-text">YouTube</span><i class="fab fa-youtube" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+<!-- 
+    Newsletter Popup 
+    - Triggered by a menu item
+    - Need to write JS to open the newsletter with a class added to the menu item
+-->
+
+<button data-micromodal-trigger="modal-1">Open Newsletter</button>
+
+<div id="modal-1" class="modal micromodal-slide block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h3" id="modal-1-title">The Parklands Newsletter</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<p>Sign up for our online newsletter and keep up with the news and events at the Parklands.</p>
+					<!-- We need to add a gravity form here, or let the user add one. -->
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    General Popup 
+    - This appears on the home page, only on the home page, as soon the page loads
+	- I have JS to create a cookie and only open the modal if the cookie does not exist
+	- So this will only need a conditional to display if the page is home and the user wants to have a popup
+	- For this to work, the html should not appear if the user has a popup set to false/nope
+-->
+
+<button data-micromodal-trigger="modal-2">Open General Popup</button>
+
+<div id="modal-2" class="modal micromodal-slide block hero style-3 content-right" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content row" id="modal-2-content">
+					<div class="col">
+						<div class="image"
+							style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+							<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+								class="visually-hidden" />
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<!-- Sara, we might want to leave the icon & label as an option for users -->
+							<!-- <h1 class="label icon icon-sun">Label</h1> -->
+							<h2 class="title h3">Modal - General</h2>
+							<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
+								nulla non
+								metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada
+								magna
+								mollis euismod.</p>
+							<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Weather Popup
+    - Triggered by a menu item in the top menu
+-->
+<button data-micromodal-trigger="modal-3">Open Weather</button>
+
+<div id="modal-3" class="modal micromodal-slide weather block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h4" id="modal-3-title">Weather</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-3-content">
+					<div id="components-demo">
+						<weather-data></weather-data>
+						<div class="meta">
+							<span class="sunrise">Sunrise <time class="time">8:01 AM</time></span><span
+								class="sunset">Sunset
+								<time class="time">7:46 PM</time></span>
+						</div>
+					</div>
+
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    CFS Popup 
+    - I think the button should be the only part that the user can edit
+-->
+<button data-micromodal-trigger="modal-4">Open CFS</button>
+
+<div id="modal-4" class="modal micromodal-slide cfs block" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-4-content">
+					<div class="cfs-module">
+						<div class="row north">
+							<div class="col title">
+								<h2 class="h4">North Beckley to Creekside</h2>
+								<span>Peewee Valley Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-1">
+									<cfs-data-1></cfs-data-1>
+								</div>
+							</div>
+						</div>
+						<div class="row line">
+							<div class="col title">
+								<h2 class="h4">Creekside to Seaton Valley</h2>
+								<span>Fisherville Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-2">
+									<cfs-data-2></cfs-data-2>
+								</div>
+							</div>
+						</div>
+						<div class="row south">
+							<div class="col title">
+								<h2 class="h4">Seaton Valley to Cliffside</h2>
+								<span>Mt. Washington Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-3">
+									<cfs-data-3></cfs-data-3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wp-block-buttons">
+						<div class="wp-block-button">
+							<a href="#" class="wp-block-button__link">Paddling Access</a>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Mobile Search Popup 
+-->
+<button data-micromodal-trigger="modal-5">Open Search</button>
+
+<div id="modal-5" class="modal micromodal-slide block basic-content one-col mobile-search" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<!-- <h2 class="title h3" id="modal-5-title">The Parklands Newsletter</h2> -->
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-5-content">
+					<div class="search-container-modal">
+						<form id="search-form-modal" class="search" action="/search/" method="get">
+							<label for="search-field"><span class="title h3">Search</span>
+								<input id="search-field-modal" type="text" name="fwp_search_field" value="">
+							</label>
+							<button id="search-submit-modal" class="submit" form="search-form" type="submit">Submit</button>
+						</form>
+					</div>				
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- End #app -->
+
+<!-- development version of vue.js, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+	integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+	crossorigin="anonymous"></script>
+
+<!-- Fancybox -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+
+
+<!-- Slick Lightbox -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"
+	integrity="sha512-iSVaq9Huv1kxBDAOH7Il1rwIJD+uspMQC1r4Y73QquhbI2ia+PIXUoS5rBjWjYyD03S8t7gZmON+Dk6yPlWHXw=="
+	crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" /> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" /> -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="assets/js/bundle.js"></script>
+
+<script>
+	var slider = $('.block.slider.gallery .items');
+	if (slider.length > 0) {
+		for (var i = 0; i < slider.length; i++) {
+			// Init first slider
+			$(slider[i]).slick();
+			$(slider[i]).slickLightbox({
+				src: 'src',
+				itemSelector: '.item img'
+			});
+		}
+	}
+
+</script>
+
+</body>
+
+</html>

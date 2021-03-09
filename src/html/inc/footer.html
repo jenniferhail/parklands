@@ -1,0 +1,72 @@
+</main>
+
+<footer class="footer">
+	<div class="wrapper">
+		<a class="logo" href="/" target="_self">
+			<img class="svg" src="assets/img/logo.svg" alt="Title Here">
+		</a>
+		<p class="green-txt tagline"><i>A visitor-supported public park</i></p>
+		<ul class="social-menu">
+			<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+						class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+						class="visually-hide-text">Twitter</span><i class="fab fa-twitter" aria-hidden="true"></i></a>
+			</li>
+			<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+						class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+						class="visually-hide-text">YouTube</span><i class="fab fa-youtube" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+@include('../component/popups.html')
+
+</div> <!-- End #app -->
+
+<!-- development version of vue.js, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+	integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+	crossorigin="anonymous"></script>
+
+<!-- Fancybox -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+
+
+<!-- Slick Lightbox -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"
+	integrity="sha512-iSVaq9Huv1kxBDAOH7Il1rwIJD+uspMQC1r4Y73QquhbI2ia+PIXUoS5rBjWjYyD03S8t7gZmON+Dk6yPlWHXw=="
+	crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" /> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" /> -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="assets/js/bundle.js"></script>
+
+<script>
+	var slider = $('.block.slider.gallery .items');
+	if (slider.length > 0) {
+		for (var i = 0; i < slider.length; i++) {
+			// Init first slider
+			$(slider[i]).slick();
+			$(slider[i]).slickLightbox({
+				src: 'src',
+				itemSelector: '.item img'
+			});
+		}
+	}
+
+</script>
+
+</body>
+
+</html>

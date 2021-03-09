@@ -1,0 +1,60 @@
+<!-- This should work for locations, articles, events, etc. — everything but profiles.
+Just change out the stuff inside .item-header -->
+
+@include('inc/header.html')
+
+<section class="block single post item">
+    <article class="article">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col clearfix">
+
+                    <figure class="image float-right">
+                        <img src="https://via.placeholder.com/1000x600" alt="Image description">
+                    </figure>
+
+                    <header class="meta">
+                        <div class="item-header">
+                            <ul class="list">
+                                <li class="icon icon-biking">Biking</li>
+                                <li class="icon icon-walking">Walking</li>
+                            </ul>
+                            <div class="line">
+                                <span class="type">Location Type</span>
+                            </div>
+                            <ul class="list dots">
+                                <li class="distance">1.87 Mi</li>
+                                <li class="duration">2 Hr</li>
+                                <li class="difficulty">Difficulty</li>
+                            </ul>
+                            <div class="line">
+                                <a href="#" class="link">View Map</a>
+                            </div>
+                        </div>
+                        <h2 class="title h2">Location</h2>
+                        <p class="tagline green-txt">Beckly Creek Park</p>
+                    </header>
+
+                    <div class="content">
+                        <!-- Content starts here -->
+                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                            elit. Etiam porta sem malesuada magna mollis euismod.</p>
+                        <p>Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem
+                            lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+                            dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec
+                            ullamcorper nulla non metus auctor fringilla.</p>
+                        <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet
+                            non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                            Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur
+                            ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+                        @include('component/share.html')
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+@include('inc/footer.html')

@@ -1,0 +1,226 @@
+$map-height: 100vh;
+$map-height-lg: calc(100vh - 105px);
+
+.block.interactive-map {
+	&:first-of-type {
+		padding-top: 0;
+		@media ($menu) {
+			padding-top: 114px;
+		}
+	}
+	.wrapper {
+		position: relative;
+		padding: 0;
+		@media ($map-breakpoint) {
+			max-width: none;
+			@include flex($align: stretch);
+		}
+	}
+	.side-panel,
+	.map,
+	.facetwp-facet.facetwp-facet-location_map.facetwp-type-map {
+		height: $map-height; // Fallback for browsers that do not support Custom Properties
+		height: calc(var(--vh, 1vh) * 100);
+		@media ($menu) {
+			height: $map-height-lg;
+		}
+	}
+	.side-panel {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		transform: translateY(30px);
+		opacity: 0;
+		visibility: hidden;
+
+		padding: 90px 40px 0; // 90px = 70px for the header + 20px for space
+		background-color: $faded-black;
+		color: $white;
+		overflow-y: scroll;
+		transition: all 400ms $base-timing;
+		@media ($map-breakpoint) {
+			display: block;
+			position: relative;
+			padding: 20px 40px 0;
+			flex: 0 0 300px;
+			background-color: $black;
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+		&.active {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+		// More facet styling is in the _facetwp.scss file
+		.fs-wrap,
+		.fs-label-wrap {
+			width: 100%;
+		}
+		.fieldset .facet-wrap {
+			margin: 0;
+		}
+		// Title
+		.title {
+			text-align: center;
+			padding-top: 50px;
+			@media ($map-breakpoint) {
+				text-align: left;
+				padding-top: 0;
+			}
+		}
+		// Reset button
+		button.facetwp-search-reset {
+			background: transparent;
+			border: none;
+			position: absolute;
+			top: 99px; // 29px + 70px for the header
+			right: 80px;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: $green;
+
+			@media ($map-breakpoint) {
+				@include btn-1();
+				width: 100%;
+				margin-bottom: 40px;
+				padding: 15px 20px;
+				top: 0;
+				right: 0;
+				box-sizing: border-box;
+			}
+		}
+	}
+	.map {
+		@media ($map-breakpoint) {
+			flex: 1 0 0;
+		}
+		.facet-label {
+			@extend .visually-hide-text;
+		}
+		// Google Maps Stylng
+		// Popup
+		.gm-style .gm-style-iw-c {
+			padding: 15px;
+			border-radius: 0;
+		}
+		// Type Styling
+		.gm-style-iw-d {
+			> div {
+				@media ($mobile-only) {
+					padding-right: 15px;
+				}
+			}
+			h5 {
+				@extend .h4;
+				font-style: normal;
+			}
+			p {
+				color: $base-font-color;
+				font-family: $base-font-family;
+				font-size: $base-font-size;
+				font-weight: $base-font-weight;
+				line-height: $base-line-height;
+				-webkit-font-smoothing: antialiased;
+			}
+			.wp-block-button__link {
+				margin-right: 10px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.map-btn {
+		display: inline-block;
+		position: absolute;
+		right: 60px;
+		bottom: 0;
+		width: auto;
+		padding: 20px;
+
+		background: $faded-black;
+		border: none;
+		font-family: $serif;
+		font-style: italic;
+		letter-spacing: 0.5px;
+		text-align: center;
+		text-decoration: none;
+		color: $white;
+		z-index: 1;
+
+		@media ($map-breakpoint) {
+			display: none;
+		}
+
+		span {
+			background-image: url($img-path + "icons/compass.svg");
+			background-repeat: no-repeat;
+			background-size: 26px 26px;
+			background-position: left center;
+			padding: 20px 0 20px 36px;
+		}
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 94px; // 24px + 70px for the header
+		right: 30px;
+		display: block;
+		padding: 0;
+		z-index: 5;
+		border: none;
+		background-color: transparent;
+		@media ($map-breakpoint) {
+			display: none;
+		}
+		.toggle-wrapper {
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: 0 auto;
+			position: relative;
+			transform: rotate(0deg);
+			transition: 0.5s ease-in-out;
+			cursor: pointer;
+		}
+
+		.toggle-bar {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background-color: $white;
+			border-radius: 50px;
+			opacity: 1;
+			top: 50%;
+			left: 0;
+			transform: rotate(0deg);
+			transition: 0.25s ease-in-out;
+		}
+
+		.toggle-bar-1 {
+			top: 18px;
+			width: 0%;
+			left: 50%;
+		}
+
+		.toggle-bar-2 {
+			transform: rotate(45deg);
+		}
+
+		.toggle-bar-3 {
+			transform: rotate(-45deg);
+		}
+
+		.toggle-bar-4 {
+			top: 18px;
+			width: 0%;
+			left: 50%;
+		}
+	}
+}

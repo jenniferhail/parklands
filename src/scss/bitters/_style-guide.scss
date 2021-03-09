@@ -1,0 +1,154 @@
+.main-title {
+    text-align: center;
+}
+.section-title {
+    border-bottom: 1px solid $base-font-color;
+}
+.style-guide-wrapper {
+    .block {
+        margin-bottom: $bottom-margin;
+    }
+}
+#style-guide-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 220px;
+    background-color: $light-gray;
+    overflow-y: scroll;
+    ul {
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+    a {
+        font-size: 1em;
+        color: $dark-gray;
+        background-color: transparent;
+    }
+}
+.block.color-palette {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .color {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
+    .black {
+        background-color: $black;
+        &:after {
+            content: '#{$black}';
+        }
+    }
+    .green {
+        background-color: $green;
+        &:after {
+            content: '#{$green}';
+        }
+    }
+    .yellow {
+        background-color: $yellow;
+        &:after {
+            content: '#{$yellow}';
+        }
+    }
+    .beige {
+        background-color: $beige;
+        &:after {
+            content: '#{$beige}';
+        }
+    }
+}
+
+.type {
+    .specimen-characters-module-content {
+        margin-bottom: $bottom-margin;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 2em;
+        .specimen-characters-char {
+            margin: 2px;
+        }
+    }
+    .font {
+        span {
+            display: block;
+            &:after {
+                display: block;
+                font-size: 24px;
+            }
+        }
+    }
+    .heading-characters {
+        font-family: $heading-font-family;
+    }
+    .header-font {
+        text-transform: capitalize;
+        &:after {
+            content: '#{$heading-font-family}';
+        }
+    }
+    .body-characters {
+        font-family: $base-font-family;
+    }
+    .body-font {
+        text-transform: capitalize;
+        &:after {
+            content: '#{$base-font-family}';
+        }
+    }
+}
+
+.typeset {
+    h1, h2, h3, h4, h5, h6 {
+        &:after {
+            display: block;
+            font-size: 24px;
+        }
+    }
+    h1 {
+        &:after {
+            content: '#{$h1-font-size $heading-font-weight $h1-line-height}';
+        }
+    }
+    h2 {
+        &:after {
+            content: '#{$h2-font-size $heading-font-weight $h2-line-height}';
+        }
+    }
+    h3 {
+        &:after {
+            content: '#{$h3-font-size $heading-font-weight $h3-line-height}';
+        }
+    }
+    h4 {
+        &:after {
+            content: '#{$h4-font-size $heading-font-weight $h4-line-height}';
+        }
+    }
+    h5 {
+        &:after {
+            content: '#{$h5-font-size $heading-font-weight $h5-line-height}';
+        }
+    }
+    h6 {
+        &:after {
+            content: '#{$h6-font-size $heading-font-weight $h6-line-height}';
+        }
+    }
+}

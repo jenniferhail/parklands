@@ -1,0 +1,186 @@
+<!-- 
+    Newsletter Popup 
+    - Triggered by a menu item
+    - Need to write JS to open the newsletter with a class added to the menu item
+-->
+
+<button data-micromodal-trigger="modal-1">Open Newsletter</button>
+
+<div id="modal-1" class="modal micromodal-slide block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h3" id="modal-1-title">The Parklands Newsletter</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<p>Sign up for our online newsletter and keep up with the news and events at the Parklands.</p>
+					<!-- We need to add a gravity form here, or let the user add one. -->
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    General Popup 
+    - This appears on the home page, only on the home page, as soon the page loads
+	- I have JS to create a cookie and only open the modal if the cookie does not exist
+	- So this will only need a conditional to display if the page is home and the user wants to have a popup
+	- For this to work, the html should not appear if the user has a popup set to false/nope
+-->
+
+<button data-micromodal-trigger="modal-2">Open General Popup</button>
+
+<div id="modal-2" class="modal micromodal-slide block hero style-3 content-right" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content row" id="modal-2-content">
+					<div class="col">
+						<div class="image"
+							style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+							<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+								class="visually-hidden" />
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<!-- Sara, we might want to leave the icon & label as an option for users -->
+							<!-- <h1 class="label icon icon-sun">Label</h1> -->
+							<h2 class="title h3">Modal - General</h2>
+							<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
+								nulla non
+								metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada
+								magna
+								mollis euismod.</p>
+							@include('../component/buttons.html')
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Weather Popup
+    - Triggered by a menu item in the top menu
+-->
+<button data-micromodal-trigger="modal-3">Open Weather</button>
+
+<div id="modal-3" class="modal micromodal-slide weather block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h4" id="modal-3-title">Weather</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-3-content">
+					<div id="components-demo">
+						<weather-data></weather-data>
+						<div class="meta">
+							<span class="sunrise">Sunrise <time class="time">8:01 AM</time></span><span
+								class="sunset">Sunset
+								<time class="time">7:46 PM</time></span>
+						</div>
+					</div>
+
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    CFS Popup 
+    - I think the button should be the only part that the user can edit
+-->
+<button data-micromodal-trigger="modal-4">Open CFS</button>
+
+<div id="modal-4" class="modal micromodal-slide cfs block" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-4-content">
+					<div class="cfs-module">
+						<div class="row north">
+							<div class="col title">
+								<h2 class="h4">North Beckley to Creekside</h2>
+								<span>Peewee Valley Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-1">
+									<cfs-data-1></cfs-data-1>
+								</div>
+							</div>
+						</div>
+						<div class="row line">
+							<div class="col title">
+								<h2 class="h4">Creekside to Seaton Valley</h2>
+								<span>Fisherville Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-2">
+									<cfs-data-2></cfs-data-2>
+								</div>
+							</div>
+						</div>
+						<div class="row south">
+							<div class="col title">
+								<h2 class="h4">Seaton Valley to Cliffside</h2>
+								<span>Mt. Washington Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-3">
+									<cfs-data-3></cfs-data-3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wp-block-buttons">
+						<div class="wp-block-button">
+							<a href="#" class="wp-block-button__link">Paddling Access</a>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Mobile Search Popup 
+-->
+<button data-micromodal-trigger="modal-5">Open Search</button>
+
+<div id="modal-5" class="modal micromodal-slide block basic-content one-col mobile-search" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<!-- <h2 class="title h3" id="modal-5-title">The Parklands Newsletter</h2> -->
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-5-content">
+					<div class="search-container-modal">
+						<form id="search-form-modal" class="search" action="/search/" method="get">
+							<label for="search-field"><span class="title h3">Search</span>
+								<input id="search-field-modal" type="text" name="fwp_search_field" value="">
+							</label>
+							<button id="search-submit-modal" class="submit" form="search-form" type="submit">Submit</button>
+						</form>
+					</div>				
+				</main>
+			</div>
+		</div>
+	</div>
+</div>

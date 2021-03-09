@@ -1,0 +1,73 @@
+<!-- This is hero style 3, but in a slider. -->
+
+<!-- Slider settings:
+- autoplay & speed -->
+<section id="sliders" class="block slider hero style-3 content-right" data-menutitle="Sliders">
+    <div class="wrapper">
+        <div class="items" data-id="1" data-slick='{
+            "slidesToShow": 1, 
+            "slidesToScroll": 1,
+            "arrows": false,
+            "dots": true, 
+            "fade": true,
+            "centerMode": false,
+            "adaptiveHeight": true,
+            "variableWidth": false,
+            "autoplay": false,
+            "autoplaySpeed": 6000,
+            "responsive": [{"breakpoint": 768,"settings": {"arrows": false}}]
+        }'>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide One</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            @include('../component/buttons.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide Two</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            @include('../component/buttons.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide Three</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            @include('../component/buttons.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

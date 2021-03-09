@@ -1,0 +1,295 @@
+.block.basic-content {
+	&.bg {
+		position: relative;
+		padding: 45px 30px;
+		@include fullbleed(auto, auto);
+		.bg-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+	}
+	// 404 Page
+	&.error {
+		margin: 10% auto 11em;
+		.label {
+			margin-bottom: 0.5em;
+		}
+		.wp-block-buttons {
+			padding-top: 3em;
+		}
+	}
+	&.donate {
+		@include centerBtns();
+		.wrapper {
+			max-width: $site-width;
+		}
+		.col {
+			@media (max-width: 959px) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.graph {
+			@media (max-width: 959px) {
+				order: 2;
+			}
+			@media (min-width: 960px) {
+				@include flex($justify: space-between, $align: flex-end);
+				flex-wrap: nowrap;
+				margin-top: -65px;
+				margin-bottom: 50px;
+			}
+			.left,
+			.right {
+				text-align: center;
+				@media (min-width: 960px) {
+					text-align: left;
+				}
+				span {
+					text-transform: uppercase;
+					letter-spacing: 0.5px;
+					font-weight: 700;
+					font-size: 18px;
+					white-space: nowrap;
+					@media (min-width: 960px) {
+						display: block;
+						font-size: 15px;
+					}
+				}
+			}
+			.left {
+				@media (max-width: 959px) {
+					padding: 30px 0 0;
+				}
+			}
+			.right {
+				@media (max-width: 959px) {
+					padding: 30px 0;
+				}
+			}
+			.center {
+				width: 100%;
+				@media (min-width: 960px) {
+					margin: 0 30px;
+				}
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			span.number {
+				@media (min-width: 960px) {
+					// H3
+					display: inline;
+					font-size: 38px;
+					line-height: 1.2;
+					font-family: $sans-serif-two;
+					font-weight: 700;
+					letter-spacing: 1.5px;
+					margin-bottom: 0;
+				}
+			}
+			span.percent {
+				padding-top: 11px;
+				font-size: 22px;
+			}
+		}
+		.donations {
+			position: relative;
+			display: block;
+			width: 100%;
+			.container {
+				position: relative;
+				height: 3.5em;
+				border-radius: 1em;
+				border: 3px solid $white;
+				background-color: rgba(0, 0, 0, 0.13);
+				overflow: hidden;
+			}
+			.goal {
+				position: relative;
+				z-index: 2;
+				display: block;
+				width: 100%;
+				height: 100%;
+				.marker {
+					height: 15px;
+					border-left: 3px solid $white;
+					border-right: 3px solid $white;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					&:nth-child(1) {
+						width: 6 / 8 * 100%;
+					}
+					&:nth-child(2) {
+						width: 4 / 8 * 100%;
+					}
+					&:nth-child(3) {
+						width: 2 / 8 * 100%;
+					}
+					&:nth-child(4) {
+						width: 3px;
+						border: none;
+						background: $white;
+					}
+				}
+			}
+			.amount {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 12px;
+				background: #e9c68b;
+				transform: translateX(-100%);
+				transition: transform 1s $base-timing;
+			}
+			.amount-bubble {
+				position: relative;
+				top: 0;
+				left: 0;
+				@include flex();
+				width: 80px;
+				height: 80px;
+				margin-bottom: 35px;
+				z-index: 3;
+				transform: translateX(-50%);
+				transition: left 1s $base-timing;
+				// transition: opacity 0s $base-timing 1s; // delay for the duration of the .amount transition
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					display: block;
+					width: 80px;
+					height: 80px;
+					border: 3px solid $white;
+					border-radius: 50% 50% 50% 6px;
+					transform: rotate(-45deg);
+					background: #e9c68b;
+				}
+				span.number {
+					font-size: 30px;
+				}
+			}
+		}
+		.content {
+			max-width: $sm-width;
+			margin: 0 auto;
+			text-align: center;
+			@media (max-width: 959px) {
+				order: 1;
+			}
+		}
+		.wp-block-buttons {
+			@media (max-width: 959px) {
+				order: 3;
+			}
+		}
+		.wp-block-button__link {
+			padding: 12px 20px 10px;
+			color: $black;
+			border-color: $black;
+			&:hover,
+			&:focus {
+				background-color: $black;
+				color: $white;
+			}
+		}
+		&.animate {
+			.donations .amount {
+				transform: translateX(var(--percentage));
+			}
+			.donations .amount-bubble {
+				left: var(--amount);
+			}
+		}
+	}
+	&.one-col {
+		text-align: center;
+		.wrapper {
+			max-width: $sm-width;
+		}
+		.wp-block-buttons {
+			justify-content: center;
+		}
+	}
+	&.two-col {
+		.row {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+			gap: 45px;
+		}
+		.col {
+			flex: 1 0 50%;
+			max-width: 500px;
+		}
+	}
+	&.three-col {
+		.row {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 30px;
+		}
+		.col {
+			flex: 1 0 33%;
+			max-width: 33%;
+		}
+	}
+	.icon {
+		margin-bottom: 30px;
+		padding: 0;
+		transform: none;
+		&.desktop-shortcode {
+			// min-height: 200px;
+			margin-bottom: 0;
+			&:after {
+				content: "";
+				height: 0;
+				padding-bottom: 20%;
+			}
+		}
+		&.icon-small {
+			display: inline-block;
+			width: 100px;
+			margin: 0 10px 15px;
+		}
+	}
+	ul,
+	ol {
+		padding-left: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: disc;
+	}
+	ol {
+		list-style: decimal;
+	}
+}
+
+// Block intros
+.block {
+	// using !important to overwrite any .wrapper styles inside blocks
+	.intro .wrapper {
+		text-align: center;
+		max-width: $sm-width !important;
+		margin-bottom: 45px;
+	}
+}

@@ -1,0 +1,189 @@
+// Item Styles
+.item {
+	svg {
+		fill: $green;
+	}
+	.item-header {
+		color: $green;
+	}
+
+	// Item Header
+	.item-header {
+		margin-bottom: 25px;
+		@include disableLists();
+		.list,
+		.line {
+			margin-bottom: 5px;
+		}
+		.icon {
+			width: 26px;
+			height: 26px;
+			margin-right: 8px;
+			margin-bottom: 10px;
+		}
+		.date {
+			font-weight: bold;
+		}
+	}
+
+	// List Items
+	&.activity.small {
+		position: relative;
+		text-align: center;
+		.name {
+			margin-bottom: 0;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 700;
+			color: $green;
+		}
+		.icon {
+			max-width: 75px;
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+	}
+	&.activity.large {
+		.icon {
+			max-width: 50px;
+		}
+	}
+	// Resources
+	&.resource {
+		margin-bottom: 45px;
+		.icon {
+			max-width: 75px;
+			margin: 0 auto 15px;
+		}
+		.title {
+			margin-bottom: 10px;
+		}
+	}
+	// Locations
+	&.location {
+		// margin-bottom: 45px;
+	}
+	// People
+	&.people {
+		text-align: center;
+		.image {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		a {
+			text-decoration: none;
+			color: $black;
+		}
+	}
+}
+
+.block.listing {
+	@include disableLists();
+
+	.items {
+		position: relative;
+		min-height: 35px;
+	}
+	.no-results {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		h2 {
+			@include label-style();
+		}
+	}
+
+	.filters {
+		@include flex($align: flex-start);
+	}
+
+	.item {
+		.image {
+			display: block;
+			width: 100%;
+			max-width: 300px;
+			margin-bottom: 20px;
+		}
+		&.people .image {
+			width: 120px;
+		}
+	}
+
+	// Listing Grids
+	&.grid-small {
+		.items {
+			@include flex();
+			max-width: 900px;
+			margin: 0 auto;
+		}
+		.item {
+			@include flexChild(100px);
+			margin: 0 15px 45px;
+			@media ($mobile-lg) {
+				margin: 0 15px 60px;
+			}
+		}
+	}
+	&.grid-half {
+		.items {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 60px;
+		}
+		.item {
+			padding: 0 10%;
+		}
+	}
+	&.grid-thirds-center {
+		.items {
+			@include flex();
+		}
+		.item {
+			@include flexChild(33%);
+			@include centerBtns();
+			text-align: center;
+		}
+	}
+	&.grid-thirds-left {
+		// Grid solution
+		.items {
+			max-width: 1100px;
+			margin: 0 auto;
+			// Two columns
+			@media ($mobile-lg) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 100px;
+			}
+			// Three columns
+			@media (min-width: 960px) {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+		.item {
+			max-width: 300px;
+			margin: 0 auto 65px;
+			@media ($mobile-lg) {
+				margin: 0;
+			}
+		}
+	}
+	&.grid-fifths {
+		.items {
+			@include flex($align: flex-start);
+		}
+		.item {
+			@include flexChild(225px);
+			margin-bottom: 30px;
+		}
+	}
+}

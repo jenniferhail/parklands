@@ -1,0 +1,111 @@
+html {
+	background-color: $viewport-background-color;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+// Global margins
+.block {
+	margin-bottom: 50px;
+
+	@media ($menu) {
+		margin-bottom: 100px;
+	}
+}
+
+// Blocks
+.block {
+	&:first-of-type {
+		padding-top: 150px;
+	}
+	&.hero.style-1:first-of-type {
+		padding-top: 0;
+	}
+	&.hero.style-4:first-of-type {
+		padding-top: 100px;
+		@media ($menu) {
+			padding-top: 0;
+		}
+	}
+}
+
+.wrapper,
+.wp-block-group__inner-container {
+	max-width: $site-width;
+	margin: auto;
+	padding: 0 30px;
+}
+
+.wp-block-group__inner-container {
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.visually-hidden,
+.visually-hide-label,
+.visually-hide-text {
+	position: absolute;
+	right: 999999999px;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.align-left,
+.text-align-left {
+	text-align: left;
+}
+
+.text-align-center,
+.align-center {
+	text-align: center;
+}
+
+.align-right,
+.text-align-right {
+	text-align: right;
+}
+
+// Floats
+.float {
+	&:after {
+		content: "";
+		clear: both;
+	}
+
+	&-right {
+		float: right;
+	}
+
+	&-left {
+		float: left;
+	}
+}
+
+.clearfix {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+// Backgrounds
+.bg-beige,
+.bg {
+	background-color: $beige;
+}

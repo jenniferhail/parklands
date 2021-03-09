@@ -1,0 +1,82 @@
+.block.single {
+	&.post,
+	&.location,
+	&.event,
+	&.alert {
+		.col {
+			@media ($mobile-only) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.meta {
+			@media ($mobile-only) {
+				order: 1;
+			}
+		}
+		.image {
+			max-width: none;
+			@media ($mobile-only) {
+				order: 2;
+			}
+			@media ($menu) {
+				width: calc(50% + 45px);
+				padding-left: 45px;
+			}
+		}
+		.content {
+			@media ($mobile-only) {
+				order: 3;
+			}
+			@media ($menu) {
+				width: 75%;
+			}
+		}
+	}
+	&.profile {
+		.wrapper {
+			max-width: $md-width;
+		}
+		.image {
+			width: 220px;
+			height: 220px;
+			margin: 0 auto 20px;
+		}
+		.info {
+			@include disableLists();
+			margin-bottom: 5px;
+			font-family: $serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 14px;
+		}
+		.list {
+			margin-bottom: 5px;
+			justify-content: center;
+			a {
+				color: $base-font-color;
+				text-decoration: none;
+			}
+		}
+		.name {
+			margin-bottom: 15px;
+		}
+	}
+
+	// Hiding imported share buttons
+	.article-share {
+		display: none;
+	}
+}
+
+// Fixing content width on location pages
+.single-location {
+	.block.single {
+		.meta,
+		.content {
+			@media ($menu) {
+				width: calc(50% - 45px);
+			}
+		}
+	}
+}

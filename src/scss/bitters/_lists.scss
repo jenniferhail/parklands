@@ -1,0 +1,50 @@
+.dots {
+	li:not(:last-child):after {
+		content: "•";
+		padding-left: 9px;
+	}
+}
+// Used in item-headers and the profile
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		margin-right: 10px;
+		&.icon {
+			margin-right: 8px;
+		}
+	}
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0 0 0 17px;
+	ul,
+	ol {
+		padding: 0 0 0 17px;
+	}
+}
+
+dl {
+	margin: 0;
+}
+
+dt {
+	font-weight: 600;
+	margin: 0;
+}
+
+dd {
+	margin: 0;
+}
+
+// Remove default summary arrows for accordions
+// summary {
+//   list-style-image: none;
+// }
+// summary::-webkit-details-marker {
+//   display: none;
+//   background: none;
+//   color: transparent;
+// }

@@ -1,0 +1,104 @@
+// Breakpoints
+$laptop: "min-width: 1260px";
+$tablet: "min-width: 769px";
+$tablet-only: "max-width: 768px";
+$mobile-lg: "min-width: 640px";
+$mobile-sm: "min-width: 480px";
+
+$menu: "min-width: 768px";
+$mobile-only: "max-width: 767px";
+$map-breakpoint: "min-width: 900px";
+
+// Paths
+$img-path: "/app/themes/mightily/dist/assets/img/";
+$font-path: "/app/themes/mightily/dist/assets/fonts/";
+// $img-path: "/assets/img/";
+// $font-path: '/assets/fonts/';
+
+// Typography
+// Proxima Nova weights: 400, 600, & 700
+$sans-serif: proxima-nova, "Open Sans", "Gill Sans MT", "Gill Sans", Corbel,
+	Arial, sans-serif;
+// Trade Gothic weights: 400 & 700
+$sans-serif-two: trade-gothic-next-compressed, sans-serif;
+// Grad font weight: 700
+$serif: grad, "Times New Roman", serif;
+
+$base-font-family: $sans-serif;
+$heading-font-family: $sans-serif-two;
+$other-font-family: $serif;
+
+// Font Size
+$base-font-size: 15px;
+$mobile-font-size: 14px;
+
+// Line Height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Font Weight
+$base-font-weight: 600;
+$heading-font-weight: 700;
+
+// Widths
+$site-width: 1400px;
+$md-width: 900px;
+$sm-width: 700px; // Used for intro blocks
+
+// Other Sizes
+$bottom-margin: 100px;
+$base-border-radius: 0px;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Theme Colors
+$black: #212121;
+$green: #68a437;
+$yellow: #e9c68b;
+$beige: #fcf8f3;
+
+$white: #ffffff;
+$light-green: #eff2e1;
+$faded-black: rgba(0, 0, 0, 0.82);
+$transparent: rgba(255, 255, 255, 0);
+
+// Other Colors
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$red: #f3614b;
+
+$primary: $green;
+$secondary: $yellow;
+$links: $red;
+$hover: $black;
+
+// Font Colors
+$base-font-color: $black;
+$action-color: $primary;
+$error-color: $red;
+$color-selection: $light-gray;
+
+// Buttons
+$btn-bg-color: $transparent;
+$btn-text-color: $primary;
+$btn-text-color-hover: $white;
+$btn-border-radius: 0;
+
+// Border
+$base-border-color: $primary;
+$base-border: 2px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: $white;
+
+// Focus
+$focus-outline-color: $action-color;
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 3px;
+
+// Transitions
+$base-duration: 300ms;
+$base-timing: ease-in-out;

@@ -1,0 +1,125 @@
+{
+    "key": "group_5fa1866e83009",
+    "title": "Module - Layout Spacing",
+    "fields": [
+        {
+            "key": "field_5fa1882288c60",
+            "label": "Layout Spacing",
+            "name": "layout_spacing",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5fa186793d297",
+                    "label": "Margin Top",
+                    "name": "margin_top",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "undefined",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": -500,
+                    "max": 500,
+                    "step": 1
+                },
+                {
+                    "key": "field_5fa186b23d298",
+                    "label": "Padding Top",
+                    "name": "padding_top",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": -500,
+                    "max": 500,
+                    "step": 1
+                },
+                {
+                    "key": "field_5fa186f03d29a",
+                    "label": "Padding Bottom",
+                    "name": "padding_bottom",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": -500,
+                    "max": 500,
+                    "step": 1
+                },
+                {
+                    "key": "field_5fa186fa3d29b",
+                    "label": "Margin Bottom",
+                    "name": "margin_bottom",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": -500,
+                    "max": 500,
+                    "step": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1604422107
+}

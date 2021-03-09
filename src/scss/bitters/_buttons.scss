@@ -1,0 +1,157 @@
+@mixin btn-base() {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	margin-bottom: 0;
+
+	font-family: $sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1;
+
+	text-align: center;
+	text-decoration: none;
+	border-radius: $btn-border-radius;
+
+	transition: color $base-duration $base-timing,
+		background-color $base-duration $base-timing,
+		outline $base-duration $base-timing;
+	user-select: none;
+	vertical-align: middle;
+	appearance: none;
+	box-sizing: content-box;
+	cursor: pointer;
+
+	&:hover {
+		outline: none;
+	}
+
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.2;
+	}
+}
+
+@mixin btn-1() {
+	@include btn-base();
+	font-size: $base-font-size;
+	color: $btn-text-color;
+	background-color: $transparent;
+	border: $base-border;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+
+	&:visited {
+		color: $btn-text-color;
+		background-color: $transparent;
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited:hover {
+		background-color: $btn-text-color;
+		color: $white;
+	}
+
+	@media ($menu) {
+		font-size: $mobile-font-size;
+	}
+}
+
+@mixin btn-2() {
+	@include btn-base();
+	color: $base-font-color;
+	background-color: $transparent;
+	border: none;
+	letter-spacing: 0.5px;
+
+	&:visited {
+		color: $base-font-color;
+		background-color: $transparent;
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited:hover {
+		color: $black;
+		background-color: $transparent;
+	}
+}
+
+button {
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+	}
+}
+
+// Theme buttons
+.front-end {
+	.wp-block-buttons {
+		position: relative;
+		padding-top: 0;
+		z-index: 1;
+
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.wp-block-button {
+		padding-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.wp-block-button__link {
+		@include btn-1();
+	}
+
+	p + {
+		.wp-block-button {
+			padding-top: 0; // Top padding for buttons under paragraphs
+		}
+	}
+
+	.wp-block-button__link,
+	input[type="submit"],
+	input[type="reset"] {
+		@include btn-1();
+	}
+
+	.facetwp-facet-load_more {
+		margin-top: 40px;
+		text-align: center;
+
+		.facetwp-load-more {
+			@include btn-1();
+		}
+	}
+}
+
+.is-style-outline .wp-block-button__link {
+	@include btn-2();
+}
+
+// Repeat buttons styles from above to style the form buttons on the front end
+.front-end .layout:not(.hero) form,
+.front-end .block:not(.hero) form {
+	#{$all-buttons} {
+		@include btn-base();
+		@include btn-1();
+
+		@media ($tablet) {
+			display: block;
+			margin: 0 auto 15px;
+		}
+	}
+}

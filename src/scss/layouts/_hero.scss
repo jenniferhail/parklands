@@ -1,0 +1,641 @@
+.block.hero {
+	position: relative;
+
+	.image,
+	.poster {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	.embed-code iframe {
+		width: 100%;
+	}
+
+	.label,
+	.title,
+	.subtitle,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 5px;
+	}
+
+	.content {
+		position: relative;
+		padding: 20px; // 20px 0
+		z-index: 1;
+		text-align: left;
+
+		@media ($menu) {
+			padding: 40px; // 40px 0
+		}
+
+		p {
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+
+		.buttons {
+			padding-top: 10px;
+
+			@media ($menu) {
+				padding-top: 20px;
+			}
+		}
+
+		.label {
+			margin-bottom: 30px;
+		}
+
+		.meta {
+			margin-bottom: 30px;
+			@include flex($align: flex-start, $justify: flex-start);
+			flex-wrap: nowrap;
+
+			.icon {
+				flex: 1 0 26px;
+				max-width: 26px;
+			}
+
+			.sunrise,
+			.sunset {
+				font-family: $serif;
+				font-style: italic;
+				letter-spacing: 0.5px;
+				@media (max-width: 480px) {
+					display: block;
+				}
+			}
+
+			.sunrise + .sunset {
+				@media (min-width: 481px) {
+					padding-left: 12px;
+					&:before {
+						content: "";
+						display: inline-block;
+						width: 4px;
+						height: 4px;
+						margin-right: 12px;
+						margin-bottom: 3px;
+						padding: 0;
+						background: $white;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			.time {
+				padding-left: 8px;
+				font-style: normal;
+				font-family: $sans-serif;
+				letter-spacing: normal;
+			}
+			.sunset .time {
+				@media (max-width: 480px) {
+					padding-left: 15px;
+				}
+			}
+
+			.icon + .right {
+				padding-top: 8px;
+			}
+
+			.label,
+			p {
+				margin: 0;
+			}
+
+			p {
+				margin-top: 6px;
+			}
+		}
+
+		.dot {
+			padding: 0 14px;
+			font-weight: bold;
+		}
+	}
+
+	.icon {
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		top: 5px;
+		position: relative;
+		margin-right: 18px;
+		& + .label {
+			display: inline-block;
+		}
+	}
+
+	&.content-center {
+		.meta {
+			display: block;
+		}
+	}
+
+	// Flex for styles 1 & 4
+	&.style-1,
+	&.style-4 {
+		&.content-left .row {
+			@include flex($justify: flex-start);
+
+			@media ($mobile-only) {
+				@include flex($justify: center);
+			}
+		}
+
+		&.content-center {
+			.row {
+				@include flex($justify: center);
+			}
+
+			.content {
+				text-align: center;
+			}
+
+			@include centerBtns();
+		}
+
+		&.content-right .row {
+			@include flex($justify: flex-end);
+
+			@media ($mobile-only) {
+				@include flex($justify: center);
+			}
+		}
+
+		.row,
+		.col {
+			height: 100%;
+		}
+	}
+
+	// Boxes
+	&.style-1 {
+		@include fullbleed(100%, auto);
+
+		&.content-right,
+		&.content-left {
+			.content {
+				@media ($menu) {
+					max-width: 500px;
+				}
+			}
+		}
+
+		&.content-right .map-button {
+			@media ($menu) {
+				left: 15%;
+			}
+		}
+
+		&.content-left .map-button {
+			@media ($menu) {
+				right: 15%;
+			}
+		}
+
+		&.content-center {
+			.content {
+				width: 100%;
+				@media ($menu) {
+					width: auto;
+					max-width: 1000px;
+				}
+			}
+			.map-button {
+				@media ($menu) {
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+
+		&.content-center:first-of-type .col {
+			height: auto;
+			min-height: 360px;
+			@media ($menu) {
+				min-height: 540px;
+			}
+		}
+
+		.col {
+			position: relative;
+			padding: 100px 0;
+			width: 100%;
+			min-height: 360px; // Work on this for mobile
+			display: flex;
+			align-items: center;
+			z-index: 1;
+			@media ($menu) {
+				width: auto;
+				min-height: 80vh;
+				padding: 200px 0;
+			}
+		}
+
+		.map-button {
+			position: relative;
+			display: block;
+			width: 100%;
+			padding: 20px;
+			background: $faded-black;
+			font-family: $serif;
+			font-style: italic;
+			letter-spacing: 0.5px;
+			text-align: center;
+			text-decoration: none;
+			color: $white;
+			z-index: 1;
+
+			@media ($menu) {
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				width: auto;
+			}
+
+			span {
+				background-image: url($img-path + "icons/compass.svg");
+				background-repeat: no-repeat;
+				background-size: 26px 26px;
+				background-position: left center;
+				padding: 20px 0 20px 36px;
+			}
+		}
+
+		.content {
+			@include box();
+			width: 100%;
+
+			@media ($menu) {
+				min-width: 500px;
+			}
+
+			.label {
+				margin-bottom: 5px;
+			}
+
+			.title {
+				margin-bottom: 0;
+			}
+
+			p {
+				margin-top: 20px;
+			}
+
+			.address {
+				margin-top: 30px;
+				margin-bottom: 0;
+			}
+
+			.title-blurb {
+				color: $green;
+			}
+		}
+	}
+
+	&.style-1,
+	&.style-2 {
+		.content {
+			.wp-block-button__link {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.style-2,
+	&.style-3 {
+		&.content-left {
+			.row {
+				@include flex($direction: row-reverse);
+			}
+
+			.content {
+				@media ($menu) {
+					padding-right: 45px;
+				}
+			}
+		}
+
+		&.content-center {
+			// Nothing to do with this yet
+		}
+
+		&.content-right {
+			.row {
+				@include flex();
+			}
+
+			.content {
+				@media ($menu) {
+					padding-left: 45px;
+				}
+			}
+		}
+
+		.wrapper {
+			@media ($mobile-only) {
+				padding: 0;
+			}
+		}
+
+		.col {
+			@media ($mobile-only) {
+				width: 100%;
+			}
+
+			@media ($menu) {
+				@include flexChild(50%);
+			}
+
+			&:last-child {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+
+		.content {
+			@media ($mobile-only) {
+				padding: 40px;
+			}
+			.title {
+				margin-bottom: 20px;
+			}
+		}
+
+		.image {
+			height: 100%;
+			padding-bottom: 65%;
+
+			@media ($mobile-only) {
+				width: 100%;
+				height: 100%;
+			}
+
+			@media ($menu) {
+				min-height: 300px;
+			}
+		}
+	}
+
+	&.style-2 {
+		&.bg {
+			padding: 80px 0;
+		}
+		&.content-left .content {
+			@media ($menu) {
+				padding-left: calc(12% - 30px);
+				padding-right: 12%;
+			}
+		}
+		&.content-right .content {
+			@media ($menu) {
+				padding-right: calc(12% - 30px);
+				padding-left: 12%;
+			}
+		}
+	}
+
+	&.style-3 {
+		&.content-left .row,
+		&.content-right .row {
+			align-items: stretch;
+		}
+
+		&.content-left .content {
+			@media ($menu) {
+				padding-left: 90px;
+			}
+			// @media ($mobile-only) {
+			// 	text-align: center;
+
+			// 	.wp-block-buttons {
+			// 		justify-content: center;
+			// 	}
+			// }
+		}
+
+		&.content-right .content {
+			@media ($menu) {
+				padding-right: 90px;
+			}
+			// @media ($mobile-only) {
+			// 	text-align: center;
+
+			// 	.wp-block-buttons {
+			// 		justify-content: center;
+			// 	}
+			// }
+		}
+
+		.col:last-child {
+			@include box();
+			padding: 0;
+		}
+
+		.row,
+		.col,
+		.content {
+			@media ($mobile-only) {
+				text-align: center;
+
+				.wp-block-buttons {
+					justify-content: center;
+				}
+			}
+		}
+	}
+
+	//  The large guy
+	&.style-4 {
+		@include fullbleed(auto, 100vh);
+		@media ($mobile-only) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+		&.content-left {
+			> .image:before {
+				background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, 0.5) 30%,
+					rgba(0, 0, 0, 0) 100%
+				);
+
+				@media ($mobile-only) {
+					background: none;
+				}
+			}
+			> .wrapper {
+				@media ($menu) {
+					@include flex($justify: flex-start);
+				}
+			}
+		}
+
+		&.content-right {
+			> .image:before {
+				background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, 0) 0%,
+					rgba(0, 0, 0, 0.5) 70%
+				);
+
+				@media ($mobile-only) {
+					background: none;
+				}
+			}
+			> .wrapper {
+				@media ($menu) {
+					@include flex($justify: flex-end);
+				}
+			}
+		}
+
+		> .image {
+			&:before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.7);
+
+				@media ($mobile-only) {
+					background: none;
+				}
+			}
+		}
+
+		.wrapper {
+			@media ($mobile-only) {
+				height: auto;
+				min-height: auto;
+			}
+			@media ($menu) {
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+
+			.col {
+				position: relative;
+				max-width: 500px;
+				min-height: 700px;
+				display: flex;
+				align-items: center;
+				z-index: 1;
+
+				@media ($mobile-only) {
+					min-height: 100%;
+					max-width: 100%;
+					padding: 0;
+					@include box;
+				}
+			}
+
+			.content {
+				color: $white;
+
+				@media ($mobile-only) {
+					padding: 0;
+				}
+			}
+		}
+
+		// Nested cards block
+		// Resetting styles
+		.block.style-3 {
+			margin-bottom: 0;
+			padding-top: 100px;
+			padding-bottom: 90px;
+
+			@media ($mobile-only) {
+				padding-top: 20px;
+				padding-bottom: 0;
+			}
+
+			.wrapper {
+				height: auto;
+				min-height: auto;
+				padding: 0 30px;
+			}
+
+			.row,
+			.col,
+			.content {
+				height: auto;
+				min-height: auto;
+				margin: 0;
+				padding: 0;
+			}
+
+			.row {
+				@media ($tablet-only) {
+					display: block;
+					height: 100%;
+				}
+			}
+
+			.col {
+				min-height: 300px;
+				max-width: 50%;
+
+				@media ($tablet-only) {
+					max-width: 100%;
+				}
+
+				&:first-child {
+					overflow: hidden;
+				}
+
+				&:last-child {
+					padding: 45px;
+					height: 100%;
+
+					@media ($tablet-only) {
+						display: block;
+						height: 100%;
+					}
+				}
+			}
+
+			.slick-track,
+			.slick-list {
+				width: 100%;
+			}
+
+			.slick-slider {
+				margin-bottom: 0;
+			}
+
+			.image {
+				// position: relative;
+				min-height: auto;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.home {
+	.block.hero.style-4 {
+		.title {
+			margin-bottom: 25px;
+		}
+		.title .h1 {
+			font-size: 23vw;
+			margin-left: -3px;
+			@media (min-width: 550px) {
+				font-size: 130px;
+				margin-left: -4px;
+			}
+		}
+	}
+}

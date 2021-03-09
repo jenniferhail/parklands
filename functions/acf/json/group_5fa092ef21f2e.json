@@ -1,0 +1,41 @@
+{
+    "key": "group_5fa092ef21f2e",
+    "title": "Block - Donate",
+    "fields": [
+        {
+            "key": "field_5fa092f5a81d9",
+            "label": "Note:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This block can be edited from the Dashboard > Site Options > Donate Block. All edits will automatically update all Donate Blocks across the site.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1604358977
+}

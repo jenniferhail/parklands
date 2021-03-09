@@ -1,0 +1,23 @@
+footer {
+    @include disableLists();
+    padding: 30px 0 45px;
+    .wrapper {
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        display: inline-block;
+        width: 100%;
+        max-width: 220px;
+        margin-bottom: 20px;
+        svg {
+            display: block;
+            max-height: 95.25px;
+        }
+    }
+    .tagline {
+        font-family: $serif;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+}

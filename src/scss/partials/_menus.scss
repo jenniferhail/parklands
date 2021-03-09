@@ -1,0 +1,538 @@
+// Main Menu
+.main-menu {
+	.menu-item {
+		position: relative;
+		opacity: 1;
+		transition: opacity $base-duration $base-timing;
+
+		&:hover {
+			@media ($menu) {
+				.sub-menu {
+					visibility: visible;
+					opacity: 1;
+					transform: translate(0, 0);
+					transition: all $base-duration $base-timing 300ms;
+				}
+			}
+		}
+
+		a {
+			display: inline-block;
+			padding: 9px 15px; // Default padding, overridden below
+			letter-spacing: 1px;
+			text-decoration: none;
+			color: $white;
+			@include label-style();
+		}
+	}
+
+	.menu-item.current-menu-item > a,
+	.menu-item a:hover {
+		color: $green;
+	}
+
+	.menu-item.button a {
+		background-color: $green;
+		color: $base-font-color;
+
+		&:hover,
+		&:focus {
+			background-color: $white;
+			color: $base-font-color;
+		}
+	}
+
+	// Sub menus
+	.submenu-btn {
+		display: inline-block;
+		width: 28px;
+		height: 44px;
+		margin-left: 8px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		vertical-align: top;
+		@media ($menu) {
+			position: absolute;
+			width: 0;
+			height: 0;
+			margin-left: 0;
+			opacity: 0;
+			&:focus {
+				position: relative;
+				width: 18px;
+				height: 33px;
+				opacity: 1;
+			}
+		}
+		svg {
+			width: 18px;
+			height: 10px;
+			transform: rotate(0deg);
+			@media ($menu) {
+				width: 16px;
+				height: 9px;
+			}
+		}
+	}
+
+	.menu-item-has-children.active {
+		.sub-menu {
+			@media ($mobile-only) {
+				display: block;
+			}
+			@media ($menu) {
+				visibility: visible;
+				opacity: 1;
+				transform: translate(0, 0);
+				transition: all $base-duration $base-timing 300ms;
+			}
+		}
+		.submenu-btn {
+			@media ($menu) {
+				position: relative;
+				width: 18px;
+				height: 33px;
+				opacity: 1;
+			}
+		}
+		.submenu-btn svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	.sub-menu {
+		@media ($mobile-only) {
+			display: none;
+		}
+		@media ($menu) {
+			visibility: hidden;
+			opacity: 0;
+			min-width: 200px;
+			margin-top: 33px;
+			padding: 20px 0 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			transform: translate(-5px, 0);
+			transition: all $base-duration $base-timing;
+		}
+
+		.menu-item {
+			background-color: $faded-black;
+
+			a {
+				@media ($menu) {
+					display: block;
+					position: relative;
+					margin: 0;
+					padding: 8px 15px;
+					font-size: 14px;
+				}
+			}
+
+			&:last-child a {
+				padding-bottom: 16px;
+			}
+		}
+	}
+
+	// Fade out for search active state
+	&.fade {
+		.menu-item:not(.search) {
+			opacity: 0;
+		}
+	}
+
+	// CFS Menu Item
+	.menu-item.cfs {
+		margin-left: 0;
+		margin-right: 8px;
+		padding: 0;
+		@media ($menu) {
+			margin-left: 5px;
+			margin-right: 0;
+			padding: 0 5px;
+		}
+
+		.open-cfs {
+			display: block;
+			padding: 0;
+			background: transparent;
+			border: none;
+			color: white;
+			@media ($menu) {
+				padding: 0 10px;
+			}
+		}
+
+		svg {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	// Weather Menu Item
+	.menu-item.weather {
+		@include flex();
+
+		#weather-trigger {
+			background: transparent;
+			color: white;
+			border: none;
+			transition: all $base-duration $base-timing;
+			@media ($mobile-only) {
+				margin: 0 6px;
+				padding: 0;
+			}
+
+			div {
+				@include flex();
+			}
+
+			&:hover,
+			&:focus {
+				color: $green;
+				transition: all $base-duration $base-timing;
+
+				svg {
+					fill: $green;
+				}
+			}
+
+			.icon {
+				@media ($menu) {
+					margin-right: 10px;
+				}
+			}
+
+			.forecast {
+				font-size: 14px;
+
+				@media ($mobile-only) {
+					display: none;
+				}
+			}
+		}
+
+		a {
+			font-family: $sans-serif;
+			font-style: normal;
+		}
+	}
+}
+
+// Hamburger Menu Items
+.hamburger-menu {
+	.wrapper {
+		@media ($menu) {
+			padding: 0 86px; // Aligning w/ the right side of weather
+		}
+	}
+
+	.main-menu.bottom {
+		max-width: none;
+		margin-bottom: 10px;
+		column-count: 1;
+
+		.menu-item a {
+			font-size: 24px;
+		}
+		.menu-item.button a {
+			background: $transparent;
+			color: $white;
+			&:hover,
+			&:focus {
+				color: $green;
+			}
+		}
+		.sub-menu {
+			// display: none;
+			margin-left: 50px;
+			.menu-item {
+				background: none;
+				a {
+					padding: 7px 0;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.main-menu {
+		max-width: 560px;
+		margin-left: 0;
+		column-count: 2;
+
+		@media ($menu) {
+			margin-left: auto;
+			column-width: 270px;
+		}
+
+		.menu-item a {
+			padding: 10px 0;
+			font-size: 16px;
+
+			@media ($menu) {
+				padding: 15px 0;
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+// Top & Bottom Menus
+.top-menu {
+	position: relative;
+	margin-left: auto;
+	padding-right: 30px;
+	@media ($menu) {
+		margin-bottom: 10px;
+		padding-right: 46px;
+	}
+
+	.main-menu {
+		@include flex();
+	}
+
+	.menu-item {
+		position: relative;
+		z-index: 1;
+	}
+
+	.menu-item a,
+	.menu-item .menu-btn {
+		padding: 11px 10px;
+	}
+
+	.menu-item.button a {
+		padding: 8px 18px;
+	}
+
+	.menu-item.button + .menu-item a {
+		//.menu-item.button + .menu-item .menu-btn
+		padding-left: 20px;
+	}
+}
+
+.bottom-menu {
+	@include flex($justify: space-between);
+	display: flex;
+
+	@media ($menu) {
+		flex: 1 0 100%;
+		padding-left: 130px; // 115px for the logo + 15px for space
+	}
+
+	.main-menu {
+		@include flex($justify: flex-start);
+
+		@media ($mobile-only) {
+			display: none;
+		}
+	}
+
+	.menu-item a,
+	.menu-item .menu-btn {
+		padding: 9px 15px;
+	}
+
+	.menu-item.button + .menu-item a,
+	.menu-item.button + .menu-item .menu-btn {
+		padding-left: 30px;
+	}
+}
+
+// Social Icons
+.social-menu {
+	font-size: 0;
+
+	.menu-item {
+		display: inline-block;
+		font-size: 0;
+
+		&:not(:first-child) {
+			margin-left: 15px;
+		}
+	}
+
+	a {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		background-color: $green;
+		color: $white;
+		font-size: 0;
+		line-height: 30px;
+		transition: all $base-duration $base-timing;
+
+		&:hover,
+		&:focus {
+			background-color: $hover;
+		}
+	}
+
+	i {
+		position: absolute;
+		top: calc(50% + 1px);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 16px;
+	}
+}
+
+.header .social-menu a {
+	color: $black;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+	}
+}
+
+// Sharing
+.social.share {
+	@include disableLists();
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 45px;
+
+	.label {
+		margin-right: 5px;
+		padding: 8px;
+		font-size: 0;
+		font-weight: 600;
+		border: none;
+		color: $green;
+		background: $transparent;
+
+		&:before {
+			font-family: "Font Awesome 5 Pro";
+			font-size: 14px;
+			font-weight: 900;
+			content: "\f064";
+		}
+	}
+}
+
+// Skip Menu
+.skip-menu {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: 9999;
+	text-align: center;
+
+	a {
+		position: absolute;
+		left: -999999px;
+		padding: 16px 30px 20px;
+		border-radius: 60px;
+		background-color: rgba(0, 0, 0, 0.6);
+		color: $white;
+		font-family: $sans-serif;
+		font-size: 60px;
+		font-weight: 600;
+		transition: background-color $base-duration $base-timing;
+
+		&:focus {
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: rgba(0, 0, 0, 0.8);
+			outline: none;
+		}
+	}
+}
+
+// Pagination
+.pagination {
+	.facetwp-pager {
+		position: relative;
+		padding-bottom: 23px;
+		font-size: 0;
+		text-align: right;
+	}
+
+	.facetwp-page {
+		padding: 0 5px;
+		font-family: $sans-serif;
+		font-size: 18px;
+		font-weight: 600;
+
+		&.active,
+		&:hover,
+		&:focus {
+			color: $hover;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.next,
+		&.prev {
+			position: relative;
+			width: 20px;
+			height: 23px;
+			padding: 0 2.5px;
+			color: transparent;
+
+			&:before,
+			&:after {
+				position: absolute;
+				transform: rotate(0);
+				transition: transform $base-duration $base-timing,
+					border $base-duration $base-timing;
+			}
+		}
+
+		&.next {
+			&:before {
+				top: 4px;
+				right: 0px;
+				@include triangle(right, $base-font-color, $size: 18px);
+			}
+
+			&:after {
+				top: 7px;
+				right: 4px;
+				@include triangle(right, $white, $size: 12px);
+			}
+
+			&:hover,
+			&:focus {
+				&:after {
+					@include triangle(right, $base-font-color, $size: 12px);
+				}
+			}
+		}
+
+		&.prev {
+			&:before {
+				top: 4px;
+				right: 0px;
+				@include triangle(left, $base-font-color, $size: 18px);
+			}
+
+			&:after {
+				top: 7px;
+				right: 2px;
+				@include triangle(left, $white, $size: 12px);
+			}
+
+			&:hover,
+			&:focus {
+				&:after {
+					@include triangle(left, $base-font-color, $size: 12px);
+				}
+			}
+		}
+	}
+}

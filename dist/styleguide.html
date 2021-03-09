@@ -1,0 +1,2580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The Parklands</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://use.typekit.net/pkd5ooe.css">
+	<!-- <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+	<script src="https://kit.fontawesome.com/15caa5e93e.js" crossorigin="anonymous"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+	<link rel="manifest" href="../favicon.ico/site.webmanifest">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="front-end home">
+
+<div id="app">
+
+	<nav class="skip-nav">
+		<ul class="skip-menu">
+			<a href="#nav-toggle" class="menu-item">Skip to main menu</a>
+			<a href="#main" class="menu-item">Skip to main content</a>
+		</ul>
+	</nav>
+
+	<header class="header">
+		<!-- <div id="33" class="site-alert option notification top">
+    <div class="wrapper">
+        <h1 class="title h3">Site Alert: Site Alert Test</h1>
+        <p>This is the Site Alert Test</p>
+        <a href="https://staging.theparklands.org/site-alert-test/" class="link">Read More</a>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+<!-- <div class="park-alert option notification top">
+    <div class="wrapper">
+        <p>An exciting notification can go here!</p>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+<!-- <div class="option notification bottom">
+    <div class="wrapper">
+        <p>A cookie notice can go here! To provide a more personalized user experience, including content, ads and social media features, our website uses pixels and cookies. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. By continuing on this website, you consent to use of our pixels and cookies. For more information, visit our Privacy Policy.</p>
+        <button class="close">
+            <span class="toggle-wrapper">
+                <span class="toggle-bar toggle-bar-1"></span>
+                <span class="toggle-bar toggle-bar-2"></span>
+            </span>
+            <span class="visually-hide-text">Close Notice</span>
+        </button>
+    </div>
+</div> -->
+
+		<div class="wrapper mobile-bar">
+			<div class="row">
+				<a class="logo" href="/" target="_self">
+					<img class="svg" src="assets/img/logo-green.svg" alt="Title Here">
+				</a>
+				<nav class="top-menu">
+					<ul class="main-menu">
+						<li class="menu-item donate button"><a href="#">Donate</a></li>
+						<li class="menu-item cfs"><a href="#">CFS</a></li>
+						<li id="weather-forecast" class="menu-item weather">
+							<button id="weather-trigger">
+								<weather-data></weather-data>
+							</button>
+						</li>
+						<!-- <li id="weather-forecast" class="menu-item weather"><a href="#">Weather</a></li> -->
+						<li class="menu-item search">
+							<a href="#">Search</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="bottom-menu">
+					<ul class="main-menu bottom">
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<!-- <button class="submenu-btn" aria-expanded="false"><i class="fas fa-caret-down" aria-hidden="true"></i><span><span class="visually-hidden">Show Submenu for "Link"</span></span></button> -->
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children">
+							<a href="#">Link</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+								<li class="menu-item"><a href="#">Link</a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<button id="nav-toggle" class="nav-toggle">
+						<span class="toggle-wrapper">
+							<span class="toggle-bar toggle-bar-1"></span>
+							<span class="toggle-bar toggle-bar-2"></span>
+							<span class="toggle-bar toggle-bar-3"></span>
+							<span class="toggle-bar toggle-bar-4"></span>
+						</span>
+						<span class="visually-hide-text">Show Main Menu</span>
+					</button>
+				</nav>
+			</div>
+			<nav class="hamburger-menu">
+				<div class="wrapper">
+					<ul class="main-menu">
+						<li class="menu-item"><a href="/styleguide.html">Style Guide</a></li>
+						<li class="menu-item"><a href="/scratchpad.html">Scratch Pad</a></li>
+						<li class="menu-item"><a href="/single.html">Single Post</a></li>
+						<li class="menu-item"><a href="/profile.html">Profile</a></li>
+						<li class="menu-item"><a href="/404.html">404 Page</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item newsletter"><a href="#">Newsletter Sign-Up</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+						<li class="menu-item"><a href="#">Link</a></li>
+					</ul>
+					<ul class="social-menu">
+						<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+									class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+									class="visually-hide-text">Twitter</span><i class="fab fa-twitter"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+									class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+									aria-hidden="true"></i></a></li>
+						<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+									class="visually-hide-text">YouTube</span><i class="fab fa-youtube"
+									aria-hidden="true"></i></a></li>
+					</ul>
+					<div class="contact">
+						<p>© 21st Century Parks, Inc. 2020</br>
+							Mailing Address:</br>
+							471 West Main Street, Suite 202</br>
+							Louisville, KY 40202</p>
+					</div>
+				</div>
+				<!-- <ul class="main-menu">
+                    <li class="menu-item" v-for="layout in layouts">
+                        <a v-bind:href="'/#' + layout.id">{{layout.dataset.menutitle}}</a>
+                    </li>
+                </ul> -->
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="main">
+
+<div class="style-guide-wrapper">
+
+	<section id="colors" class="block color-palette" data-menutitle="Colors">
+	<div class="wrapper">
+		<h2 class="title">Colors</h2>
+		<div class="row">
+			<div class="color black"></div>
+			<div class="color green"></div>
+			<div class="color yellow"></div>
+			<div class="color beige"></div>
+		</div>
+	</div>
+</section>
+	<section id="typeface" class="block type" data-menutitle="Typeface">
+	<div class="wrapper">
+		<h2 class="title">Type Face</h2>
+		<div class="row">
+			<section class="heading-characters specimen-characters-module specimen-module fonts-module">
+				<h2 class="font header-font"></h2>
+				<h2 class="specimen-module-title fonts-module-title">Characters</h2>
+				<div class="specimen-characters-module-content">
+					<div class="specimen-characters-char">A</div>
+					<div class="specimen-characters-char">B</div>
+					<div class="specimen-characters-char">C</div>
+					<div class="specimen-characters-char">ÄŒ</div>
+					<div class="specimen-characters-char">Ä†</div>
+					<div class="specimen-characters-char">D</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">E</div>
+					<div class="specimen-characters-char">F</div>
+					<div class="specimen-characters-char">G</div>
+					<div class="specimen-characters-char">H</div>
+					<div class="specimen-characters-char">I</div>
+					<div class="specimen-characters-char">J</div>
+					<div class="specimen-characters-char">K</div>
+					<div class="specimen-characters-char">L</div>
+					<div class="specimen-characters-char">M</div>
+					<div class="specimen-characters-char">N</div>
+					<div class="specimen-characters-char">O</div>
+					<div class="specimen-characters-char">P</div>
+					<div class="specimen-characters-char">Q</div>
+					<div class="specimen-characters-char">R</div>
+					<div class="specimen-characters-char">S</div>
+					<div class="specimen-characters-char">Å </div>
+					<div class="specimen-characters-char">T</div>
+					<div class="specimen-characters-char">U</div>
+					<div class="specimen-characters-char">V</div>
+					<div class="specimen-characters-char">W</div>
+					<div class="specimen-characters-char">X</div>
+					<div class="specimen-characters-char">Y</div>
+					<div class="specimen-characters-char">Z</div>
+					<div class="specimen-characters-char">Å½</div>
+					<div class="specimen-characters-char">a</div>
+					<div class="specimen-characters-char">b</div>
+					<div class="specimen-characters-char">c</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">Ä‡</div>
+					<div class="specimen-characters-char">d</div>
+					<div class="specimen-characters-char">Ä‘</div>
+					<div class="specimen-characters-char">e</div>
+					<div class="specimen-characters-char">f</div>
+					<div class="specimen-characters-char">g</div>
+					<div class="specimen-characters-char">h</div>
+					<div class="specimen-characters-char">i</div>
+					<div class="specimen-characters-char">j</div>
+					<div class="specimen-characters-char">k</div>
+					<div class="specimen-characters-char">l</div>
+					<div class="specimen-characters-char">m</div>
+					<div class="specimen-characters-char">n</div>
+					<div class="specimen-characters-char">o</div>
+					<div class="specimen-characters-char">p</div>
+					<div class="specimen-characters-char">q</div>
+					<div class="specimen-characters-char">r</div>
+					<div class="specimen-characters-char">s</div>
+					<div class="specimen-characters-char">Å¡</div>
+					<div class="specimen-characters-char">t</div>
+					<div class="specimen-characters-char">u</div>
+					<div class="specimen-characters-char">v</div>
+					<div class="specimen-characters-char">w</div>
+					<div class="specimen-characters-char">x</div>
+					<div class="specimen-characters-char">y</div>
+					<div class="specimen-characters-char">z</div>
+					<div class="specimen-characters-char">Å¾</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð‘</div>
+					<div class="specimen-characters-char">Ð’</div>
+					<div class="specimen-characters-char">Ð“</div>
+					<div class="specimen-characters-char">Ò</div>
+					<div class="specimen-characters-char">Ð”</div>
+					<div class="specimen-characters-char">Ð‚</div>
+					<div class="specimen-characters-char">Ð•</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð„</div>
+					<div class="specimen-characters-char">Ð–</div>
+					<div class="specimen-characters-char">Ð—</div>
+					<div class="specimen-characters-char">Ð…</div>
+					<div class="specimen-characters-char">Ð˜</div>
+					<div class="specimen-characters-char">Ð†</div>
+					<div class="specimen-characters-char">Ð‡</div>
+					<div class="specimen-characters-char">Ð™</div>
+					<div class="specimen-characters-char">Ðˆ</div>
+					<div class="specimen-characters-char">Ðš</div>
+					<div class="specimen-characters-char">Ð›</div>
+					<div class="specimen-characters-char">Ð‰</div>
+					<div class="specimen-characters-char">Ðœ</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">ÐŠ</div>
+					<div class="specimen-characters-char">Ðž</div>
+					<div class="specimen-characters-char">ÐŸ</div>
+					<div class="specimen-characters-char">Ð </div>
+					<div class="specimen-characters-char">Ð¡</div>
+					<div class="specimen-characters-char">Ð¢</div>
+					<div class="specimen-characters-char">Ð‹</div>
+					<div class="specimen-characters-char">Ð£</div>
+					<div class="specimen-characters-char">ÐŽ</div>
+					<div class="specimen-characters-char">Ð¤</div>
+					<div class="specimen-characters-char">Ð¥</div>
+					<div class="specimen-characters-char">Ð¦</div>
+					<div class="specimen-characters-char">Ð§</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð¨</div>
+					<div class="specimen-characters-char">Ð©</div>
+					<div class="specimen-characters-char">Ðª</div>
+					<div class="specimen-characters-char">Ð«</div>
+					<div class="specimen-characters-char">Ð¬</div>
+					<div class="specimen-characters-char">Ð­</div>
+					<div class="specimen-characters-char">Ð®</div>
+					<div class="specimen-characters-char">Ð¯</div>
+					<div class="specimen-characters-char">Ð°</div>
+					<div class="specimen-characters-char">Ð±</div>
+					<div class="specimen-characters-char">Ð²</div>
+					<div class="specimen-characters-char">Ð³</div>
+					<div class="specimen-characters-char">Ò‘</div>
+					<div class="specimen-characters-char">Ð´</div>
+					<div class="specimen-characters-char">Ñ’</div>
+					<div class="specimen-characters-char">Ðµ</div>
+					<div class="specimen-characters-char">Ñ‘</div>
+					<div class="specimen-characters-char">Ñ”</div>
+					<div class="specimen-characters-char">Ð¶</div>
+					<div class="specimen-characters-char">Ð·</div>
+					<div class="specimen-characters-char">Ñ•</div>
+					<div class="specimen-characters-char">Ð¸</div>
+					<div class="specimen-characters-char">Ñ–</div>
+					<div class="specimen-characters-char">Ñ—</div>
+					<div class="specimen-characters-char">Ð¹</div>
+					<div class="specimen-characters-char">Ñ˜</div>
+					<div class="specimen-characters-char">Ðº</div>
+					<div class="specimen-characters-char">Ð»</div>
+					<div class="specimen-characters-char">Ñ™</div>
+					<div class="specimen-characters-char">Ð¼</div>
+					<div class="specimen-characters-char">Ð½</div>
+					<div class="specimen-characters-char">Ñš</div>
+					<div class="specimen-characters-char">Ð¾</div>
+					<div class="specimen-characters-char">Ð¿</div>
+					<div class="specimen-characters-char">Ñ€</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Ñ‚</div>
+					<div class="specimen-characters-char">Ñ›</div>
+					<div class="specimen-characters-char">Ñƒ</div>
+					<div class="specimen-characters-char">Ñž</div>
+					<div class="specimen-characters-char">Ñ„</div>
+					<div class="specimen-characters-char">Ñ…</div>
+					<div class="specimen-characters-char">Ñ†</div>
+					<div class="specimen-characters-char">Ñ‡</div>
+					<div class="specimen-characters-char">ÑŸ</div>
+					<div class="specimen-characters-char">Ñˆ</div>
+					<div class="specimen-characters-char">Ñ‰</div>
+					<div class="specimen-characters-char">ÑŠ</div>
+					<div class="specimen-characters-char">Ñ‹</div>
+					<div class="specimen-characters-char">ÑŒ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">ÑŽ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Î‘</div>
+					<div class="specimen-characters-char">Î’</div>
+					<div class="specimen-characters-char">Î“</div>
+					<div class="specimen-characters-char">Î”</div>
+					<div class="specimen-characters-char">Î•</div>
+					<div class="specimen-characters-char">Î–</div>
+					<div class="specimen-characters-char">Î—</div>
+					<div class="specimen-characters-char">Î˜</div>
+					<div class="specimen-characters-char">Î™</div>
+					<div class="specimen-characters-char">Îš</div>
+					<div class="specimen-characters-char">Î›</div>
+					<div class="specimen-characters-char">Îœ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Îž</div>
+					<div class="specimen-characters-char">ÎŸ</div>
+					<div class="specimen-characters-char">Î </div>
+					<div class="specimen-characters-char">Î¡</div>
+					<div class="specimen-characters-char">Î£</div>
+					<div class="specimen-characters-char">Î¤</div>
+					<div class="specimen-characters-char">Î¥</div>
+					<div class="specimen-characters-char">Î¦</div>
+					<div class="specimen-characters-char">Î§</div>
+					<div class="specimen-characters-char">Î¨</div>
+					<div class="specimen-characters-char">Î©</div>
+					<div class="specimen-characters-char">Î±</div>
+					<div class="specimen-characters-char">Î²</div>
+					<div class="specimen-characters-char">Î³</div>
+					<div class="specimen-characters-char">Î´</div>
+					<div class="specimen-characters-char">Îµ</div>
+					<div class="specimen-characters-char">Î¶</div>
+					<div class="specimen-characters-char">Î·</div>
+					<div class="specimen-characters-char">Î¸</div>
+					<div class="specimen-characters-char">Î¹</div>
+					<div class="specimen-characters-char">Îº</div>
+					<div class="specimen-characters-char">Î»</div>
+					<div class="specimen-characters-char">Î¼</div>
+					<div class="specimen-characters-char">Î½</div>
+					<div class="specimen-characters-char">Î¾</div>
+					<div class="specimen-characters-char">Î¿</div>
+					<div class="specimen-characters-char">Ï€</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Ïƒ</div>
+					<div class="specimen-characters-char">Ï„</div>
+					<div class="specimen-characters-char">Ï…</div>
+					<div class="specimen-characters-char">Ï†</div>
+					<div class="specimen-characters-char">Ï‡</div>
+					<div class="specimen-characters-char">Ïˆ</div>
+					<div class="specimen-characters-char">Ï‰</div>
+					<div class="specimen-characters-char">Î¬</div>
+					<div class="specimen-characters-char">Î†</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Îˆ</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Î‰</div>
+					<div class="specimen-characters-char">Î¯</div>
+					<div class="specimen-characters-char">ÏŠ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">ÎŠ</div>
+					<div class="specimen-characters-char">ÏŒ</div>
+					<div class="specimen-characters-char">ÎŒ</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Î°</div>
+					<div class="specimen-characters-char">Ï‹</div>
+					<div class="specimen-characters-char">ÎŽ</div>
+					<div class="specimen-characters-char">Î«</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Ä‚</div>
+					<div class="specimen-characters-char">Ã‚</div>
+					<div class="specimen-characters-char">ÃŠ</div>
+					<div class="specimen-characters-char">Ã”</div>
+					<div class="specimen-characters-char">Æ </div>
+					<div class="specimen-characters-char">Æ¯</div>
+					<div class="specimen-characters-char">Äƒ</div>
+					<div class="specimen-characters-char">Ã¢</div>
+					<div class="specimen-characters-char">Ãª</div>
+					<div class="specimen-characters-char">Ã´</div>
+					<div class="specimen-characters-char">Æ¡</div>
+					<div class="specimen-characters-char">Æ°</div>
+					<div class="specimen-characters-char">1</div>
+					<div class="specimen-characters-char">2</div>
+					<div class="specimen-characters-char">3</div>
+					<div class="specimen-characters-char">4</div>
+					<div class="specimen-characters-char">5</div>
+					<div class="specimen-characters-char">6</div>
+					<div class="specimen-characters-char">7</div>
+					<div class="specimen-characters-char">8</div>
+					<div class="specimen-characters-char">9</div>
+					<div class="specimen-characters-char">0</div>
+					<div class="specimen-characters-char">â€˜</div>
+					<div class="specimen-characters-char">?</div>
+					<div class="specimen-characters-char">â€™</div>
+					<div class="specimen-characters-char">â€œ</div>
+					<div class="specimen-characters-char">!</div>
+					<div class="specimen-characters-char">â€</div>
+					<div class="specimen-characters-char">(</div>
+					<div class="specimen-characters-char">%</div>
+					<div class="specimen-characters-char">)</div>
+					<div class="specimen-characters-char">[</div>
+					<div class="specimen-characters-char">#</div>
+					<div class="specimen-characters-char">]</div>
+					<div class="specimen-characters-char">{</div>
+					<div class="specimen-characters-char">@</div>
+					<div class="specimen-characters-char">}</div>
+					<div class="specimen-characters-char">/</div>
+					<div class="specimen-characters-char">&amp;</div>
+					<div class="specimen-characters-char">\</div>
+					<div class="specimen-characters-char">&lt;</div>
+					<div class="specimen-characters-char">-</div>
+					<div class="specimen-characters-char">+</div>
+					<div class="specimen-characters-char">Ã·</div>
+					<div class="specimen-characters-char">Ã—</div>
+					<div class="specimen-characters-char">=</div>
+					<div class="specimen-characters-char">&gt;</div>
+					<div class="specimen-characters-char">Â®</div>
+					<div class="specimen-characters-char">Â©</div>
+					<div class="specimen-characters-char">$</div>
+					<div class="specimen-characters-char">â‚¬</div>
+					<div class="specimen-characters-char">Â£</div>
+					<div class="specimen-characters-char">Â¥</div>
+					<div class="specimen-characters-char">Â¢</div>
+					<div class="specimen-characters-char">:</div>
+					<div class="specimen-characters-char">;</div>
+					<div class="specimen-characters-char">,</div>
+					<div class="specimen-characters-char">.</div>
+					<div class="specimen-characters-char">*</div>
+				</div>
+			</section>
+			<section class="body-characters specimen-characters-module specimen-module fonts-module">
+				<h2 class="font body-font"></h2>
+				<h2 class="specimen-module-title fonts-module-title">Characters</h2>
+				<div class="specimen-characters-module-content">
+					<div class="specimen-characters-char">A</div>
+					<div class="specimen-characters-char">B</div>
+					<div class="specimen-characters-char">C</div>
+					<div class="specimen-characters-char">ÄŒ</div>
+					<div class="specimen-characters-char">Ä†</div>
+					<div class="specimen-characters-char">D</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">E</div>
+					<div class="specimen-characters-char">F</div>
+					<div class="specimen-characters-char">G</div>
+					<div class="specimen-characters-char">H</div>
+					<div class="specimen-characters-char">I</div>
+					<div class="specimen-characters-char">J</div>
+					<div class="specimen-characters-char">K</div>
+					<div class="specimen-characters-char">L</div>
+					<div class="specimen-characters-char">M</div>
+					<div class="specimen-characters-char">N</div>
+					<div class="specimen-characters-char">O</div>
+					<div class="specimen-characters-char">P</div>
+					<div class="specimen-characters-char">Q</div>
+					<div class="specimen-characters-char">R</div>
+					<div class="specimen-characters-char">S</div>
+					<div class="specimen-characters-char">Å </div>
+					<div class="specimen-characters-char">T</div>
+					<div class="specimen-characters-char">U</div>
+					<div class="specimen-characters-char">V</div>
+					<div class="specimen-characters-char">W</div>
+					<div class="specimen-characters-char">X</div>
+					<div class="specimen-characters-char">Y</div>
+					<div class="specimen-characters-char">Z</div>
+					<div class="specimen-characters-char">Å½</div>
+					<div class="specimen-characters-char">a</div>
+					<div class="specimen-characters-char">b</div>
+					<div class="specimen-characters-char">c</div>
+					<div class="specimen-characters-char">Ä</div>
+					<div class="specimen-characters-char">Ä‡</div>
+					<div class="specimen-characters-char">d</div>
+					<div class="specimen-characters-char">Ä‘</div>
+					<div class="specimen-characters-char">e</div>
+					<div class="specimen-characters-char">f</div>
+					<div class="specimen-characters-char">g</div>
+					<div class="specimen-characters-char">h</div>
+					<div class="specimen-characters-char">i</div>
+					<div class="specimen-characters-char">j</div>
+					<div class="specimen-characters-char">k</div>
+					<div class="specimen-characters-char">l</div>
+					<div class="specimen-characters-char">m</div>
+					<div class="specimen-characters-char">n</div>
+					<div class="specimen-characters-char">o</div>
+					<div class="specimen-characters-char">p</div>
+					<div class="specimen-characters-char">q</div>
+					<div class="specimen-characters-char">r</div>
+					<div class="specimen-characters-char">s</div>
+					<div class="specimen-characters-char">Å¡</div>
+					<div class="specimen-characters-char">t</div>
+					<div class="specimen-characters-char">u</div>
+					<div class="specimen-characters-char">v</div>
+					<div class="specimen-characters-char">w</div>
+					<div class="specimen-characters-char">x</div>
+					<div class="specimen-characters-char">y</div>
+					<div class="specimen-characters-char">z</div>
+					<div class="specimen-characters-char">Å¾</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð‘</div>
+					<div class="specimen-characters-char">Ð’</div>
+					<div class="specimen-characters-char">Ð“</div>
+					<div class="specimen-characters-char">Ò</div>
+					<div class="specimen-characters-char">Ð”</div>
+					<div class="specimen-characters-char">Ð‚</div>
+					<div class="specimen-characters-char">Ð•</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð„</div>
+					<div class="specimen-characters-char">Ð–</div>
+					<div class="specimen-characters-char">Ð—</div>
+					<div class="specimen-characters-char">Ð…</div>
+					<div class="specimen-characters-char">Ð˜</div>
+					<div class="specimen-characters-char">Ð†</div>
+					<div class="specimen-characters-char">Ð‡</div>
+					<div class="specimen-characters-char">Ð™</div>
+					<div class="specimen-characters-char">Ðˆ</div>
+					<div class="specimen-characters-char">Ðš</div>
+					<div class="specimen-characters-char">Ð›</div>
+					<div class="specimen-characters-char">Ð‰</div>
+					<div class="specimen-characters-char">Ðœ</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">ÐŠ</div>
+					<div class="specimen-characters-char">Ðž</div>
+					<div class="specimen-characters-char">ÐŸ</div>
+					<div class="specimen-characters-char">Ð </div>
+					<div class="specimen-characters-char">Ð¡</div>
+					<div class="specimen-characters-char">Ð¢</div>
+					<div class="specimen-characters-char">Ð‹</div>
+					<div class="specimen-characters-char">Ð£</div>
+					<div class="specimen-characters-char">ÐŽ</div>
+					<div class="specimen-characters-char">Ð¤</div>
+					<div class="specimen-characters-char">Ð¥</div>
+					<div class="specimen-characters-char">Ð¦</div>
+					<div class="specimen-characters-char">Ð§</div>
+					<div class="specimen-characters-char">Ð</div>
+					<div class="specimen-characters-char">Ð¨</div>
+					<div class="specimen-characters-char">Ð©</div>
+					<div class="specimen-characters-char">Ðª</div>
+					<div class="specimen-characters-char">Ð«</div>
+					<div class="specimen-characters-char">Ð¬</div>
+					<div class="specimen-characters-char">Ð­</div>
+					<div class="specimen-characters-char">Ð®</div>
+					<div class="specimen-characters-char">Ð¯</div>
+					<div class="specimen-characters-char">Ð°</div>
+					<div class="specimen-characters-char">Ð±</div>
+					<div class="specimen-characters-char">Ð²</div>
+					<div class="specimen-characters-char">Ð³</div>
+					<div class="specimen-characters-char">Ò‘</div>
+					<div class="specimen-characters-char">Ð´</div>
+					<div class="specimen-characters-char">Ñ’</div>
+					<div class="specimen-characters-char">Ðµ</div>
+					<div class="specimen-characters-char">Ñ‘</div>
+					<div class="specimen-characters-char">Ñ”</div>
+					<div class="specimen-characters-char">Ð¶</div>
+					<div class="specimen-characters-char">Ð·</div>
+					<div class="specimen-characters-char">Ñ•</div>
+					<div class="specimen-characters-char">Ð¸</div>
+					<div class="specimen-characters-char">Ñ–</div>
+					<div class="specimen-characters-char">Ñ—</div>
+					<div class="specimen-characters-char">Ð¹</div>
+					<div class="specimen-characters-char">Ñ˜</div>
+					<div class="specimen-characters-char">Ðº</div>
+					<div class="specimen-characters-char">Ð»</div>
+					<div class="specimen-characters-char">Ñ™</div>
+					<div class="specimen-characters-char">Ð¼</div>
+					<div class="specimen-characters-char">Ð½</div>
+					<div class="specimen-characters-char">Ñš</div>
+					<div class="specimen-characters-char">Ð¾</div>
+					<div class="specimen-characters-char">Ð¿</div>
+					<div class="specimen-characters-char">Ñ€</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Ñ‚</div>
+					<div class="specimen-characters-char">Ñ›</div>
+					<div class="specimen-characters-char">Ñƒ</div>
+					<div class="specimen-characters-char">Ñž</div>
+					<div class="specimen-characters-char">Ñ„</div>
+					<div class="specimen-characters-char">Ñ…</div>
+					<div class="specimen-characters-char">Ñ†</div>
+					<div class="specimen-characters-char">Ñ‡</div>
+					<div class="specimen-characters-char">ÑŸ</div>
+					<div class="specimen-characters-char">Ñˆ</div>
+					<div class="specimen-characters-char">Ñ‰</div>
+					<div class="specimen-characters-char">ÑŠ</div>
+					<div class="specimen-characters-char">Ñ‹</div>
+					<div class="specimen-characters-char">ÑŒ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">ÑŽ</div>
+					<div class="specimen-characters-char">Ñ</div>
+					<div class="specimen-characters-char">Î‘</div>
+					<div class="specimen-characters-char">Î’</div>
+					<div class="specimen-characters-char">Î“</div>
+					<div class="specimen-characters-char">Î”</div>
+					<div class="specimen-characters-char">Î•</div>
+					<div class="specimen-characters-char">Î–</div>
+					<div class="specimen-characters-char">Î—</div>
+					<div class="specimen-characters-char">Î˜</div>
+					<div class="specimen-characters-char">Î™</div>
+					<div class="specimen-characters-char">Îš</div>
+					<div class="specimen-characters-char">Î›</div>
+					<div class="specimen-characters-char">Îœ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Îž</div>
+					<div class="specimen-characters-char">ÎŸ</div>
+					<div class="specimen-characters-char">Î </div>
+					<div class="specimen-characters-char">Î¡</div>
+					<div class="specimen-characters-char">Î£</div>
+					<div class="specimen-characters-char">Î¤</div>
+					<div class="specimen-characters-char">Î¥</div>
+					<div class="specimen-characters-char">Î¦</div>
+					<div class="specimen-characters-char">Î§</div>
+					<div class="specimen-characters-char">Î¨</div>
+					<div class="specimen-characters-char">Î©</div>
+					<div class="specimen-characters-char">Î±</div>
+					<div class="specimen-characters-char">Î²</div>
+					<div class="specimen-characters-char">Î³</div>
+					<div class="specimen-characters-char">Î´</div>
+					<div class="specimen-characters-char">Îµ</div>
+					<div class="specimen-characters-char">Î¶</div>
+					<div class="specimen-characters-char">Î·</div>
+					<div class="specimen-characters-char">Î¸</div>
+					<div class="specimen-characters-char">Î¹</div>
+					<div class="specimen-characters-char">Îº</div>
+					<div class="specimen-characters-char">Î»</div>
+					<div class="specimen-characters-char">Î¼</div>
+					<div class="specimen-characters-char">Î½</div>
+					<div class="specimen-characters-char">Î¾</div>
+					<div class="specimen-characters-char">Î¿</div>
+					<div class="specimen-characters-char">Ï€</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Ïƒ</div>
+					<div class="specimen-characters-char">Ï„</div>
+					<div class="specimen-characters-char">Ï…</div>
+					<div class="specimen-characters-char">Ï†</div>
+					<div class="specimen-characters-char">Ï‡</div>
+					<div class="specimen-characters-char">Ïˆ</div>
+					<div class="specimen-characters-char">Ï‰</div>
+					<div class="specimen-characters-char">Î¬</div>
+					<div class="specimen-characters-char">Î†</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Îˆ</div>
+					<div class="specimen-characters-char">Î­</div>
+					<div class="specimen-characters-char">Î‰</div>
+					<div class="specimen-characters-char">Î¯</div>
+					<div class="specimen-characters-char">ÏŠ</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">ÎŠ</div>
+					<div class="specimen-characters-char">ÏŒ</div>
+					<div class="specimen-characters-char">ÎŒ</div>
+					<div class="specimen-characters-char">Ï</div>
+					<div class="specimen-characters-char">Î°</div>
+					<div class="specimen-characters-char">Ï‹</div>
+					<div class="specimen-characters-char">ÎŽ</div>
+					<div class="specimen-characters-char">Î«</div>
+					<div class="specimen-characters-char">Î</div>
+					<div class="specimen-characters-char">Ä‚</div>
+					<div class="specimen-characters-char">Ã‚</div>
+					<div class="specimen-characters-char">ÃŠ</div>
+					<div class="specimen-characters-char">Ã”</div>
+					<div class="specimen-characters-char">Æ </div>
+					<div class="specimen-characters-char">Æ¯</div>
+					<div class="specimen-characters-char">Äƒ</div>
+					<div class="specimen-characters-char">Ã¢</div>
+					<div class="specimen-characters-char">Ãª</div>
+					<div class="specimen-characters-char">Ã´</div>
+					<div class="specimen-characters-char">Æ¡</div>
+					<div class="specimen-characters-char">Æ°</div>
+					<div class="specimen-characters-char">1</div>
+					<div class="specimen-characters-char">2</div>
+					<div class="specimen-characters-char">3</div>
+					<div class="specimen-characters-char">4</div>
+					<div class="specimen-characters-char">5</div>
+					<div class="specimen-characters-char">6</div>
+					<div class="specimen-characters-char">7</div>
+					<div class="specimen-characters-char">8</div>
+					<div class="specimen-characters-char">9</div>
+					<div class="specimen-characters-char">0</div>
+					<div class="specimen-characters-char">â€˜</div>
+					<div class="specimen-characters-char">?</div>
+					<div class="specimen-characters-char">â€™</div>
+					<div class="specimen-characters-char">â€œ</div>
+					<div class="specimen-characters-char">!</div>
+					<div class="specimen-characters-char">â€</div>
+					<div class="specimen-characters-char">(</div>
+					<div class="specimen-characters-char">%</div>
+					<div class="specimen-characters-char">)</div>
+					<div class="specimen-characters-char">[</div>
+					<div class="specimen-characters-char">#</div>
+					<div class="specimen-characters-char">]</div>
+					<div class="specimen-characters-char">{</div>
+					<div class="specimen-characters-char">@</div>
+					<div class="specimen-characters-char">}</div>
+					<div class="specimen-characters-char">/</div>
+					<div class="specimen-characters-char">&amp;</div>
+					<div class="specimen-characters-char">\</div>
+					<div class="specimen-characters-char">&lt;</div>
+					<div class="specimen-characters-char">-</div>
+					<div class="specimen-characters-char">+</div>
+					<div class="specimen-characters-char">Ã·</div>
+					<div class="specimen-characters-char">Ã—</div>
+					<div class="specimen-characters-char">=</div>
+					<div class="specimen-characters-char">&gt;</div>
+					<div class="specimen-characters-char">Â®</div>
+					<div class="specimen-characters-char">Â©</div>
+					<div class="specimen-characters-char">$</div>
+					<div class="specimen-characters-char">â‚¬</div>
+					<div class="specimen-characters-char">Â£</div>
+					<div class="specimen-characters-char">Â¥</div>
+					<div class="specimen-characters-char">Â¢</div>
+					<div class="specimen-characters-char">:</div>
+					<div class="specimen-characters-char">;</div>
+					<div class="specimen-characters-char">,</div>
+					<div class="specimen-characters-char">.</div>
+					<div class="specimen-characters-char">*</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>
+	<section id="typeset" class="block type" data-menutitle="Typeset">
+	<div class="wrapper">
+		<h2 class="title">Typeset</h2>
+		<div class="row typeset">
+
+			<h1>Header 1</h1>
+			<h2>Header 2</h2>
+			<h3>Header 3</h3>
+			<h4>Header 4</h4>
+			<h5>Header 5</h5>
+			<h6>Header 6</h6>
+
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicfdng elit. Necessitatibus, quo</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse asperiores quasi minus quo dolore quas.
+			</h2>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quasi officia saepe placeat dolor?
+				Quas laudantium, unde vel!</h3>
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iste nisi, distinctio cumque, eveniet
+				ea dolores rem! Deserunt est libero dolorum, odit mollitia nulla!</h4>
+			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas repudiandae rerum doloremque
+				hic fugit assumenda, in, ea temporibus minus! Eum repudiandae dolorem laudantium quasi.</h5>
+			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, ab aliquam odit tempore nulla? Eveniet
+				doloremque, consequuntur, eaque cumque veritatis dolorem odit voluptatem assumenda, placeat repellat
+				deserunt aliquam culpa
+				animi.</h6>
+
+			<h2>Paragraphs</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				ex ea commodo consequat. Duis aute
+				irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+				occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="javascript:void(0)">eiusmod
+					tempor incididunt ut labore</a> et dolore magna aliqua. Ut enim ad minim veniam, <a
+					href="javascript:void(0)">quis nostrud
+					exercitation
+					ullamco</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <a
+					href="javascript:void(0)">reprehenderit</a> in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non <a href="javascript:void(0)">proident</a>,
+				sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo
+					consequat. Duis
+					aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+					est laborum.</b></p>
+			<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo
+					consequat. Duis
+					aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+					est laborum.</i></p>
+			<blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat.
+				Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+				occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</blockquote>
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+				</ul>
+			</ul>
+			<ol>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Lorem ipsum dolor sit amet</li>
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Lorem ipsum dolor sit amet</li>
+				</ol>
+			</ol>
+		</div>
+	</div>
+</section>
+	<section id="buttons-regular" class="block button-styles" data-menutitle="Buttons - Regular">
+	<div class="wrapper">
+		<h2 class="title">Button Styles</h2>
+		<div class="row">
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 small">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 small">Button</a>
+			</div>
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 large">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 large">Button</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="buttons-inverted" class="block button-styles blue-bg" data-menutitle="Buttons - Inverted">
+	<div class="wrapper">
+		<div class="row">
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 small">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 small">Button</a>
+			</div>
+			<div class="buttons">
+				<a href="javascript:void(0)" class="btn btn-1 large">Button</a>
+				<a href="javascript:void(0)" class="btn btn-2 large">Button</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="tables" class="block tables" data-menutitle="Tables">
+	<div class="wrapper">
+		<h2 class="title">Tables</h2>
+		<div class="row">
+			<div class="col">
+				<div style="overflow-x:auto;">
+					<table>
+						<tr>
+							<th>Lorem ipsum dolor</th>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+						</tr>
+					</table>
+				</div>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+						<th>Lorem ipsum dolor</th>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+						<td>Lorem ipsum</td>
+					</tr>
+				</table>
+				<div style="overflow-x:auto;">
+					<table>
+						<tr>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+							<th>Lorem ipsum dolor</th>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+							<td>Lorem ipsum</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="form-elements" class="block forms" data-menutitle="Form Elements">
+	<div class="wrapper">
+		<h1 class="title">Form Elements</h1>
+		<div class="row">
+			<div class="col">
+				<form class="" action="index.html" method="post">
+					<fieldset>
+						<input type="text" name="" value="" placeholder="Text">
+						<input type="email" name="" value="" placeholder="Email">
+						<input type="number" name="" value="" placeholder="Number">
+						<input type="password" name="" value="" placeholder="Password">
+						<input type="date" name="" value="" placeholder="Date">
+						<input type="file" name="" value="" placeholder="File">
+						<input type="range" name="" value="" min="0" max="100" placeholder="Range">
+						<input type="search" name="" value="" placeholder="Search">
+						<input type="tel" name="" value="" placeholder="Telephone">
+						<input type="url" name="" value="" placeholder="Url">
+						<input type="text" name="" value="" placeholder="Read Only" readonly>
+						<input type="text" name="" value="" placeholder="Disabled" disabled>
+
+					</fieldset>
+					<fieldset>
+						<label for="radio-1">
+							Radio 1
+							<input id="radio-1" type="radio" name="radio" value="Radio 1">
+						</label>
+						<label for="radio-2">
+							Radio 2
+							<input id="radio-2" type="radio" name="radio" value="Radio 2">
+						</label>
+						<label for="radio-3">
+							Radio 3
+							<input id="radio-3" type="radio" name="radio" value="Radio 3">
+						</label>
+					</fieldset>
+					<fieldset>
+						<label for="checkbox-1">
+							Checkbox 1
+							<input id="checkbox-1" type="checkbox" name="checkbox-1" value="Test">
+						</label>
+						<label for="checkbox-2">
+							Checkbox 2
+							<input id="checkbox-2" type="checkbox" name="checkbox-2" value="Test">
+						</label>
+						<label for="checkbox-3">
+							Checkbox 3
+							<input id="checkbox-3" type="checkbox" name="checkbox-3" value="Test">
+						</label>
+					</fieldset>
+					<select class="" name="">
+						<option value="">Label 1</option>
+						<option value="">Label 2</option>
+						<option value="">Label 3</option>
+					</select>
+					<textarea name="name" rows="8" cols="80"></textarea>
+					<button type="button" name="button" onclick="alert('Clicked!')">Submit</button>
+					<input type="reset">
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="block hero style-1 content-center">
+	<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+		<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title"><span class="h2">Hero Style 1</span></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block hero style-1 content-left">
+	<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+		<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title"><span class="h2">Hero Style 1</span></h2>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non
+						metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+		<a class="map-button" href="https://staging.theparklands.org/location-map/" target="_blank"><span>Interactive
+				map</span></a>
+	</div>
+</section>
+
+<section class="block hero style-1 content-right">
+	<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+		<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title"><span class="h2">Hero Style 1</span></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section id="hero-style-1-right" class="block hero style-2 content-right" data-menutitle="Hero Style 2 - Right">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+					<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+						class="visually-hidden" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h1 class="label icon icon-walking">Label</h1>
+					<h2 class="title">Hero Style 2</h2>
+					<p class="copy">Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean
+						lacinia bibendum nulla sed consectetur.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block hero style-2 content-left">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+					<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+						class="visually-hidden" />
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title">
+						<span class="line h4 line-break black">Take me to the river </span>
+						<span class="line h2 no-line-break green">Drop me in the</span>
+						<span class="line h2 no-line-break black">water</span>
+					</h2>
+					<p class="copy">Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean
+						lacinia bibendum nulla sed consectetur.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="block hero style-2 content-right">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="video">
+					<div class="embed-container">
+						<div class="poster"
+							style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+							<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+								class="visually-hidden" />
+						</div>
+						<iframe src="https://www.youtube.com/embed//gdJjc6l6iII" frameborder="0"
+							allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="content">
+					<h1 class="label">Label</h1>
+					<h2 class="title">Hero Style 2</h2>
+					<p class="copy">Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean
+						lacinia bibendum nulla sed consectetur.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="block hero style-3 content-right">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="content">
+                    <h1 class="label icon icon-sun">Label</h1>
+                    <h2 class="title h3">Hero Style 3 - Right</h2>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="block hero style-3 content-left">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="content">
+                    <h1 class="label icon icon-sun">Label</h1>
+                    <h2 class="title h3">Hero Style 3 - Left</h2>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	<div class="home">
+	<section class="block hero style-4 content-left">
+		<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+			<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+				class="visually-hidden" />
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content">
+						<div class="meta">
+							<div class="icon icon-small">
+								<img src="https://staging.theparklands.org/app/uploads/2020/11/sun.svg" alt="">
+							</div>
+							<div class="right">
+								<span class="sunrise">Sunrise <time class="time">8:01 AM</time></span><span
+									class="sunset">Sunset
+									<time class="time">7:46 PM</time></span>
+								<p>Other content can go below.</p>
+							</div>
+						</div>
+						<h1 class="title">Hero Style 4</h1>
+						<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla
+							non
+							metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+						<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Block inception -->
+		<section class="block hero style-3 slider content-right">
+			<div class="wrapper">
+				<div class="items" data-id="1" data-slick='{
+					"slidesToShow": 1, 
+					"slidesToScroll": 1,
+					"arrows": false,
+					"dots": true, 
+					"fade": true,
+					"centerMode": false,
+					"adaptiveHeight": true,
+					"variableWidth": false,
+					"autoplay": false,
+					"autoplaySpeed": 6000,
+					"responsive": [{"breakpoint": 768,"settings": {"arrows": false}}]
+				}'>
+					<div class="item">
+						<div class="row">
+							<div class="col">
+								<div class="image"
+									style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+									<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+										class="visually-hidden" />
+								</div>
+							</div>
+							<div class="col">
+								<div class="content">
+									<h1 class="label icon icon-sun">Label</h1>
+									<h1 class="title h3">Slide One</h1>
+									<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+										ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.
+										Etiam porta sem malesuada magna mollis euismod.</p>
+									<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col">
+								<div class="image"
+									style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+									<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+										class="visually-hidden" />
+								</div>
+							</div>
+							<div class="col">
+								<div class="content">
+									<h1 class="label icon icon-sun">Label</h1>
+									<h1 class="title h3">Slide Two</h1>
+									<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+										ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.
+										Etiam porta sem malesuada magna mollis euismod.</p>
+									<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col">
+								<div class="image"
+									style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+									<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+										class="visually-hidden" />
+								</div>
+							</div>
+							<div class="col">
+								<div class="content">
+									<h1 class="label icon icon-sun">Label</h1>
+									<h1 class="title h3">Slide Three</h1>
+									<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+										ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.
+										Etiam porta sem malesuada magna mollis euismod.</p>
+									<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</div>
+
+<section class="block hero style-4 content-left">
+	<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);">
+		<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="content">
+					<div class="meta">
+						<div class="icon icon-small">
+							<img src="https://staging.theparklands.org/app/uploads/2020/11/sun.svg" alt="">
+						</div>
+						<div class="right">
+							<span class="sunrise">Sunrise <time class="time">8:01 AM</time></span><span
+								class="sunset">Sunset
+								<time class="time">7:46 PM</time></span>
+							<p>Other content can go below.</p>
+						</div>
+					</div>
+					<h2 class="title">Hero Style 4</h2>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non
+						metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+					<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="block cards style-1">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                    <div class="card-title">
+                        <h2 class="h3">Title Here</h2>
+                    </div>
+				</div>
+				<div class="content">
+					<h1 class="title h3">Cards Style 1</h1>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="col">
+				<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                    <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                    <div class="card-title">
+                        <h2 class="h3">Title Here</h2>
+                    </div>
+				</div>
+                <div class="content">
+					<h1 class="title h3">Cards Style 1</h1>
+					<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                    <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<section class="block listing activities grid-small">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Activities, Small</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item activity small" v-for="n in 16">
+                    <p class="name">Activity</p>
+<div class="icon">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+    <g>
+        <g>
+            <path d="M498.112,419.272c-5.093-2.141-10.955,0.248-13.096,5.34c-14.051,33.395-46.539,54.973-82.767,54.973
+                c-43.468,0-79.812-31.062-88.015-72.153c0.007-0.158,0.024-0.313,0.024-0.473c0-4.405-0.578-8.676-1.653-12.748
+                c-0.07-1.451-0.108-2.91-0.108-4.377c0-37.54,23.17-69.765,55.958-83.14l24.168,85.85c1.242,4.41,5.254,7.293,9.621,7.293
+                c0.897,0,1.809-0.122,2.715-0.377c5.316-1.497,8.413-7.02,6.916-12.336l-24.169-85.857c4.735-0.775,9.592-1.184,14.543-1.184
+                c35.711,0,68.017,21.153,82.303,53.891c2.209,5.062,8.102,7.374,13.165,5.165c5.062-2.209,7.375-8.103,5.166-13.165
+                c-17.468-40.027-56.969-65.891-100.634-65.891c-6.826,0-13.507,0.632-19.992,1.831l-0.857-3.045
+                c-2.893-10.277-5.052-20.733-6.476-31.288c0-0.004-0.001-0.008-0.001-0.012c-0.824-6.11-1.405-12.252-1.731-18.414
+                c0.91,4.586,4.956,8.043,9.809,8.043h13.663c18.916,0,34.306-15.39,34.306-34.306s-15.39-34.306-34.306-34.306h-29.997
+                l-76.693-67.96c3.979,1.155,8.178,1.787,12.524,1.787c24.813,0,45-20.187,45-45s-20.187-45-45-45s-45,20.187-45,45
+                c0,8.455,2.347,16.369,6.419,23.134c-7.155-3.259-14.983-4.987-23.081-4.987c-14.887,0-28.882,5.798-39.409,16.324l-81.882,81.881
+                c-0.022,0.022-0.039,0.048-0.061,0.07c-0.263,0.268-0.513,0.553-0.748,0.854c-0.027,0.035-0.057,0.067-0.083,0.102
+                c-0.01,0.013-0.021,0.024-0.03,0.037c-5.199,6.915-8.168,15.198-8.797,24.132H90.173c-5.523,0-10,4.478-10,10v12.237
+                c0,20.822,16.94,37.763,37.763,37.763h11.856l-5.128,22.143c-4.879-0.666-9.856-1.018-14.914-1.018
+                C49.234,280.082,0,329.317,0,389.833c0,37.05,18.457,69.868,46.657,89.751H10c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10
+                h99.751c54.26,0,99.442-39.583,108.207-91.387c0.611,4.937,4.813,8.761,9.915,8.761h68.02
+                c6.553,25.68,22.185,47.765,43.262,62.626h-63.488c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10H402.25
+                c44.298,0,84.021-26.384,101.202-67.217C505.593,427.277,503.202,421.415,498.112,419.272z M372.873,188.585h23.79
+                c7.888-0.001,14.306,6.416,14.306,14.305c0,7.888-6.417,14.306-14.306,14.306H383c-5.174,0-9.43,3.929-9.947,8.966
+                c-0.12-3.015-0.18-6.031-0.18-9.052V188.585z M353.842,238.957H253.618c-1.602-1.911-3.283-3.767-5.062-5.547l-31.516-31.517
+                l41.521-41.521l94.599,68.524C353.32,232.255,353.546,235.611,353.842,238.957z M339.085,258.957l-61.276,55.508l-5.839-36.281
+                c-0.011-0.07-0.023-0.14-0.036-0.21c-1.208-6.609-3.183-12.977-5.853-19.017H339.085z M302.498,32.411c13.785,0,25,11.215,25,25
+                c0,13.785-11.215,25-25,25c-13.785,0-25-11.215-25-25C277.498,43.626,288.712,32.411,302.498,32.411z M215.569,106.025
+                c6.749-6.75,15.722-10.467,25.267-10.467s18.518,3.717,25.269,10.468l86.769,77.059v20.908l-89.487-64.82
+                c-1.761-1.275-3.817-1.901-5.863-1.901c-2.577,0-5.138,0.992-7.074,2.929l-50.504,50.505l-33.373-9.214l-20.743-5.727
+                L215.569,106.025z M117.936,238.958c-9.794-0.001-17.763-7.969-17.763-17.763v-2.237h12.003c2.223,7.37,5.844,14.194,10.525,20
+                H117.936z M109.751,479.584C60.262,479.584,20,439.323,20,389.833s40.262-89.751,89.751-89.751c3.51,0,6.972,0.209,10.379,0.604
+                l-20.121,86.892c-0.688,2.97,0.017,6.092,1.914,8.479c1.897,2.387,4.779,3.777,7.828,3.777h89.191
+                C193.953,444.633,155.86,479.584,109.751,479.584z M122.331,379.833l17.283-74.636c31.833,11.265,55.471,40.006,59.328,74.636
+                H122.331z M144.151,285.61l6.139-26.514l47.929,27.676l15.739,68.609C203.063,322.513,177.026,296.488,144.151,285.61z
+                M216.738,278.054c-0.621-2.707-2.34-5.034-4.746-6.424l-64.738-37.382c-8.26-4.77-14.706-14.173-16.821-24.541
+                c-1.271-6.229-0.893-12.128,1.036-17.159l29.122,8.04l37.102,10.243l36.722,36.722c9.283,9.282,15.446,21.008,17.827,33.916
+                l12.15,75.493c-0.045,0-0.088-0.003-0.133-0.003h-29.42v-0.001L216.738,278.054z M237.873,396.958v-20h26.385
+                c13.038,0,24.159,8.359,28.287,20H237.873z M294.803,367.414c-2.898-2.244-6.045-4.177-9.397-5.749l-3.806-23.649l76.677-69.458
+                c1.12,5.279,2.407,10.525,3.872,15.729l0.86,3.054C328.591,300.563,302.467,330.64,294.803,367.414z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M502,379.833c-5.523,0-10,4.478-10,10l-0.001,0.469c-0.016,5.522,4.448,10.013,9.971,10.029c0.01,0,0.02,0,0.03,0
+                c5.509,0,9.983-4.458,10-9.971l0.001-0.527C512,384.311,507.523,379.833,502,379.833z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M243.4,482.517c-1.86-1.87-4.43-2.93-7.07-2.93c-2.63,0-5.21,1.06-7.07,2.93c-1.86,1.86-2.93,4.431-2.93,7.07
+                c0,2.63,1.07,5.21,2.93,7.07c1.86,1.859,4.44,2.93,7.07,2.93s5.21-1.07,7.07-2.93c1.87-1.86,2.93-4.44,2.93-7.07
+                C246.33,486.947,245.27,484.377,243.4,482.517z"/>
+        </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </svg>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing activities grid-half">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Activities, Large</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item activity large" v-for="n in 5">
+                    <div class="icon">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+    <g>
+        <g>
+            <path d="M498.112,419.272c-5.093-2.141-10.955,0.248-13.096,5.34c-14.051,33.395-46.539,54.973-82.767,54.973
+                c-43.468,0-79.812-31.062-88.015-72.153c0.007-0.158,0.024-0.313,0.024-0.473c0-4.405-0.578-8.676-1.653-12.748
+                c-0.07-1.451-0.108-2.91-0.108-4.377c0-37.54,23.17-69.765,55.958-83.14l24.168,85.85c1.242,4.41,5.254,7.293,9.621,7.293
+                c0.897,0,1.809-0.122,2.715-0.377c5.316-1.497,8.413-7.02,6.916-12.336l-24.169-85.857c4.735-0.775,9.592-1.184,14.543-1.184
+                c35.711,0,68.017,21.153,82.303,53.891c2.209,5.062,8.102,7.374,13.165,5.165c5.062-2.209,7.375-8.103,5.166-13.165
+                c-17.468-40.027-56.969-65.891-100.634-65.891c-6.826,0-13.507,0.632-19.992,1.831l-0.857-3.045
+                c-2.893-10.277-5.052-20.733-6.476-31.288c0-0.004-0.001-0.008-0.001-0.012c-0.824-6.11-1.405-12.252-1.731-18.414
+                c0.91,4.586,4.956,8.043,9.809,8.043h13.663c18.916,0,34.306-15.39,34.306-34.306s-15.39-34.306-34.306-34.306h-29.997
+                l-76.693-67.96c3.979,1.155,8.178,1.787,12.524,1.787c24.813,0,45-20.187,45-45s-20.187-45-45-45s-45,20.187-45,45
+                c0,8.455,2.347,16.369,6.419,23.134c-7.155-3.259-14.983-4.987-23.081-4.987c-14.887,0-28.882,5.798-39.409,16.324l-81.882,81.881
+                c-0.022,0.022-0.039,0.048-0.061,0.07c-0.263,0.268-0.513,0.553-0.748,0.854c-0.027,0.035-0.057,0.067-0.083,0.102
+                c-0.01,0.013-0.021,0.024-0.03,0.037c-5.199,6.915-8.168,15.198-8.797,24.132H90.173c-5.523,0-10,4.478-10,10v12.237
+                c0,20.822,16.94,37.763,37.763,37.763h11.856l-5.128,22.143c-4.879-0.666-9.856-1.018-14.914-1.018
+                C49.234,280.082,0,329.317,0,389.833c0,37.05,18.457,69.868,46.657,89.751H10c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10
+                h99.751c54.26,0,99.442-39.583,108.207-91.387c0.611,4.937,4.813,8.761,9.915,8.761h68.02
+                c6.553,25.68,22.185,47.765,43.262,62.626h-63.488c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10H402.25
+                c44.298,0,84.021-26.384,101.202-67.217C505.593,427.277,503.202,421.415,498.112,419.272z M372.873,188.585h23.79
+                c7.888-0.001,14.306,6.416,14.306,14.305c0,7.888-6.417,14.306-14.306,14.306H383c-5.174,0-9.43,3.929-9.947,8.966
+                c-0.12-3.015-0.18-6.031-0.18-9.052V188.585z M353.842,238.957H253.618c-1.602-1.911-3.283-3.767-5.062-5.547l-31.516-31.517
+                l41.521-41.521l94.599,68.524C353.32,232.255,353.546,235.611,353.842,238.957z M339.085,258.957l-61.276,55.508l-5.839-36.281
+                c-0.011-0.07-0.023-0.14-0.036-0.21c-1.208-6.609-3.183-12.977-5.853-19.017H339.085z M302.498,32.411c13.785,0,25,11.215,25,25
+                c0,13.785-11.215,25-25,25c-13.785,0-25-11.215-25-25C277.498,43.626,288.712,32.411,302.498,32.411z M215.569,106.025
+                c6.749-6.75,15.722-10.467,25.267-10.467s18.518,3.717,25.269,10.468l86.769,77.059v20.908l-89.487-64.82
+                c-1.761-1.275-3.817-1.901-5.863-1.901c-2.577,0-5.138,0.992-7.074,2.929l-50.504,50.505l-33.373-9.214l-20.743-5.727
+                L215.569,106.025z M117.936,238.958c-9.794-0.001-17.763-7.969-17.763-17.763v-2.237h12.003c2.223,7.37,5.844,14.194,10.525,20
+                H117.936z M109.751,479.584C60.262,479.584,20,439.323,20,389.833s40.262-89.751,89.751-89.751c3.51,0,6.972,0.209,10.379,0.604
+                l-20.121,86.892c-0.688,2.97,0.017,6.092,1.914,8.479c1.897,2.387,4.779,3.777,7.828,3.777h89.191
+                C193.953,444.633,155.86,479.584,109.751,479.584z M122.331,379.833l17.283-74.636c31.833,11.265,55.471,40.006,59.328,74.636
+                H122.331z M144.151,285.61l6.139-26.514l47.929,27.676l15.739,68.609C203.063,322.513,177.026,296.488,144.151,285.61z
+                M216.738,278.054c-0.621-2.707-2.34-5.034-4.746-6.424l-64.738-37.382c-8.26-4.77-14.706-14.173-16.821-24.541
+                c-1.271-6.229-0.893-12.128,1.036-17.159l29.122,8.04l37.102,10.243l36.722,36.722c9.283,9.282,15.446,21.008,17.827,33.916
+                l12.15,75.493c-0.045,0-0.088-0.003-0.133-0.003h-29.42v-0.001L216.738,278.054z M237.873,396.958v-20h26.385
+                c13.038,0,24.159,8.359,28.287,20H237.873z M294.803,367.414c-2.898-2.244-6.045-4.177-9.397-5.749l-3.806-23.649l76.677-69.458
+                c1.12,5.279,2.407,10.525,3.872,15.729l0.86,3.054C328.591,300.563,302.467,330.64,294.803,367.414z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M502,379.833c-5.523,0-10,4.478-10,10l-0.001,0.469c-0.016,5.522,4.448,10.013,9.971,10.029c0.01,0,0.02,0,0.03,0
+                c5.509,0,9.983-4.458,10-9.971l0.001-0.527C512,384.311,507.523,379.833,502,379.833z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M243.4,482.517c-1.86-1.87-4.43-2.93-7.07-2.93c-2.63,0-5.21,1.06-7.07,2.93c-1.86,1.86-2.93,4.431-2.93,7.07
+                c0,2.63,1.07,5.21,2.93,7.07c1.86,1.859,4.44,2.93,7.07,2.93s5.21-1.07,7.07-2.93c1.87-1.86,2.93-4.44,2.93-7.07
+                C246.33,486.947,245.27,484.377,243.4,482.517z"/>
+        </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </svg>
+</div>
+<h2 class="title h3">Activity</h2>
+<p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p>
+<p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Learn More About Activity</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing resources grid-thirds-center">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Resources</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item resource" v-for="n in 5">
+                    <div class="icon">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+    <g>
+        <g>
+            <path d="M498.112,419.272c-5.093-2.141-10.955,0.248-13.096,5.34c-14.051,33.395-46.539,54.973-82.767,54.973
+                c-43.468,0-79.812-31.062-88.015-72.153c0.007-0.158,0.024-0.313,0.024-0.473c0-4.405-0.578-8.676-1.653-12.748
+                c-0.07-1.451-0.108-2.91-0.108-4.377c0-37.54,23.17-69.765,55.958-83.14l24.168,85.85c1.242,4.41,5.254,7.293,9.621,7.293
+                c0.897,0,1.809-0.122,2.715-0.377c5.316-1.497,8.413-7.02,6.916-12.336l-24.169-85.857c4.735-0.775,9.592-1.184,14.543-1.184
+                c35.711,0,68.017,21.153,82.303,53.891c2.209,5.062,8.102,7.374,13.165,5.165c5.062-2.209,7.375-8.103,5.166-13.165
+                c-17.468-40.027-56.969-65.891-100.634-65.891c-6.826,0-13.507,0.632-19.992,1.831l-0.857-3.045
+                c-2.893-10.277-5.052-20.733-6.476-31.288c0-0.004-0.001-0.008-0.001-0.012c-0.824-6.11-1.405-12.252-1.731-18.414
+                c0.91,4.586,4.956,8.043,9.809,8.043h13.663c18.916,0,34.306-15.39,34.306-34.306s-15.39-34.306-34.306-34.306h-29.997
+                l-76.693-67.96c3.979,1.155,8.178,1.787,12.524,1.787c24.813,0,45-20.187,45-45s-20.187-45-45-45s-45,20.187-45,45
+                c0,8.455,2.347,16.369,6.419,23.134c-7.155-3.259-14.983-4.987-23.081-4.987c-14.887,0-28.882,5.798-39.409,16.324l-81.882,81.881
+                c-0.022,0.022-0.039,0.048-0.061,0.07c-0.263,0.268-0.513,0.553-0.748,0.854c-0.027,0.035-0.057,0.067-0.083,0.102
+                c-0.01,0.013-0.021,0.024-0.03,0.037c-5.199,6.915-8.168,15.198-8.797,24.132H90.173c-5.523,0-10,4.478-10,10v12.237
+                c0,20.822,16.94,37.763,37.763,37.763h11.856l-5.128,22.143c-4.879-0.666-9.856-1.018-14.914-1.018
+                C49.234,280.082,0,329.317,0,389.833c0,37.05,18.457,69.868,46.657,89.751H10c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10
+                h99.751c54.26,0,99.442-39.583,108.207-91.387c0.611,4.937,4.813,8.761,9.915,8.761h68.02
+                c6.553,25.68,22.185,47.765,43.262,62.626h-63.488c-5.523,0-10,4.478-10,10c0,5.522,4.477,10,10,10H402.25
+                c44.298,0,84.021-26.384,101.202-67.217C505.593,427.277,503.202,421.415,498.112,419.272z M372.873,188.585h23.79
+                c7.888-0.001,14.306,6.416,14.306,14.305c0,7.888-6.417,14.306-14.306,14.306H383c-5.174,0-9.43,3.929-9.947,8.966
+                c-0.12-3.015-0.18-6.031-0.18-9.052V188.585z M353.842,238.957H253.618c-1.602-1.911-3.283-3.767-5.062-5.547l-31.516-31.517
+                l41.521-41.521l94.599,68.524C353.32,232.255,353.546,235.611,353.842,238.957z M339.085,258.957l-61.276,55.508l-5.839-36.281
+                c-0.011-0.07-0.023-0.14-0.036-0.21c-1.208-6.609-3.183-12.977-5.853-19.017H339.085z M302.498,32.411c13.785,0,25,11.215,25,25
+                c0,13.785-11.215,25-25,25c-13.785,0-25-11.215-25-25C277.498,43.626,288.712,32.411,302.498,32.411z M215.569,106.025
+                c6.749-6.75,15.722-10.467,25.267-10.467s18.518,3.717,25.269,10.468l86.769,77.059v20.908l-89.487-64.82
+                c-1.761-1.275-3.817-1.901-5.863-1.901c-2.577,0-5.138,0.992-7.074,2.929l-50.504,50.505l-33.373-9.214l-20.743-5.727
+                L215.569,106.025z M117.936,238.958c-9.794-0.001-17.763-7.969-17.763-17.763v-2.237h12.003c2.223,7.37,5.844,14.194,10.525,20
+                H117.936z M109.751,479.584C60.262,479.584,20,439.323,20,389.833s40.262-89.751,89.751-89.751c3.51,0,6.972,0.209,10.379,0.604
+                l-20.121,86.892c-0.688,2.97,0.017,6.092,1.914,8.479c1.897,2.387,4.779,3.777,7.828,3.777h89.191
+                C193.953,444.633,155.86,479.584,109.751,479.584z M122.331,379.833l17.283-74.636c31.833,11.265,55.471,40.006,59.328,74.636
+                H122.331z M144.151,285.61l6.139-26.514l47.929,27.676l15.739,68.609C203.063,322.513,177.026,296.488,144.151,285.61z
+                M216.738,278.054c-0.621-2.707-2.34-5.034-4.746-6.424l-64.738-37.382c-8.26-4.77-14.706-14.173-16.821-24.541
+                c-1.271-6.229-0.893-12.128,1.036-17.159l29.122,8.04l37.102,10.243l36.722,36.722c9.283,9.282,15.446,21.008,17.827,33.916
+                l12.15,75.493c-0.045,0-0.088-0.003-0.133-0.003h-29.42v-0.001L216.738,278.054z M237.873,396.958v-20h26.385
+                c13.038,0,24.159,8.359,28.287,20H237.873z M294.803,367.414c-2.898-2.244-6.045-4.177-9.397-5.749l-3.806-23.649l76.677-69.458
+                c1.12,5.279,2.407,10.525,3.872,15.729l0.86,3.054C328.591,300.563,302.467,330.64,294.803,367.414z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M502,379.833c-5.523,0-10,4.478-10,10l-0.001,0.469c-0.016,5.522,4.448,10.013,9.971,10.029c0.01,0,0.02,0,0.03,0
+                c5.509,0,9.983-4.458,10-9.971l0.001-0.527C512,384.311,507.523,379.833,502,379.833z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path d="M243.4,482.517c-1.86-1.87-4.43-2.93-7.07-2.93c-2.63,0-5.21,1.06-7.07,2.93c-1.86,1.86-2.93,4.431-2.93,7.07
+                c0,2.63,1.07,5.21,2.93,7.07c1.86,1.859,4.44,2.93,7.07,2.93s5.21-1.07,7.07-2.93c1.87-1.86,2.93-4.44,2.93-7.07
+                C246.33,486.947,245.27,484.377,243.4,482.517z"/>
+        </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </svg>
+</div>
+<h2 class="title h4">Activity</h2>
+<!-- <p class="tagline">Cum sociis natoque penatibus et magnis.</p>
+<p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Download PDF</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing locations grid-thirds-left">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Locations</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item location" v-for="n in 5">
+                    <div class="item-header">
+    <ul class="list">
+        <li class="icon icon-biking">Biking</li>
+        <li class="icon icon-walking">Walking</li>
+    </ul>
+    <div class="line">
+        <span class="type">Location Type</span>
+    </div>
+    <ul class="list dots">
+        <li class="distance">1.87 Mi</li>
+        <li class="duration">2 Hr</li>
+        <li class="difficulty">Difficulty</li>
+    </ul>
+    <div class="line">
+        <a href="#" class="link">View Map</a>
+    </div>
+</div>
+
+<img class="image" src="https://source.unsplash.com/jbtfM0XBeRc/300x200" alt="Placeholder Image" />
+<h2 class="title h4">Location</h2>
+<p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p>
+<!-- <p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">View Location</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing events grid-thirds-left">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Events</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item event" v-for="n in 5">
+                    <div class="item-header">
+    <ul class="list">
+        <li class="icon icon-biking">Biking</li>
+        <li class="icon icon-walking">Walking</li>
+    </ul>
+    <!-- <div class="line">
+        <span class="type">Location Type</span>
+    </div> -->
+    <ul class="list dots">
+        <li class="distance">1.87 Mi</li>
+        <li class="duration">2 Hr</li>
+        <li class="difficulty">Difficulty</li>
+    </ul>
+    <!-- <ul class="list dots">
+        <li><time class="date" datetime="2020-09-10">September 10, 2020</time></li>
+        <li><time class="date" datetime="2020-09-12">September 12, 2020</time></li>
+    </ul> -->
+    <div class="line">
+        <time class="date" datetime="2020-09-10">September 10, 2020</time>
+    </div>
+    <div class="line">
+        <time class="time">10:00 AM</time>
+    </div>
+</div>
+
+<img class="image" src="https://source.unsplash.com/jbtfM0XBeRc/300x200" alt="Placeholder Image" />
+<h2 class="title h4">Event Title Here</h2>
+<p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p>
+<!-- <p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">View Event</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing articles grid-thirds-left">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Articles</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item article" v-for="n in 5">
+                    <div class="item-header">
+    <ul class="list dots">
+        <li class="topic">Topic Type 1</li>
+        <li class="topic">Topic Type 1</li>
+    </ul>
+    <div class="line">
+        <time class="date" datetime="2020-09-10">September 10, 2020</time>
+    </div>
+    <div class="line">
+        <span class="author">Author Name</span>
+    </div>
+</div>
+
+<img class="image" src="https://source.unsplash.com/jbtfM0XBeRc/300x200" alt="Placeholder Image" />
+<h2 class="title h4">Article Title Here</h2>
+<p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p>
+<!-- <p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">View Article</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing pages grid-thirds-left">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Pages</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item page" v-for="n in 5">
+                    <img class="image" src="https://source.unsplash.com/jbtfM0XBeRc/300x200" alt="Placeholder Image" />
+<h2 class="title h4">Page Title Here</h2>
+<!-- <p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p> -->
+<!-- <p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">View Page</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing alerts grid-thirds-left">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - Alerts</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item alert" v-for="n in 5">
+                    <div class="item-header">
+    <ul class="list dots">
+        <li class="topic">Topic Type 1</li>
+        <li class="topic">Topic Type 1</li>
+    </ul>
+    <div class="line">
+        <time class="date" datetime="2020-09-10">September 10, 2020</time>
+    </div>
+    <div class="line">
+        <span class="author">Author Name</span>
+    </div>
+</div>
+
+<!-- <img class="image" src="https://source.unsplash.com/jbtfM0XBeRc/300x200" alt="Placeholder Image" /> -->
+<h2 class="title h4">Alert Title Here</h2>
+<p class="tagline green-txt">Cum sociis natoque penatibus et magnis.</p>
+<!-- <p class="description">Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p> -->
+<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">View Alert</a>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+<section class="block listing people grid-fifths">
+	<div class="wrapper">
+        <h2 style="text-align: center;">Listing - People</h2>
+        <div class="row">
+            <ul class="items">
+                <li class="item people" v-for="n in 11">
+                    <!-- Image can be optional -->
+<div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/150x150);">
+    <img src="https://source.unsplash.com/jbtfM0XBeRc/150x150" alt="Placeholder Image" class="visually-hidden"/>
+</div>
+<h2 class="title h4">Dave Anderson</h2>
+<!-- Include the title and company in the label below, comma separated -->
+<p class="label">Park Ranger</p>
+                </li>
+            </ul>
+        </div>
+	</div>
+</section>
+
+	<section class="block accordions">
+	<div class="wrapper">
+		<details class="accordion" open>
+			<summary class="title">
+				<h2>Accordion long title can go here. Maybe this is a question?</h2>
+			</summary>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor similique tenetur,
+					ducimus sapiente possimus. Ut quos incidunt debitis accusantium temporibus perferendis,
+					consectetur voluptatum esse illum doloribus
+					est atque rem soluta
+					sequi nostrum accusamus consequuntur tempore unde illo adipisci. Rerum, eum illo, facere
+					est aperiam, quam molestiae dolorum explicabo libero sunt alias perspiciatis earum
+					sequi. Soluta est, doloribus ipsum
+					dignissimos maxime animi quae
+					porro suscipit molestias optio, vero cum asperiores totam officia quia tenetur ipsam ad
+					sed reprehenderit delectus minima quidem ratione labore. Mollitia, laboriosam voluptate
+					quasi veritatis cum. Voluptas, cum
+					modi odio, dicta ducimus
+					veniam possimus facilis dolorum incidunt repellendus nemo accusantium iste voluptatum
+					dolor non illo officia id, perferendis, odit nisi tenetur aliquid! Eligendi voluptatum,
+					rem dolore ducimus doloribus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem esse
+					repellendus accusantium adipisci consequatur, natus eum expedita distinctio nihil porro
+					in ut, commodi, omnis saepe dolorem
+					officia illo atque quae
+					mollitia magnam quas dignissimos! Consequuntur ut, impedit similique, eius nobis
+					facilis? Rerum, tempora blanditiis quo ad at. Pariatur dolorem impedit repellat expedita
+					quidem sunt modi ad veritatis, placeat
+					beatae fuga quod nemo harum
+					inventore laudantium ducimus ipsam ipsum asperiores deleniti cum quasi nam! Vel
+					quibusdam porro error laborum quas numquam inventore velit illo, magnam delectus beatae
+					facilis dicta cum iste aperiam. Repudiandae
+					amet, aspernatur ex.
+					Voluptates, alias! Et fugiat recusandae quos excepturi incidunt eaque placeat id, ipsa
+					eveniet consectetur unde maiores dolorum officiis esse ratione, omnis cumque! Vitae amet
+					incidunt ea architecto fugiat
+					reiciendis nisi, quae autem veniam
+					quasi aspernatur, dignissimos perspiciatis natus, corporis fugit aut reprehenderit
+					atque. Ea tempora voluptatibus quidem iure magnam, doloremque. Dicta laborum atque
+					aliquid alias, eligendi voluptates assumenda, at
+					quas sint repellendus,
+					nobis nam vitae velit fugiat maiores, incidunt error itaque quod dolorem minima optio
+					blanditiis mollitia! Beatae quam dignissimos vitae recusandae accusantium maxime iure,
+					esse iusto totam. Ipsam animi, dolore
+					quae! Perspiciatis
+					voluptatibus nemo voluptas repellendus odit ipsa quia dicta inventore eligendi dolore
+					animi, fuga deleniti accusantium cumque voluptatum nihil porro! Vitae omnis labore
+					commodi eius cupiditate perferendis quaerat
+					sunt molestiae dignissimos
+					blanditiis.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+				</ul>
+				<div class="buttons">
+					<a href="#" target="_self" class="btn">Button TItle</a>
+					<a href="#" target="_self" class="btn">Button TItle</a>
+				</div>
+			</div>
+		</details>
+		<details class="accordion" open>
+			<summary class="title">
+				<h2>Accordion</h2>
+			</summary>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor similique tenetur,
+					ducimus sapiente possimus. Ut quos incidunt debitis accusantium temporibus perferendis,
+					consectetur voluptatum esse illum doloribus
+					est atque rem soluta
+					sequi nostrum accusamus consequuntur tempore unde illo adipisci. Rerum, eum illo, facere
+					est aperiam, quam molestiae dolorum explicabo libero sunt alias perspiciatis earum
+					sequi. Soluta est, doloribus ipsum
+					dignissimos maxime animi quae
+					porro suscipit molestias optio, vero cum asperiores totam officia quia tenetur ipsam ad
+					sed reprehenderit delectus minima quidem ratione labore. Mollitia, laboriosam voluptate
+					quasi veritatis cum. Voluptas, cum
+					modi odio, dicta ducimus
+					veniam possimus facilis dolorum incidunt repellendus nemo accusantium iste voluptatum
+					dolor non illo officia id, perferendis, odit nisi tenetur aliquid! Eligendi voluptatum,
+					rem dolore ducimus doloribus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima exercitationem esse
+					repellendus accusantium adipisci consequatur, natus eum expedita distinctio nihil porro
+					in ut, commodi, omnis saepe dolorem
+					officia illo atque quae
+					mollitia magnam quas dignissimos! Consequuntur ut, impedit similique, eius nobis
+					facilis? Rerum, tempora blanditiis quo ad at. Pariatur dolorem impedit repellat expedita
+					quidem sunt modi ad veritatis, placeat
+					beatae fuga quod nemo harum
+					inventore laudantium ducimus ipsam ipsum asperiores deleniti cum quasi nam! Vel
+					quibusdam porro error laborum quas numquam inventore velit illo, magnam delectus beatae
+					facilis dicta cum iste aperiam. Repudiandae
+					amet, aspernatur ex.
+					Voluptates, alias! Et fugiat recusandae quos excepturi incidunt eaque placeat id, ipsa
+					eveniet consectetur unde maiores dolorum officiis esse ratione, omnis cumque! Vitae amet
+					incidunt ea architecto fugiat
+					reiciendis nisi, quae autem veniam
+					quasi aspernatur, dignissimos perspiciatis natus, corporis fugit aut reprehenderit
+					atque. Ea tempora voluptatibus quidem iure magnam, doloremque. Dicta laborum atque
+					aliquid alias, eligendi voluptates assumenda, at
+					quas sint repellendus,
+					nobis nam vitae velit fugiat maiores, incidunt error itaque quod dolorem minima optio
+					blanditiis mollitia! Beatae quam dignissimos vitae recusandae accusantium maxime iure,
+					esse iusto totam. Ipsam animi, dolore
+					quae! Perspiciatis
+					voluptatibus nemo voluptas repellendus odit ipsa quia dicta inventore eligendi dolore
+					animi, fuga deleniti accusantium cumque voluptatum nihil porro! Vitae omnis labore
+					commodi eius cupiditate perferendis quaerat
+					sunt molestiae dignissimos
+					blanditiis.</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, similique</li>
+				</ul>
+				<div class="buttons">
+					<a href="#" target="_self" class="btn">Button TItle</a>
+					<a href="#" target="_self" class="btn">Button TItle</a>
+				</div>
+			</div>
+		</details>
+	</div>
+</section>
+
+	<section id="sliders" class="block slider gallery" data-menutitle="Sliders">
+    <div class="wrapper">
+        <div class="items" data-id="1" data-slick='{
+            "slidesToShow": 3, 
+            "slidesToScroll": 1,
+            "arrows": true, 
+            "fade": false,
+            "centerMode": true,
+            "adaptiveHeight": false,
+            "variableWidth": true,
+            "responsive": [{"breakpoint": 768,"settings": {"arrows": true}}]
+        }'>
+            <div class="item">
+                <a href="https://via.placeholder.com/400x600.png"><img src="https://via.placeholder.com/400x600.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/1000x600.png"><img src="https://via.placeholder.com/1000x600.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/800x480.png"><img src="https://via.placeholder.com/800x480.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/1000x580.png"><img src="https://via.placeholder.com/1000x580.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/1000x580.png"><img src="https://via.placeholder.com/1000x580.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/1000x580.png"><img src="https://via.placeholder.com/1000x580.png" alt="Image description" /></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sliders" class="block slider gallery" data-menutitle="Sliders">
+    <div class="wrapper">
+        <div class="items" data-id="1" data-slick='{
+            "slidesToShow": 3, 
+            "slidesToScroll": 1,
+            "arrows": true, 
+            "fade": false,
+            "centerMode": true,
+            "adaptiveHeight": false,
+            "variableWidth": true,
+            "responsive": [{"breakpoint": 768,"settings": {"slidesToShow": 1, "adaptiveHeight": true}}]
+        }'>
+            <div class="item">
+                <a href="https://via.placeholder.com/400x600.png"><img src="https://via.placeholder.com/400x600.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/800x600.png"><img src="https://via.placeholder.com/800x600.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/300x500.png"><img src="https://via.placeholder.com/300x500.png" alt="Image description" /></a>
+            </div>
+            <div class="item">
+                <a href="https://via.placeholder.com/600x400.png"><img src="https://via.placeholder.com/600x400.png" alt="Image description" /></a>
+            </div>
+        </div>
+    </div>
+</section>
+	<!-- This is hero style 3, but in a slider. -->
+
+<!-- Slider settings:
+- autoplay & speed -->
+<section id="sliders" class="block slider hero style-3 content-right" data-menutitle="Sliders">
+    <div class="wrapper">
+        <div class="items" data-id="1" data-slick='{
+            "slidesToShow": 1, 
+            "slidesToScroll": 1,
+            "arrows": false,
+            "dots": true, 
+            "fade": true,
+            "centerMode": false,
+            "adaptiveHeight": true,
+            "variableWidth": false,
+            "autoplay": false,
+            "autoplaySpeed": 6000,
+            "responsive": [{"breakpoint": 768,"settings": {"arrows": false}}]
+        }'>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide One</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide Two</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col">
+                        <div class="image" style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+                            <img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image" class="visually-hidden" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="content">
+                            <h1 class="label icon icon-sun">Label</h1>
+                            <h1 class="title h3">Slide Three</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            <div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+	<div class="wrapper">
+		<a class="logo" href="/" target="_self">
+			<img class="svg" src="assets/img/logo.svg" alt="Title Here">
+		</a>
+		<p class="green-txt tagline"><i>A visitor-supported public park</i></p>
+		<ul class="social-menu">
+			<li class="menu-item"><a href="https://www.facebook.com/" target="_blank"><span
+						class="visually-hide-text">Facebook</span><i class="fab fa-facebook-f"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://twitter.com/" target="_blank"><span
+						class="visually-hide-text">Twitter</span><i class="fab fa-twitter" aria-hidden="true"></i></a>
+			</li>
+			<li class="menu-item"><a href="https://www.instagram.com/" target="_blank"><span
+						class="visually-hide-text">Instagram</span><i class="fab fa-instagram"
+						aria-hidden="true"></i></a></li>
+			<li class="menu-item"><a href="https://www.youtube.com/" target="_blank"><span
+						class="visually-hide-text">YouTube</span><i class="fab fa-youtube" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+<!-- 
+    Newsletter Popup 
+    - Triggered by a menu item
+    - Need to write JS to open the newsletter with a class added to the menu item
+-->
+
+<button data-micromodal-trigger="modal-1">Open Newsletter</button>
+
+<div id="modal-1" class="modal micromodal-slide block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h3" id="modal-1-title">The Parklands Newsletter</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<p>Sign up for our online newsletter and keep up with the news and events at the Parklands.</p>
+					<!-- We need to add a gravity form here, or let the user add one. -->
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    General Popup 
+    - This appears on the home page, only on the home page, as soon the page loads
+	- I have JS to create a cookie and only open the modal if the cookie does not exist
+	- So this will only need a conditional to display if the page is home and the user wants to have a popup
+	- For this to work, the html should not appear if the user has a popup set to false/nope
+-->
+
+<button data-micromodal-trigger="modal-2">Open General Popup</button>
+
+<div id="modal-2" class="modal micromodal-slide block hero style-3 content-right" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content row" id="modal-2-content">
+					<div class="col">
+						<div class="image"
+							style="background-image:url(https://source.unsplash.com/jbtfM0XBeRc/1200x500);background-size:cover;background-position:50% 50%">
+							<img src="https://source.unsplash.com/jbtfM0XBeRc/1200x500" alt="Placeholder Image"
+								class="visually-hidden" />
+						</div>
+					</div>
+					<div class="col">
+						<div class="content">
+							<!-- Sara, we might want to leave the icon & label as an option for users -->
+							<!-- <h1 class="label icon icon-sun">Label</h1> -->
+							<h2 class="title h3">Modal - General</h2>
+							<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper
+								nulla non
+								metus auctor fringilla. Maecenas faucibus mollis interdum. Etiam porta sem malesuada
+								magna
+								mollis euismod.</p>
+							<div class="wp-block-buttons">
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+    <div class="wp-block-button">
+        <a href="#" class="wp-block-button__link">Button</a>
+    </div>
+</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Weather Popup
+    - Triggered by a menu item in the top menu
+-->
+<button data-micromodal-trigger="modal-3">Open Weather</button>
+
+<div id="modal-3" class="modal micromodal-slide weather block basic-content one-col" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<h2 class="title h4" id="modal-3-title">Weather</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-3-content">
+					<div id="components-demo">
+						<weather-data></weather-data>
+						<div class="meta">
+							<span class="sunrise">Sunrise <time class="time">8:01 AM</time></span><span
+								class="sunset">Sunset
+								<time class="time">7:46 PM</time></span>
+						</div>
+					</div>
+
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    CFS Popup 
+    - I think the button should be the only part that the user can edit
+-->
+<button data-micromodal-trigger="modal-4">Open CFS</button>
+
+<div id="modal-4" class="modal micromodal-slide cfs block" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-4-content">
+					<div class="cfs-module">
+						<div class="row north">
+							<div class="col title">
+								<h2 class="h4">North Beckley to Creekside</h2>
+								<span>Peewee Valley Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-1">
+									<cfs-data-1></cfs-data-1>
+								</div>
+							</div>
+						</div>
+						<div class="row line">
+							<div class="col title">
+								<h2 class="h4">Creekside to Seaton Valley</h2>
+								<span>Fisherville Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-2">
+									<cfs-data-2></cfs-data-2>
+								</div>
+							</div>
+						</div>
+						<div class="row south">
+							<div class="col title">
+								<h2 class="h4">Seaton Valley to Cliffside</h2>
+								<span>Mt. Washington Gauge</span>
+							</div>
+							<div class="col button">
+								<div id="cfs-3">
+									<cfs-data-3></cfs-data-3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wp-block-buttons">
+						<div class="wp-block-button">
+							<a href="#" class="wp-block-button__link">Paddling Access</a>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 
+    Mobile Search Popup 
+-->
+<button data-micromodal-trigger="modal-5">Open Search</button>
+
+<div id="modal-5" class="modal micromodal-slide block basic-content one-col mobile-search" aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-5-title">
+			<div class="modal__wrapper">
+				<header class="modal__header">
+					<!-- <h2 class="title h3" id="modal-5-title">The Parklands Newsletter</h2> -->
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<main class="modal__content" id="modal-5-content">
+					<div class="search-container-modal">
+						<form id="search-form-modal" class="search" action="/search/" method="get">
+							<label for="search-field"><span class="title h3">Search</span>
+								<input id="search-field-modal" type="text" name="fwp_search_field" value="">
+							</label>
+							<button id="search-submit-modal" class="submit" form="search-form" type="submit">Submit</button>
+						</form>
+					</div>				
+				</main>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- End #app -->
+
+<!-- development version of vue.js, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+	integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+	crossorigin="anonymous"></script>
+
+<!-- Fancybox -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+
+
+<!-- Slick Lightbox -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"
+	integrity="sha512-iSVaq9Huv1kxBDAOH7Il1rwIJD+uspMQC1r4Y73QquhbI2ia+PIXUoS5rBjWjYyD03S8t7gZmON+Dk6yPlWHXw=="
+	crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" rel="stylesheet" />
+
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" /> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.css" rel="stylesheet" /> -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="assets/js/bundle.js"></script>
+
+<script>
+	var slider = $('.block.slider.gallery .items');
+	if (slider.length > 0) {
+		for (var i = 0; i < slider.length; i++) {
+			// Init first slider
+			$(slider[i]).slick();
+			$(slider[i]).slickLightbox({
+				src: 'src',
+				itemSelector: '.item img'
+			});
+		}
+	}
+
+</script>
+
+</body>
+
+</html>
